@@ -7,3 +7,7 @@ Documentation of the hytale file formats based on my discoveries
 This repository stores information relating to the file formats used by the game [Hytale](https://hytale.com/), from the world format, entity format, player data format, etc.
 
 See the `docs` folder for the documentation.
+
+## License
+
+Distributed under the **CC-BY-SA-4.0** License unless mentioned otherwise.

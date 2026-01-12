@@ -1,0 +1,28 @@
+site_name: Hytale Formats Wiki
+theme:
+    name: material
+    features:
+        - navigation.sections
+        - navigation.expand
+extra_css:
+    - css/treeview.css
+    - css/table.css
+extra_javascript:
+    - js/add_icons.js
+nav:
+    - Home: index.md
+    - Pages:
+        - World formats:
+            - Chunk format: wiki/Chunk_format.md
+            - Level format: wiki/Level_format.md
+        - Version history: wiki/Version_history.md
+        - Official Hytale Website: https://hytale.com
+plugins:
+    - search
+    - exclude:
+        glob:
+            - images/file/*.md
+markdown_extensions:
+    - attr_list
+    - md_in_html
+    - pymdownx.superfences
