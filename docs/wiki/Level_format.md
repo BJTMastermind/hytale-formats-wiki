@@ -9,9 +9,9 @@ This is the directory structure of the `Hytale/worlds` folder, where the game sa
 <div markdown="1" id="treeview">
 
 * : A world directory.
-{.addicon .file.directory}
+{.addicon .file_system.directory}
     * TBD
-    {.addicon .file.file .file.directory}
+    {.addicon .file_system.file .file_system.directory}
 
 </div>
 
