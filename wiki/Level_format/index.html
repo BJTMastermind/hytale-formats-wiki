@@ -586,13 +586,57 @@
 
 
 <h1 id="level-format">Level format</h1>
-<p>Each level is its own folder. A level folder is often identified by having a ??? file, along with other subfolders to store the maps and regions of the level.</p>
+<p>Each level is its own folder. A level folder itself (can be empty) is how the game identified a level, along with other subfolders to store the maps and regions of the level.</p>
 <h2 id="directory-structure">Directory structure</h2>
-<p>This is the directory structure of the <code>Hytale/worlds</code> folder, where the game saves the entire world data:</p>
+<p>This is the directory structure of the <code>Hytale/Saves</code> folder, where the game saves the entire world data:</p>
 <div id="treeview">
 <ul>
 <li class="addicon file_system.directory">: A world directory.<ul>
-<li class="addicon file_system.file file_system.directory">TBD</li>
+<li class="addicon file_system.directory">log<ul>
+<li class="addicon file_system.file">&lt;yyyy&gt;-&lt;mm&gt;-&lt;dd&gt;_&lt;HH&gt;-&lt;MM&gt;-&lt;SS&gt;_server.log</li>
+</ul>
+</li>
+<li class="addicon file_system.directory">mods: Stores the installed mods that are used with this world.<ul>
+<li class="addicon file_system.directory">Hytale_Shop<ul>
+<li class="addicon file_system.file">barter_shop_state.json</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon file_system.directory">universe<ul>
+<li class="addicon file_system.directory">players: Stores the individual states of the players that have played in this world.<ul>
+<li class="addicon file_system.file">&lt;uuid&gt;.json: A json file of the player. See <strong>Player.json format</strong>. (Coming Soon)</li>
+</ul>
+</li>
+<li class="addicon file_system.directory">worlds<ul>
+<li class="addicon file_system.directory">default: The default world, normally Orbis.<ul>
+<li class="addicon file_system.directory">chunks: Stores region files of the world.<ul>
+<li class="addicon file_system.file">&lt;x&gt;.&lt;z&gt;.region.bin: A region file. See <a href="../Chunk_format/">Chunk format</a>.</li>
+</ul>
+</li>
+<li class="addicon file_system.directory">resources<ul>
+<li class="addicon file_system.file">BlockCounter.json</li>
+<li class="addicon file_system.file">BlockMapMarkers.json</li>
+<li class="addicon file_system.file">InstanceData.json</li>
+<li class="addicon file_system.file">PrefabEditSession.json</li>
+<li class="addicon file_system.file">ReputationData.json</li>
+<li class="addicon file_system.file">SpawnSuppressionController.json</li>
+<li class="addicon file_system.file">Time.json</li>
+</ul>
+</li>
+<li class="addicon file_system.file">config.json</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon file_system.file">memories.json</li>
+</ul>
+</li>
+<li class="addicon file_system.file">bans.json</li>
+<li class="addicon file_system.file">config.json</li>
+<li class="addicon file_system.file">permissions.json</li>
+<li class="addicon file_system.file">preview.png</li>
+<li class="addicon file_system.file">whitelist.json</li>
 </ul>
 </li>
 </ul>
@@ -604,7 +648,7 @@
             <th colspan="8"><p>Early Access</p></th>
         </tr>
         <tr>
-            <th>0.0.0</th>
+            <th>2026.01.13-dcad8778f</th>
             <td>To Be Determined</td>
         </tr>
     </tbody>
