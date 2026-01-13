@@ -1,6 +1,6 @@
 # Level format
 
-Each level is its own folder. A level folder itself (can be empty) is how the game identified a level, along with other subfolders to store the maps and regions of the level.
+Each level is its own folder. A level folder itself (can be empty) is how the game identifies a level, along with other subfolders to store the maps and regions of the level.
 
 ## Directory structure
 
