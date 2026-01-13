@@ -1,4 +1,4 @@
-# Hytale File Formats
+# Hytale Formats Wiki
 
 Documentation of the hytale file formats based on my discoveries
 
