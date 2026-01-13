@@ -6,6 +6,7 @@ for (const e of document.getElementsByClassName("addicon")) {
         const file = icon.split(".")[1];
 
         const img = document.createElement("img");
+        console.log(`Origin: ${window.location.origin}`);
         img.src = `${window.location.origin}/images/${subfolder}/${file}.png`;
         img.width = 16;
         img.height = 16;
