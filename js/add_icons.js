@@ -7,7 +7,6 @@ for (const e of document.getElementsByClassName("addicon")) {
 
         const img = document.createElement("img");
         const basePath = window.location.pathname.split("/").slice(0, 2).join("/");
-        console.log(basePath);
         img.src = `${window.location.origin}${basePath}/images/${subfolder}/${file}.png`;
         img.width = 16;
         img.height = 16;
