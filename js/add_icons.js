@@ -6,9 +6,9 @@ for (const e of document.getElementsByClassName("addicon")) {
         const file = icon.split(".")[1];
 
         const img = document.createElement("img");
-        const basePath = document.querySelector("base")?.href ?? "/";
-        console.log(`Base: ${basePath}`);
-        img.src = `${window.location.origin}${basePath}images/${subfolder}/${file}.png`;
+        const basePath = window.location.pathname.split("/").slice(0, 2).join("/");
+        console.log(basePath);
+        img.src = `${window.location.origin}${basePath}/images/${subfolder}/${file}.png`;
         img.width = 16;
         img.height = 16;
         img.style.padding = "0";
