@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Version_history/">
+        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Player.json_format/">
       
       
-        <link rel="prev" href="../Player.json_format/">
+        <link rel="prev" href="../Level_format/">
       
+      
+        <link rel="next" href="../Version_history/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Version history - Hytale Formats Wiki</title>
+        <title>player.json format - Hytale Formats Wiki</title>
       
     
     
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#version-history" class="md-skip">
+        <a href="#playerjson-format" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Version history
+              player.json format
             
           </span>
         </div>
@@ -393,34 +395,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../Player.json_format/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    player.json format
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -440,7 +414,7 @@
   <span class="md-ellipsis">
     
   
-    Version history
+    player.json format
   
 
     
@@ -458,7 +432,7 @@
   <span class="md-ellipsis">
     
   
-    Version history
+    player.json format
   
 
     
@@ -484,30 +458,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#early-access-release" class="md-nav__link">
+  <a href="#json-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Early access release
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Early access release">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#202601" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2026.01
+        Json Structure
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-slot-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventory slot numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        History
+      
+    </span>
+  </a>
   
 </li>
       
@@ -515,6 +494,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Version_history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Version history
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -581,30 +588,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#early-access-release" class="md-nav__link">
+  <a href="#json-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Early access release
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Early access release">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#202601" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2026.01
+        Json Structure
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-slot-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventory slot numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        History
+      
+    </span>
+  </a>
   
 </li>
       
@@ -625,26 +637,325 @@
 
 
 
-<h1 id="version-history">Version history</h1>
-<p>Hytale has been in constant development since 2015 and first released publicly in early access on January 13, 2026.</p>
-<h2 id="early-access-release">Early access release</h2>
-<h3 id="202601">2026.01</h3>
-<p>Early Access was the initial development phase of <em>Hytale</em> released to the public.</p>
+<h1 id="playerjson-format">player.json format</h1>
+<p><strong>&lt;player&gt;.json</strong> files are used to store the state of individual players. These files are in <a href="https://www.json.org/json-en.html">Json format</a>.</p>
+<h2 id="json-structure">Json Structure</h2>
+<details>
+<summary>Show</summary>
+<div id="treeview">
+<ul>
+<li class="addicon json.object">: Root object.<ul>
+<li class="addicon json.object">Components:<ul>
+<li class="addicon json.object">Nameplate:<ul>
+<li class="addicon json.string">Text: The players name.</li>
+</ul>
+</li>
+<li class="addicon json.object">EffectController:</li>
+<li class="addicon json.object">ObjectiveHistory:<ul>
+<li class="addicon json.object">ObjectiveHistory:</li>
+<li class="addicon json.object">ObjectiveLineHistory:</li>
+</ul>
+</li>
+<li class="addicon json.object">DisplayName:<ul>
+<li class="addicon json.object">DisplayName:<ul>
+<li class="addicon json.string">RawText: The players name.</li>
+<li class="addicon json.boolean">Bold:</li>
+<li class="addicon json.boolean">Italic:</li>
+<li class="addicon json.boolean">Monospace:</li>
+<li class="addicon json.boolean">Underline:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.object">UIComponentList:</li>
+<li class="addicon json.object">Transform:<ul>
+<li class="addicon json.object">Position:<ul>
+<li class="addicon json.float">X:</li>
+<li class="addicon json.float">Y:</li>
+<li class="addicon json.float">Z:</li>
+</ul>
+</li>
+<li class="addicon json.object">Rotation:<ul>
+<li class="addicon json.float">Pitch:</li>
+<li class="addicon json.float">Yaw:</li>
+<li class="addicon json.float">Roll:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.object">BuilderTools:<ul>
+<li>SelectionHistory:</li>
+</ul>
+</li>
+<li class="addicon json.object">Velocity:<ul>
+<li class="addicon json.object">Velocity:<ul>
+<li class="addicon json.float">X:</li>
+<li class="addicon json.float">Y:</li>
+<li class="addicon json.float">Z:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.object">Player<ul>
+<li class="addicon json.int">Version:</li>
+<li class="addicon json.object">UUID:<ul>
+<li class="addicon json.string">$binary:</li>
+<li class="addicon json.string">$type:</li>
+</ul>
+</li>
+<li class="addicon json.object">Inventory:<ul>
+<li class="addicon json.int">Version:</li>
+<li class="addicon json.object">Storage:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Capacity:</li>
+<li class="addicon json.object">Items:<ul>
+<li class="addicon json.object">&lt;#&gt;:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Quantity:</li>
+<li class="addicon json.float">Durability:</li>
+<li class="addicon json.float">MaxDurability:</li>
+<li class="addicon json.boolean">OverrideDropItemAnimation:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.object">Armor:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Capacity:</li>
+<li class="addicon json.object">Items:<ul>
+<li class="addicon json.object">&lt;#&gt;:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Quantity:</li>
+<li class="addicon json.float">Durability:</li>
+<li class="addicon json.float">MaxDurability:</li>
+<li class="addicon json.boolean">OverrideDropItemAnimation:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.object">HotBar:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Capacity:</li>
+<li class="addicon json.object">Items:<ul>
+<li class="addicon json.object">&lt;#&gt;:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Quantity:</li>
+<li class="addicon json.float">Durability:</li>
+<li class="addicon json.float">MaxDurability:</li>
+<li class="addicon json.boolean">OverrideDropItemAnimation:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.object">Utility:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Capacity:</li>
+<li class="addicon json.object">Items:<ul>
+<li class="addicon json.object">&lt;#&gt;:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Quantity:</li>
+<li class="addicon json.float">Durability:</li>
+<li class="addicon json.float">MaxDurability:</li>
+<li class="addicon json.boolean">OverrideDropItemAnimation:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.object">Backpack:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Capacity:</li>
+<li class="addicon json.object">Items:<ul>
+<li class="addicon json.object">&lt;#&gt;:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Quantity:</li>
+<li class="addicon json.float">Durability:</li>
+<li class="addicon json.float">MaxDurability:</li>
+<li class="addicon json.boolean">OverrideDropItemAnimation:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.int">ActiveHotbarSlot:</li>
+<li class="addicon json.object">Tool:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Capacity:</li>
+<li class="addicon json.object">Items:<ul>
+<li class="addicon json.object">&lt;#&gt;:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Quantity:</li>
+<li class="addicon json.float">Durability:</li>
+<li class="addicon json.float">MaxDurability:</li>
+<li class="addicon json.boolean">OverrideDropItemAnimation:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.int">ActiveToolsSlot:</li>
+<li class="addicon json.int">ActiveUtilitySlot:</li>
+<li class="addicon json.string">SortType:</li>
+</ul>
+</li>
+<li class="addicon json.object">PlayerData:<ul>
+<li class="addicon json.int">BlockIdVersion:</li>
+<li class="addicon json.string">World:</li>
+<li class="addicon json.array">KnownRecipes:</li>
+<li class="addicon json.object">PerWorldData:<ul>
+<li class="addicon json.object">instance-&lt;Zone_Name&gt;-&lt;uuid&gt;:<ul>
+<li class="addicon json.object">LastPosition:<ul>
+<li class="addicon json.float">X:</li>
+<li class="addicon json.float">Y:</li>
+<li class="addicon json.float">Z:</li>
+<li class="addicon json.float">Pitch:</li>
+<li class="addicon json.float">Yaw:</li>
+<li class="addicon json.float">Roll:</li>
+</ul>
+</li>
+<li class="addicon json.object">LastMovementStates:<ul>
+<li class="addicon json.boolean">Flying:</li>
+</ul>
+</li>
+<li class="addicon json.boolean">FirstSpawn:</li>
+<li class="addicon json.array">DeathPositions:<ul>
+<li class="addicon json.object">: A death position.<ul>
+<li class="addicon json.string">MarkerId:</li>
+<li class="addicon json.object">Transform:<ul>
+<li class="addicon json.float">X:</li>
+<li class="addicon json.float">Y:</li>
+<li class="addicon json.float">Z:</li>
+<li class="addicon json.float">Pitch:</li>
+<li class="addicon json.float">Yaw:</li>
+<li class="addicon json.float">Roll:</li>
+</ul>
+</li>
+<li class="addicon json.int">Day:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.array">DiscoveredZones:<ul>
+<li class="addicon json.string">: A zone the player has discoverd.</li>
+</ul>
+</li>
+<li class="addicon json.array">DiscoveredInstances:<ul>
+<li class="addicon json.object">: A discovered instance.<ul>
+<li class="addicon json.string">$binary:</li>
+<li class="addicon json.string">$type:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.object">ReputationData:</li>
+<li class="addicon json.array">ActiveObjectiveUUIDs:</li>
+</ul>
+</li>
+<li class="addicon json.boolean">BlockPlacementOverride:</li>
+<li class="addicon json.object">HotbarManager:<ul>
+<li class="addicon json.array">SavedHotbars:<ul>
+<li class="addicon json.object">: A saved hotbar row.<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Capacity:</li>
+<li class="addicon json.object">Items:<ul>
+<li class="addicon json.object">&lt;#&gt;:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.int">Quantity:</li>
+<li class="addicon json.float">Durability:</li>
+<li class="addicon json.float">MaxDurability:</li>
+<li class="addicon json.boolean">OverrideDropItemAnimation:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.int">CurrentHotbar:</li>
+</ul>
+</li>
+<li class="addicon json.string">GameMode:</li>
+</ul>
+</li>
+<li class="addicon json.object">Invulnerable:</li>
+<li class="addicon json.object">HitboxCollision:<ul>
+<li class="addicon json.int">HitboxCollisionConfigIndex:</li>
+</ul>
+</li>
+<li class="addicon json.object">UniqueItemUsages:<ul>
+<li class="addicon json.array">UniqueItemUsed:</li>
+</ul>
+</li>
+<li class="addicon json.object">Instance:</li>
+<li class="addicon json.object">UUID:<ul>
+<li class="addicon json.object">UUID:<ul>
+<li class="addicon json.string">$binary:</li>
+<li class="addicon json.string">$type:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.object">EntityStates:<ul>
+<li class="addicon json.int">Version:</li>
+<li class="addicon json.object">Stats:<ul>
+<li class="addicon json.object">&lt;stat&gt;:<ul>
+<li class="addicon json.string">Id:</li>
+<li class="addicon json.float">Value:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.object">CreativeHub:<ul>
+<li class="addicon json.string">ParentHubWorldUuid:</li>
+</ul>
+</li>
+<li class="addicon json.object">HeadRotation:<ul>
+<li class="addicon json.object">Rotation:<ul>
+<li class="addicon json.float">Pitch:</li>
+<li class="addicon json.float">Yaw:</li>
+<li class="addicon json.float">Roll:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</details>
+<h2 id="inventory-slot-numbers">Inventory slot numbers</h2>
+<p>The image below shows the slot numbers of the player's inventory slots as of Hytale 2026.01.13-dcad8778f.</p>
+<p>The gray names reflect what each inventory section is called in the json.</p>
+<p><img alt="player_inventory_numbers" src="../../images/misc/player_inventory_numbers.png" /></p>
+<h2 id="history">History</h2>
 <table id="table">
-    <tr>
-        <th>Version</th>
-        <th>Revision</th>
-        <th>Type</th>
-    </tr>
-    <tr>
-        <td rowspan="2">2026.01.13</td>
-        <td>dcad8778f</td>
-        <td>initial release</td>
-    </tr>
-    <tr>
-        <td><a href="../changelogs/2026.01.13-50e69c385">50e69c385</a></td>
-        <td>hotfix</td>
-    </tr>
+    <tbody>
+        <tr>
+            <th colspan="8"><p>Early Access</p></th>
+        </tr>
+        <tr>
+            <th>2026.01.13-dcad8778f</th>
+            <td>The player format is introduced.</td>
+        </tr>
+    </tbody>
 </table>
 
 

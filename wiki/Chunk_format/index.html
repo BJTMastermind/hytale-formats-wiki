@@ -394,10 +394,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
+  <a href="#binary-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Structure
+        Binary Structure
       
     </span>
   </a>
@@ -466,6 +466,34 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Player.json_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    player.json format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -560,10 +588,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
+  <a href="#binary-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Structure
+        Binary Structure
       
     </span>
   </a>
@@ -611,10 +639,61 @@
 
 <h1 id="chunk-format">Chunk format</h1>
 <p>Chunks store the terrain and entities within a 32×320×32 area in the world. They also store precomputed lighting, heightmap data for Hytale's performance, and other meta information.</p>
-<h2 id="structure">Structure</h2>
-<p>TBD</p>
+<h2 id="binary-structure">Binary Structure</h2>
+<div id="table">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Size (in bytes)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Magic</td>
+<td>20</td>
+<td>Identifies the Hytale region. Always <code>HytaleIndexedStorage</code></td>
+</tr>
+<tr>
+<td>Version</td>
+<td>4</td>
+<td>The version of the format used to save this region. Currently always 1.</td>
+</tr>
+<tr>
+<td>Blob Count</td>
+<td>4</td>
+<td>Currently always 1024.</td>
+</tr>
+<tr>
+<td>Segment Size</td>
+<td>4</td>
+<td>Currently always 4096.</td>
+</tr>
+<tr>
+<td>Blob Array</td>
+<td><code>Blob Count</code> * 4</td>
+<td>The blob int array.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>(To be continued)</p>
 <h2 id="block-format">Block format</h2>
-<p>TBD</p>
+<p>Block positions are ordered YZX for compression purposes.</p>
+<p>The coordinate system is as follows:</p>
+<ul>
+<li><strong>X</strong> increases East, decreases West</li>
+<li><strong>Y</strong> increases upward, decreases downward</li>
+<li><strong>Z</strong> increases South, decreases North</li>
+</ul>
+<p>This means indices are ordered like in a book, with its top to the North, read from beneath and with words written backward: each letter is a different X-index, each line a Z-index, and each page a Y-index. In case of a flat 2D array, the Y-index is omitted, and the array reads like a single page.</p>
+<p>Each section is a 32×32×32-block area, with up to 10 sections in a chunk : from 0 at the bottom, to 31 on top. Empty sections are not saved.</p>
+<p>You can calculate the index for a chunk section one of the following ways:</p>
+<p>(Simple index)<br>
+<code>index = (y * 32 + z) * 32 + x</code></p>
+<p>(Advanced index. loops over when out of bounds)<br>
+<code>index = (y &amp; 31) &lt;&lt; 10 | (z &amp; 31) &lt;&lt; 5 | x &amp; 31</code></p>
 <h2 id="history">History</h2>
 <table id="table">
     <tbody>
