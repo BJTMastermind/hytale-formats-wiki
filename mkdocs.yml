@@ -16,6 +16,7 @@ nav:
         - World formats:
             - Chunk format: wiki/Chunk_format.md
             - Level format: wiki/Level_format.md
+        - player.json format: wiki/Player.json_format.md
         - Version history: wiki/Version_history.md
     - View on GitHub: https://github.com/bjtmastermind/hytale-formats-wiki
 plugins:
