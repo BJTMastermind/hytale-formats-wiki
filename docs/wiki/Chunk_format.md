@@ -11,7 +11,7 @@ Chunks store the terrain and entities within a 32×320×32 area in the world. Th
 | Version | 4 | The version of the format used to save this region. Currently always 1. |
 | Blob Count | 4 | Currently always 1024. |
 | Segment Size | 4 | Currently always 4096. |
-| Blob Array | `Blob Count` * 4 | The blob int array. |
+| Blob Index Array | `Blob Count` * 4 | The blob index int array. |
 </div>
 
 (To be continued)

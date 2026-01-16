@@ -10,9 +10,13 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
 
 * : A world directory.
 {.addicon .file_system.directory}
-    * log
+    * backup: Contains backups of the contents of the universe folder automaticly created by the game while playing.
     {.addicon .file_system.directory}
-        * <yyyy\>-<mm\>-<dd\>_<HH\>-<MM\>-<SS\>_server.log
+        * <yyyy\>-<mm\>-<dd\>_<HH\>-<MM\>-<SS\>.zip: A backup file.
+        {.addicon .file_system.archive}
+    * logs: Contains copies of the games console log.
+    {.addicon .file_system.directory}
+        * <yyyy\>-<mm\>-<dd\>_<HH\>-<MM\>-<SS\>_server.log: A console log.
         {.addicon .file_system.file}
     * mods: Stores the installed mods that are used with this world.
     {.addicon .file_system.directory}
@@ -61,7 +65,7 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
     * permissions.json
     {.addicon .file_system.file}
     * preview.png
-    {.addicon .file_system.file}
+    {.addicon .file_system.image_file}
     * whitelist.json
     {.addicon .file_system.file}
 
