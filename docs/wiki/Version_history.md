@@ -21,16 +21,18 @@ Early Access was the initial development phase of *Hytale* released to the publi
     </tr>
     <tr>
         <td><a href="../changelogs/2026.01.13-50e69c385">50e69c385</a></td>
-        <td>hotfix</td>
+        <td rowspan="2">hotfix</td>
     </tr>
     <tr>
         <td>2026.01.15</td>
         <td><a href="../changelogs/2026.01.15-c04fdfe10">c04fdfe10</a></td>
-        <td>hotfix</td>
     </tr>
     <tr>
-        <td>2026.01.16</td>
+        <td rowspan="2">2026.01.16</td>
         <td>c508b9acd</td>
-        <td>pre-release</td>
+        <td rowspan="2">pre-release</td>
+    </tr>
+    <tr>
+        <td><a href="../changelogs/2026.01.16-5d02071f7">5d02071f7</td>
     </tr>
 </table>
