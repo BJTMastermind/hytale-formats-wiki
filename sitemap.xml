@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/</loc>
-         <lastmod>2026-01-16</lastmod>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/</loc>
-         <lastmod>2026-01-16</lastmod>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Development_version_history/</loc>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Level_format/</loc>
-         <lastmod>2026-01-16</lastmod>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Player.json_format/</loc>
-         <lastmod>2026-01-16</lastmod>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Version_history/</loc>
-         <lastmod>2026-01-16</lastmod>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.13-50e69c385/</loc>
-         <lastmod>2026-01-16</lastmod>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.15-c04fdfe10/</loc>
-         <lastmod>2026-01-16</lastmod>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
-         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.16-5d02071f7/</loc>
-         <lastmod>2026-01-16</lastmod>
+         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.17-4b0f30090/</loc>
+         <lastmod>2026-01-17</lastmod>
     </url>
 </urlset>

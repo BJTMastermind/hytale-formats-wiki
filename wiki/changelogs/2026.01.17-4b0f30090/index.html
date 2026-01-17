@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.13-50e69c385/">
+        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.17-4b0f30090/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Hytale 2026.01.13-50e69c385 - Hytale Formats Wiki</title>
+        <title>Hytale 2026.01.17-4b0f30090 (Update 1) - Hytale Formats Wiki</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hytale-20260113-50e69c385" class="md-skip">
+        <a href="#hytale-20260117-4b0f30090-update-1" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hytale 2026.01.13-50e69c385
+              Hytale 2026.01.17-4b0f30090 (Update 1)
             
           </span>
         </div>
@@ -532,63 +532,101 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#fixes" class="md-nav__link">
+  <a href="#world-environment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fixes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Fixes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connectivity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Connectivity
+        World &amp; Environment
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#stability" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#npcs-creatures" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stability
+        NPCs &amp; Creatures
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#launcher" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#crafting-items-farming" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Launcher
+        Crafting, Items &amp; Farming
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#services" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#audio-visual-effects" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Services
+        Audio &amp; Visual Effects
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#ui-performance-quality-of-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI, Performance &amp; Quality of Life
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Character Customization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combat-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combat &amp; Balance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands &amp; Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug-fixes-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes &amp; Stability
+      
+    </span>
+  </a>
   
 </li>
       
@@ -620,37 +658,124 @@
 
 
 
-<h1 id="hytale-20260113-50e69c385">Hytale 2026.01.13-50e69c385</h1>
-<p><strong>2026.01.13-50e69c385</strong> is a hotfix update released on January 13th, 2026,<a href="#1">[1]</a> which addresses the most critical issues reported since launch.</p>
-<h2 id="fixes">Fixes</h2>
-<h3 id="connectivity">Connectivity</h3>
+<h1 id="hytale-20260117-4b0f30090-update-1">Hytale 2026.01.17-4b0f30090 (Update 1)</h1>
+<p><strong>2026.01.17-4b0f30090</strong> is a major update for Hytale released on January 17th, 2026<a href="#1">[1]</a>, which adds new NPCs, adjusts crafting recipes, QoL fixes, and more!</p>
+<h2 id="world-environment">World &amp; Environment</h2>
 <ul>
-<li>Added message after server boot if authentication is required.</li>
-<li>Client now switches to offline mode when session becomes invalid.</li>
+<li>Added dinosaurs and other NPCs to populate the underground jungles. They currently use placeholder behaviours and are a work in progress.</li>
 </ul>
-<h3 id="stability">Stability</h3>
+<p><strong>NOTE:</strong> These new NPCs required a change to the environment in the biome, so you will need to generate new unexplored areas to see them.</p>
 <ul>
-<li>Fixed a crash that could occur when selecting certain hair styles followed by eyebrows in character creation.</li>
-<li>Fixed a crash when taking screenshots for people with non-English folder names.</li>
-<li>Fixed an issue preventing our Norwegian friends from launching the game.</li>
-<li>Fixed a crash when using buckets. This broke some workbenches, they will need to be destroyed and placed back down to resolve the issue.</li>
-<li>Preventing left mouse button from being bound to some actions.</li>
-<li>General stability improvements.</li>
+<li>Devastated Lands sewers now have proper atmospheric effects and creature spawns.</li>
+<li>Areas beneath volcanoes now use volcanic environmental effects.</li>
+<li>Fixed entity placements, textures, and interiors in Feran villages.</li>
+<li>Removed an invisible filler block behind the bench in the Forgotten Temple.</li>
 </ul>
-<h3 id="launcher">Launcher</h3>
+<h2 id="npcs-creatures">NPCs &amp; Creatures</h2>
 <ul>
-<li>Added a warning to inform players if their computer time is out of date. This fixes certain authentication issues.</li>
-<li>Fixed an authentication issue that happened sporadically when logging in.</li>
+<li>Added knockback resistance to NPCs that previously did not have it.</li>
+<li>Fire-themed NPCs and creatures should now be immune to fire damage. However, they'll still catch on fire for now.</li>
+<li>The Crystal Earth Golem's combat behavior and spin attack have been improved.</li>
+<li>Skeletons should no longer take drowning damage.</li>
+<li>Kweebecs should now be immune to the environmental damage caused by cactus and brambles.</li>
+<li>Replaced Trork Shaman placeholder summon animation.</li>
+<li>Added proper loot tables to Kweebecs and Trorks in the Whisperfrost Frontiers.</li>
+<li>Livestock should no longer climb on top of the Chicken Coop.</li>
+<li>Cautious wildlife predators, such as the Fox, should no longer engage players unless attacked.</li>
 </ul>
-<h3 id="services">Services</h3>
+<h2 id="crafting-items-farming">Crafting, Items &amp; Farming</h2>
 <ul>
-<li>Patched a vulnerability that allowed players to spoof their username. (purely visual)</li>
-<li>Improved caching of game patches globally.</li>
-<li>Improved email sending service to handle larger volumes of emails.</li>
+<li>The Backpack and its upgrades are now easier to obtain:Base backpack now requires a Tier 1 Workbench (down from Tier 2).</li>
+<li>Base backpack cost reduced to 8 Medium Leather (down from 16).</li>
+<li>Upgrading the backpack for the first time now requires a Tier 2 Workbench (down from Tier 3).</li>
+<li>Light, Medium, and Heavy Hide now take 10 less seconds to process into Leather.</li>
+<li>Crafting benches can now pull materials from chests within 14 blocks horizontally (up from 7) and 6 blocks vertically (up from 4).</li>
+<li>Processing benches now display item tooltips in the upgrade requirements panel.</li>
+<li>All raw fruits and vegetables should now only grant Health Regen I. Cooking them grants additional benefits.</li>
+<li>Dropped items should no longer get stuck on the side of blocks.</li>
+<li>Torches and other handheld light sources can now be placed on the ground when equipped in the Utility Slot while wielding a pickaxe or a hatchet.</li>
+<li>Pickaxes and hatchets are now only swung when using the primary action.</li>
+<li>Corn now gives 1 Essence Of Life instead of 4 when exchanged in the Farming Bench as it was previously misconfigured making it better than higher tier crops.</li>
+<li>Fully grown Cauliflower and Pumpkin no longer drop regular seeds when broken by hand or with any tool</li>
+<li>Fully grown Eternal Crops no longer drop eternal seeds when broken by hand or with any tool</li>
+<li>Wood Logs now display their respective "wood type"</li>
+<li>Example: Oak Log will display "Hardwood" in It's Tooltip.</li>
+<li>When a crafting recipe previously required a type of "Trunk" this is now displayed correctly as "Log" instead.</li>
+<li>Example: "Hardwood Trunk" is displayed as "Hardwood Log" in the recipe requirements.</li>
+<li>When a crafting recipe requires a specific Log Type (Such as Hardwood) the tooltip now displays which Trees can drop that type of Log</li>
+<li>Example: "Softwood Log" will display "Banyan, Beech and Aspen" in It's tooltip.</li>
+<li>Woodcutter's Block no longer displays as "Dev" item quality, and no longer has it's un-used processing bench interaction it is now a decorative furniture block that can also be crafted in the Furniture Bench.</li>
+</ul>
+<h2 id="audio-visual-effects">Audio &amp; Visual Effects</h2>
+<ul>
+<li>New hit and break sounds for stone.</li>
+<li>New hit and break sounds for ores with additional layered effects.</li>
+<li>Horses now properly play running sounds while mounted.</li>
+<li>Torch burn loop replaced with a softer ambient sound.</li>
+<li>Adjusted volumes for cocoon breaking, pig, piglet, and warthog sounds.</li>
+<li>Reduced pitch variation on sword swings.</li>
+<li>Added new ore breaking particles.</li>
+<li>Added fruit eating particles. More to come later for other food types.</li>
+<li>A new particle effect now appears above an NPC's head when absorbing their memory.</li>
+<li>Updated health potion visual effects with new glitter, glow, and spiral particles.</li>
+<li>Fixed rope offset when held in hand.</li>
+<li>Fixed hand positioning for various plants, flowers, and foliage.</li>
+</ul>
+<h2 id="ui-performance-quality-of-life">UI, Performance &amp; Quality of Life</h2>
+<ul>
+<li>You can now sleep starting at 7:30 PM.</li>
+<li>Added an information panel explaining the Memories system when interacting with The Heart of Orbis for the first time. Can be viewed again by clicking on the '?' in the top-left corner of the Memories UI.</li>
+<li>Toggle Fullscreen, Switch HUD, and Take Screenshot can no longer be bound to mouse buttons.</li>
+<li>The game now warns when launching pre-release versions or opening worlds from different versions.</li>
+<li>Field of view while sprinting is now limited to 160° to prevent hyper-drive effect.</li>
+<li>Cancelling LAN server discovery now works correctly.</li>
+<li>The interaction system now handles server lag spikes better.</li>
+</ul>
+<h2 id="character-customization">Character Customization</h2>
+<ul>
+<li>New eye types: Cat Eye, Demonic Eyes, Goat Eye, Reptile Eye.</li>
+<li>New mouth options: Large Mouth, Tiny Lips.</li>
+<li>New hair color: Lavender.</li>
+<li>Reworked Bangs hairstyle and brightened Dark Brown color.</li>
+<li>Featherbound Hood is now correctly showing for the Supporter edition.</li>
+</ul>
+<h2 id="combat-balance">Combat &amp; Balance</h2>
+<ul>
+<li>Weapon attacks should now check for line of sight.</li>
+<li>The regular Burn effect now generally deals less damage. Burn applied by lava remains unchanged.</li>
+<li>Cactus and brambles now deal the Environmental damage type.</li>
+</ul>
+<h2 id="commands-server">Commands &amp; Server</h2>
+<ul>
+<li>Fixed argument order for teleport commands. /tp &lt;player&gt; &lt;targetPlayer&gt;</li>
+<li>Give command now supports specifying item durability.</li>
+<li>Whitelist and ban commands now support both online usernames and offline UUIDs.</li>
+<li>The server now uses "Bottleneck Bandwidth and Round-trip propagation time" (BBR) congestion control for QUIC.</li>
+<li>Improved authentication and session token error handling.</li>
+</ul>
+<h2 id="bug-fixes-stability">Bug Fixes &amp; Stability</h2>
+<ul>
+<li>Fixed a misconfiguration that allowed weapon Charged Attacks to not consume Stamina correctly when swapping to another hotbar slot at the right time.</li>
+<li>Fixed signature ready sound playing incorrectly in adventure mode.</li>
+<li>Fixed regular expression parsing in /replace command.</li>
+<li>Fixed an issue where signature attacks could be used without signature energy.</li>
+<li>Fixed some items allowing longer interaction ranges than intended.</li>
+<li>Fixed fluid flow behavior when stacking water sources.</li>
+<li>Fixed crash when using non-English folder names for screenshots.</li>
+<li>Fixed crash when selecting certain hairstyles with variants.</li>
+<li>Fixed crash caused by corrupt cached avatar previews.</li>
+<li>Fixed crash when the memories plugin fails to load.</li>
+<li>Fixed an issue where rewards from restoring memories were granted too early and did not match the correct number of memories required.</li>
+<li>Fixed "waiting for chunks" taking too long at &lt;128 view distance.</li>
+<li>Fixed crash when updating player model.</li>
+<li>Fixed localization loop affecting Norwegian language users.</li>
+<li>Fixed race condition in instance teleport that caused entity removal and re-add issues.</li>
+<li>Fixed session refresh for singleplayer servers.</li>
+<li>Fixed various issues with crop growth where certain crops like Tomatoes would not grow correctly, chunks are now saved when a farming block updates.</li>
 </ul>
 <h2 id="references">References</h2>
 <ol>
-<li><a id="1"></a> <a href="https://hytale.com/news/2026/1/hotfixes-january-2026">"Hotfixes: January 2026"</a> -- Hytale.com, January 13, 2026.</li>
+<li><a id="1"></a> <a href="https://hytale.com/news/2026/1/hytale-patch-notes-update-1">"Hytale Patch Notes - Update 1"</a> -- Hytale.com, January 17, 2026.</li>
 </ol>
 
 
