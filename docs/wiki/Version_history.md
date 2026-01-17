@@ -10,11 +10,13 @@ Early Access was the initial development phase of *Hytale* released to the publi
 
 <table id="table">
     <tr>
+        <th>Update</th>
         <th>Version</th>
         <th>Revision</th>
         <th>Type</th>
     </tr>
     <tr>
+        <td rowspan="3">Update 0</td>
         <td rowspan="2">2026.01.13</td>
         <td>dcad8778f</td>
         <td>initial release</td>
@@ -28,11 +30,9 @@ Early Access was the initial development phase of *Hytale* released to the publi
         <td><a href="../changelogs/2026.01.15-c04fdfe10">c04fdfe10</a></td>
     </tr>
     <tr>
-        <td rowspan="2">2026.01.16</td>
-        <td>c508b9acd</td>
-        <td rowspan="2">pre-release</td>
-    </tr>
-    <tr>
-        <td><a href="../changelogs/2026.01.16-5d02071f7">5d02071f7</td>
+        <td>Update 1</td>
+        <td>2026.01.17</td>
+        <td><a href="../changelogs/2026.01.17-4b0f30090">4b0f30090</a></td>
+        <td>release</td>
     </tr>
 </table>
