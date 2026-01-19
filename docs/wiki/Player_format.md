@@ -1,8 +1,8 @@
-# player.json format
+# Player format
 
-**<player\>.json** files are used to store the state of individual players. These files are in [Json format](https://www.json.org/json-en.html).
+**players/<uuid\>.json** files are used to store the state of individual players. The players UUID is the name of the file. These files are in [JSON format](https://www.json.org/json-en.html).
 
-## Json Structure
+## JSON format
 
 <details markdown="1">
 <summary>Show</summary>

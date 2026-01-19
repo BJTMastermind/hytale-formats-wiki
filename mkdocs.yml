@@ -16,7 +16,9 @@ nav:
         - World formats:
             - Chunk format: wiki/Chunk_format.md
             - Level format: wiki/Level_format.md
-        - player.json format: wiki/Player.json_format.md
+            - Player format: wiki/Player_format.md
+            - Memories format: wiki/Memories_format.md
+            - World Config format: wiki/World_Config_format.md
         - Version history: wiki/Version_history.md
         - Development version history: wiki/Development_version_history.md
     - View on GitHub: https://github.com/bjtmastermind/hytale-formats-wiki
@@ -28,4 +30,5 @@ plugins:
 markdown_extensions:
     - attr_list
     - md_in_html
+    - admonition
     - pymdownx.superfences

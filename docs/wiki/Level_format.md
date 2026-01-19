@@ -1,6 +1,6 @@
 # Level format
 
-Each level is its own folder. A level folder itself (can be empty) is how the game identifies a level, along with other subfolders to store the maps and regions of the level.
+Each level is its own folder. A level folder is often identified by having a `universe` subfolder, along with other subfolders to store the maps and regions of the level.
 
 ## Directory structure
 
@@ -54,13 +54,17 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
                     {.addicon .file_system.file}
                     * Time.json
                     {.addicon .file_system.file}
-                * config.json
+                * config.json: See [World Config format](./World_Config_format.md).
                 {.addicon .file_system.file}
-        * memories.json
+        * memories.json: See [Memories format](./Memories_format.md).
+        {.addicon .file_system.file}
+        * warps.json:
         {.addicon .file_system.file}
     * bans.json
     {.addicon .file_system.file}
-    * config.json
+    * client_metadata.json:
+    {.addicon .file_system.file}
+    * config.json: See [Mods Config format](./Mods_Config_format.md).
     {.addicon .file_system.file}
     * permissions.json
     {.addicon .file_system.file}
@@ -81,6 +85,10 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
         <tr>
             <th>2026.01.13-dcad8778f</th>
             <td>To Be Determined</td>
+        </tr>
+        <tr>
+            <th>?</th>
+            <td>Added client_metadata.json file to track which patchline the world was created with.</td>
         </tr>
     </tbody>
 </table>
