@@ -14,7 +14,7 @@
         <link rel="prev" href="../Chunk_format/">
       
       
-        <link rel="next" href="../Player.json_format/">
+        <link rel="next" href="../Player_format/">
       
       
         
@@ -452,9 +452,29 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Player_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Player format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -467,14 +487,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Player.json_format/" class="md-nav__link">
+      <a href="../Memories_format/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    player.json format
+    Memories format
   
 
     
@@ -483,6 +503,42 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../World_Config_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    World Config format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -644,7 +700,7 @@
 
 
 <h1 id="level-format">Level format</h1>
-<p>Each level is its own folder. A level folder itself (can be empty) is how the game identifies a level, along with other subfolders to store the maps and regions of the level.</p>
+<p>Each level is its own folder. A level folder is often identified by having a <code>universe</code> subfolder, along with other subfolders to store the maps and regions of the level.</p>
 <h2 id="directory-structure">Directory structure</h2>
 <p>This is the directory structure of the <code>Hytale/Saves</code> folder, where the game saves the entire world data:</p>
 <div id="treeview">
@@ -667,7 +723,7 @@
 </li>
 <li class="addicon file_system.directory">universe<ul>
 <li class="addicon file_system.directory">players: Stores the individual states of the players that have played in this world.<ul>
-<li class="addicon file_system.file">&lt;uuid&gt;.json: A json file of the player. See <a href="../Player.json_format/">Player.json format</a>.</li>
+<li class="addicon file_system.file">&lt;uuid&gt;.json: A json file of the player. See <a href="./Player.json_format.md">Player.json format</a>.</li>
 </ul>
 </li>
 <li class="addicon file_system.directory">worlds<ul>
@@ -686,16 +742,18 @@
 <li class="addicon file_system.file">Time.json</li>
 </ul>
 </li>
-<li class="addicon file_system.file">config.json</li>
+<li class="addicon file_system.file">config.json: See <a href="../World_Config_format/">World Config format</a>.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="addicon file_system.file">memories.json</li>
+<li class="addicon file_system.file">memories.json: See <a href="../Memories_format/">Memories format</a>.</li>
+<li class="addicon file_system.file">warps.json:</li>
 </ul>
 </li>
 <li class="addicon file_system.file">bans.json</li>
-<li class="addicon file_system.file">config.json</li>
+<li class="addicon file_system.file">client_metadata.json:</li>
+<li class="addicon file_system.file">config.json: See <a href="../Mods_Config_format/">Mods Config format</a>.</li>
 <li class="addicon file_system.file">permissions.json</li>
 <li class="addicon file_system.image_file">preview.png</li>
 <li class="addicon file_system.file">whitelist.json</li>
@@ -712,6 +770,10 @@
         <tr>
             <th>2026.01.13-dcad8778f</th>
             <td>To Be Determined</td>
+        </tr>
+        <tr>
+            <th>?</th>
+            <td>Added client_metadata.json file to track which patchline the world was created with.</td>
         </tr>
     </tbody>
 </table>

@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Player.json_format/">
+        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Player_format/">
       
       
         <link rel="prev" href="../Level_format/">
       
       
-        <link rel="next" href="../Version_history/">
+        <link rel="next" href="../Memories_format/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>player.json format - Hytale Formats Wiki</title>
+        <title>Player format - Hytale Formats Wiki</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#playerjson-format" class="md-skip">
+        <a href="#player-format" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              player.json format
+              Player format
             
           </span>
         </div>
@@ -280,6 +280,8 @@
                 
   
   
+    
+  
   
   
     
@@ -289,13 +291,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -316,7 +316,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -383,14 +383,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
               
                 
   
@@ -414,7 +406,7 @@
   <span class="md-ellipsis">
     
   
-    player.json format
+    Player format
   
 
     
@@ -432,7 +424,7 @@
   <span class="md-ellipsis">
     
   
-    player.json format
+    Player format
   
 
     
@@ -458,10 +450,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#json-structure" class="md-nav__link">
+  <a href="#json-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Json Structure
+        JSON format
       
     </span>
   </a>
@@ -493,6 +485,70 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memories_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memories format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../World_Config_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    World Config format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -616,10 +672,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#json-structure" class="md-nav__link">
+  <a href="#json-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Json Structure
+        JSON format
       
     </span>
   </a>
@@ -665,9 +721,9 @@
 
 
 
-<h1 id="playerjson-format">player.json format</h1>
-<p><strong>&lt;player&gt;.json</strong> files are used to store the state of individual players. These files are in <a href="https://www.json.org/json-en.html">Json format</a>.</p>
-<h2 id="json-structure">Json Structure</h2>
+<h1 id="player-format">Player format</h1>
+<p><strong>players/&lt;uuid&gt;.json</strong> files are used to store the state of individual players. The players UUID is the name of the file. These files are in <a href="https://www.json.org/json-en.html">JSON format</a>.</p>
+<h2 id="json-format">JSON format</h2>
 <details>
 <summary>Show</summary>
 <div id="treeview">
