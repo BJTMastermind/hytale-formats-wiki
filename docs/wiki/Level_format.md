@@ -60,17 +60,17 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
         {.addicon .file_system.file}
         * warps.json:
         {.addicon .file_system.file}
-    * bans.json
+    * bans.json: See [Bans format](./Bans_format.md).
     {.addicon .file_system.file}
-    * client_metadata.json:
+    * client_metadata.json: See [Client Metadata format](./Client_Metadata_format.md).
     {.addicon .file_system.file}
     * config.json: See [Mods Config format](./Mods_Config_format.md).
     {.addicon .file_system.file}
-    * permissions.json
+    * permissions.json: See [Permission format](./Permissions_format.md).
     {.addicon .file_system.file}
     * preview.png
     {.addicon .file_system.image_file}
-    * whitelist.json
+    * whitelist.json: See [Whitelist format](./Whitelist_format.md).
     {.addicon .file_system.file}
 
 </div>
