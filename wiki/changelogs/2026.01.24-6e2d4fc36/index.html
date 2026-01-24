@@ -1,0 +1,940 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.24-6e2d4fc36/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Hytale 2026.01.24-6e2d4fc36 (Update 2) - Hytale Formats Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/treeview.css">
+    
+      <link rel="stylesheet" href="../../../css/table.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hytale-20260124-6e2d4fc36-update-2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hytale Formats Wiki" class="md-header__button md-logo" aria-label="Hytale Formats Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hytale Formats Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hytale 2026.01.24-6e2d4fc36 (Update 2)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hytale Formats Wiki" class="md-nav__button md-logo" aria-label="Hytale Formats Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hytale Formats Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pages
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pages
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    World formats
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    World formats
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chunk_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chunk format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Level_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Player_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Player format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Memories_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memories format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../World_Config_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    World Config format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Version_history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Version history
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Development_version_history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development version history
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/bjtmastermind/hytale-formats-wiki" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    View on GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cosmetics-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cosmetics &amp; Customization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gameplay-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gameplay &amp; Balance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#world-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        World Generation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#farming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI / UX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-visual-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio &amp; Visual Effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug-fixes-tech-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes, Tech &amp; Stability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="hytale-20260124-6e2d4fc36-update-2">Hytale 2026.01.24-6e2d4fc36 (Update 2)</h1>
+<p><strong>2026.01.24-6e2d4fc36</strong> is a major update for Hytale released on January 24th, 2026<a href="#1">[1]</a>, which adds new NPCs, adjusts crafting recipes, QoL fixes, and more!</p>
+<h2 id="cosmetics-customization">Cosmetics &amp; Customization</h2>
+<ul>
+<li>New Avatar customization options have been added for everyone.<ul>
+<li>Bandit Mask + Side Knot (Variant)</li>
+<li>Blindfold + Thick (Variant)</li>
+<li>Bandage Blindfold + Thick, Left Eye, Right Eye (Variants)</li>
+<li>Vampire Mouth</li>
+<li>Cute Mouth</li>
+<li>Orc Mouth</li>
+<li>Added white color to fantasy cotton cosmetic colors</li>
+</ul>
+</li>
+<li>Updated visuals for the following haircuts:<ul>
+<li>Single Side Pigtail</li>
+<li>Hair Stick Bun</li>
+<li>Simple Bobcut</li>
+<li>Fighter Buns</li>
+<li>Smart Elven</li>
+<li>Windswept</li>
+</ul>
+</li>
+<li>Added new armor slot visibility toggles next to equipped armor, accessible directly in the character panel.<ul>
+<li>Server hosts can disable/enable this feature to enforce rules for PvP/Immersion purposes.</li>
+</ul>
+</li>
+<li>Improved animations for capes when the player is running.</li>
+</ul>
+<h2 id="gameplay-balance">Gameplay &amp; Balance</h2>
+<ul>
+<li>A new item was added that allows the user to raise skeletal minions from nearby bone piles.</li>
+<li>Has a chance to drop from the large Praetorian Skeleton.</li>
+<li>Adamantite now requires a Thorium or Cobalt pickaxe to be mined.</li>
+<li>Mining and pickaxe progression has been adjusted.<ul>
+<li>Lower tier pickaxes now deal much less damage to higher tier ore blocks.</li>
+<li>Upgrading to a higher quality pickaxe significantly reduces the amount of hits required.</li>
+</ul>
+</li>
+<li>Buffed Polar Bears.</li>
+<li>More decorative light recipes have been added to the furniture bench.</li>
+<li>The following NPCs will now drop Medium Hide instead of Light Hide:<ul>
+<li>Bison</li>
+<li>Boar</li>
+<li>Cow</li>
+<li>Horse</li>
+<li>Warthog</li>
+</ul>
+</li>
+<li>The Magma Toad has been adjusted.<ul>
+<li>Tongue damage has been significantly reduced.</li>
+<li>It now alternates between its Tongue attack and a new ability: Headbutt</li>
+</ul>
+</li>
+<li>Petals are now craftable in the furniture bench under Textiles category.<ul>
+<li>This makes them renewable as Yellow Petals can be farmed from growing Sunflower Seeds.</li>
+<li>All crafting requirements used to make different colored Petals are renewable resources.</li>
+<li>Lighter variants for each Cloth Block can now be crafted using a combination of Petals.</li>
+</ul>
+</li>
+</ul>
+<h2 id="world-generation">World Generation</h2>
+<ul>
+<li>WorldGen V2 has been prepared for public documentation to help modders.</li>
+<li>New Default_Flat &amp; Default_Void templates have been added using World Gen V2.</li>
+<li>The Creative Hub Portal now spawns with World Gen V2 flat worldgen.<ul>
+<li>Results in clear weather and limited fog, but only works in new creative worlds.</li>
+</ul>
+</li>
+<li>Major refactor of ore placement in all zones. - You will need to explore new chunks for old worlds to see this change.<ul>
+<li>Results in more ores, especially in Devastated Lands undergrounds.</li>
+</ul>
+</li>
+</ul>
+<h2 id="farming">Farming</h2>
+<ul>
+<li>Eternal crops no longer break from accidental weapon damage.</li>
+<li>Increased tilled soil lifetime.<ul>
+<li>Now lasts longer between 1.2 to 1.5 days.</li>
+</ul>
+</li>
+<li>Fixed soil decay under fully grown crops.</li>
+<li>You can now hold torches in your offhand while using the Hoe and Seeds.</li>
+<li>Breaking fully grown Eternal crops will drop their Seeds back.</li>
+<li>Harvested crops can now be placed on the ground when crouching.</li>
+<li>Recipe requirement costs have been adjusted for Hoes.</li>
+<li>Hoes now unlock at different farming bench tiers.<ul>
+<li>Copper is now Tier 2 instead of Tier 4.</li>
+<li>Iron is now Tier 4 instead of Tier 8.</li>
+<li>Thorium has been added at Tier 6.</li>
+</ul>
+</li>
+</ul>
+<h2 id="ui-ux">UI / UX</h2>
+<ul>
+<li>Improved the editor block tooltip descriptions.</li>
+<li>Tooltips will now display the name of colors when hovering over color options in the Avatar Customization menu.</li>
+<li>Made improvements to the visibility of the hotbar active-slot by increasing contrast and adding a diamond indicator.<ul>
+<li>This makes it easier to see the hotbar active-slot, when in brighter environments like the Howling Sands.</li>
+</ul>
+</li>
+<li>The categories of Memories are now sorted alphabetically when being viewed via "The Heart Of Orbis".</li>
+<li>Scripted Brush QoL improvements.<ul>
+<li>Added missing entries to filters, and removed invalid blocks from filters.</li>
+<li>Fixed various bugs in existing scripted brushes.</li>
+<li>Added decoration and cave brushes.</li>
+<li>Removed redundant scripted brushes.</li>
+<li>Updated the JumpIfBlockType node to use a single offset instead of a list of offsets.</li>
+</ul>
+</li>
+<li>Inventory interaction updates.<ul>
+<li>Better double click handling, you can now click faster.</li>
+<li>Shift + Clicking on armor will now directly equip it if no armor is currently equipped in the respective slot.</li>
+<li>QERT shortcut keybinds have been added for the inventory "quick actions" (put all, pull all, quickstack and sort).</li>
+<li>Shortcuts now display in the tooltip when hovering over "quick action" buttons such as "Sort Items By Type (T)".</li>
+</ul>
+</li>
+<li>An "FPS counter overlay" option has been added to the settings menu.<ul>
+<li>This can be found under General &gt; User Interface.</li>
+<li>The current FPS will be displayed in the top right corner of the game when this is enabled.</li>
+<li>Made various improvements to player markers.</li>
+<li>Player markers now display on the compass.</li>
+<li>Removed "Player: " prefix from the player markers on the map.</li>
+<li>Player names will always render on the map.</li>
+<li>Added toggle buttons for map/compass visibility in the maps player list.</li>
+<li>Players at different heights will have a different icon (up/down indicators) in the compass.</li>
+</ul>
+</li>
+<li>Added Ophidiophobia accessibility mode.<ul>
+<li>This can be found under Gameplay &gt; Accessibility.</li>
+<li>Turns Snake models into Hatworms.</li>
+</ul>
+</li>
+</ul>
+<h2 id="audio-visual-effects">Audio &amp; Visual Effects</h2>
+<ul>
+<li>Added all missing basic Rex sounds.</li>
+<li>Updated the bones item drag/drop inventory sound.</li>
+<li>Fixed a bug in a Howling Sands cave track.</li>
+<li>Updated all food particle tints.</li>
+</ul>
+<h2 id="bug-fixes-tech-stability">Bug Fixes, Tech &amp; Stability</h2>
+<ul>
+<li>Introduced a server auto-update system, including configuration options and new commands for update management.<ul>
+<li>Added a new UpdateModule core plugin and integrated it into the server boot process, allowing the server to check for and apply updates, notify players, and handle staged updates.</li>
+<li>Introduced UpdateConfig in HytaleServerConfig with fields for enabling updates, check intervals, notification preferences, patchline selection, backup options, and auto-apply modes. Includes serialization support and getter/setter methods.</li>
+<li>Added a new shutdown reason ShutdownReason.UPDATE to indicate when the server should restart to apply a staged update.</li>
+<li>Added new /update commands and detailed server messages for checking, downloading, applying, and managing updates, including player notifications and auto-apply warnings.</li>
+<li>Updated the release workflow to include launcher scripts (start.sh, start.bat).</li>
+</ul>
+</li>
+<li>Made improvements to rendering shadows to fix various issues.</li>
+<li>Fixed middle click "pick block" when the hotbar is full in creative mode.<ul>
+<li>Now when middle clicking a block in creative mode when the inventory is full, it will replace the current slot with the newly picked item.</li>
+</ul>
+</li>
+<li>The Asset Editor will now display documentation in tooltips.</li>
+<li>Fixed issues with Mantling detection which resulted in many unintended behaviours.</li>
+<li>Implemented a fix to persist cleared keybinds across sessions.</li>
+<li>Made some adjustments to improve weather transitions to reduce jarring visuals.<ul>
+<li>More improvements will be made in future updates.</li>
+</ul>
+</li>
+<li>Fixed an issue when using teleporters to avoid accidental collisions by applying an offset.</li>
+<li>Rail carts now consume correctly and place properly.</li>
+<li>Bed respawning in unloaded chunks has been fixed.<ul>
+<li>Fixes an issue where the collision checks always failed if there were no loaded chunks.</li>
+</ul>
+</li>
+<li>Major server stability, validation, ECS, localization and timeout improvements.</li>
+<li>Refilling containers now targets the closest block of water rather than requiring you to aim at a block behind/under water.</li>
+<li>Fixed some types of items displaying oversized placement previews.</li>
+<li>Fixed an issue with the Berserker haircut texture tiling.</li>
+<li>Fixed glasses textures from inheriting the cosmetic colour on their lens highlights.</li>
+<li>Added permissions for world map teleporting.<ul>
+<li>Prevents players from sending packets to the server and teleporting anywhere they want without Op.</li>
+</ul>
+</li>
+<li>Emerald Wilds dungeon and other environments have been fixed. - You might hear new soundtracks!</li>
+<li>Fixed sending player marker updates while map isn't open.</li>
+<li>Fixed player markers flickering when hovered on the map.</li>
+<li>Other players names are more readable when zoomed in on the map.</li>
+</ul>
+<h2 id="references">References</h2>
+<ol>
+<li><a id="1"></a> <a href="https://hytale.com/news/2026/1/hytale-patch-notes-update-2">"Hytale Patch Notes - Update 2"</a> -- Hytale.com, January 24, 2026.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../js/add_icons.js"></script>
+      
+    
+  </body>
+</html>
