@@ -28,7 +28,7 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
     {.addicon .file_system.directory}
         * players: Stores the individual states of the players that have played in this world.
         {.addicon .file_system.directory}
-            * <uuid\>.json: A json file of the player. See [Player.json format](./Player.json_format.md).
+            * <uuid\>.json: A json file of the player. See [Player format](./Player_format.md).
             {.addicon .file_system.file}
         * worlds
         {.addicon .file_system.directory}
