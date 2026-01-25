@@ -15,7 +15,6 @@ nav:
     - Pages:
         - World formats:
             - Chunk format: wiki/Chunk_format.md
-            - Level format: wiki/Level_format.md
             - Player format: wiki/Player_format.md
             - World Config format: wiki/World_Config_format.md
         - Multiplayer formats:
@@ -28,6 +27,7 @@ nav:
             - Memories format: wiki/Memories_format.md
             - Mods Config format: wiki/Mods_Config_format.md
             - Warps format: wiki/Warps_format.md
+            - World structure: wiki/World_structure.md
         - Changelogs:
             - 2026.01.13-50e69c385: wiki/changelogs/2026.01.13-50e69c385.md
             - 2026.01.15-c04fdfe10: wiki/changelogs/2026.01.15-c04fdfe10.md

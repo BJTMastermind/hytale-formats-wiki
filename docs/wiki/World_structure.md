@@ -1,6 +1,6 @@
-# Level format
+# World structure
 
-Each level is its own folder. A level folder is often identified by having a `universe` subfolder, along with other subfolders to store the maps and regions of the level.
+Each world is its own folder. A world folder is often identified by having a `universe` subfolder, along with other subfolders to store mod configs and regions of the world.
 
 ## Directory structure
 
