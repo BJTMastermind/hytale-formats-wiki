@@ -23,9 +23,16 @@ nav:
             - Whitelist format: wiki/Whitelist_format.md
         - Other formats:
             - Barter Shop State format: wiki/Barter_Shop_State_format.md
+            - Block Counter format: wiki/Block_Counter_format.md
+            - Block Map Markers format: wiki/Block_Map_Markers_format.md
             - Client Metadata format: wiki/Client_Metadata_format.md
+            - Instance Data format: wiki/Instance_Data_format.md
             - Memories format: wiki/Memories_format.md
             - Mods Config format: wiki/Mods_Config_format.md
+            - Prefab Edit Session format: wiki/Prefab_Edit_Session_format.md
+            - Reputation Data format: wiki/Reputation_Data_format.md
+            - Spawn Suppression Controller format: wiki/Spawn_Suppression_Controller_format.md
+            - Time format: wiki/Time_format.md
             - Warps format: wiki/Warps_format.md
             - World structure: wiki/World_structure.md
         - Changelogs:
