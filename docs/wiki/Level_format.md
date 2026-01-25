@@ -18,11 +18,11 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
     {.addicon .file_system.directory}
         * <yyyy\>-<mm\>-<dd\>_<HH\>-<MM\>-<SS\>_server.log: A console log.
         {.addicon .file_system.file}
-    * mods: Stores the installed mods that are used with this world.
+    * mods: Stores the installed mods config files and other data that are used with this world.
     {.addicon .file_system.directory}
         * Hytale_Shop
         {.addicon .file_system.directory}
-            * barter_shop_state.json
+            * barter_shop_state.json: See [Barter Shop State format](./Barter_Shop_State_format.md).
             {.addicon .file_system.file}
     * universe
     {.addicon .file_system.directory}
@@ -58,7 +58,7 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
                 {.addicon .file_system.file}
         * memories.json: See [Memories format](./Memories_format.md).
         {.addicon .file_system.file}
-        * warps.json:
+        * warps.json: See [Warps format](./Warps_format.md).
         {.addicon .file_system.file}
     * bans.json: See [Bans format](./Bans_format.md).
     {.addicon .file_system.file}
