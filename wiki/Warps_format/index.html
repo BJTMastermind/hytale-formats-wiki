@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Level_format/">
+        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Warps_format/">
       
       
-        <link rel="prev" href="../Chunk_format/">
-      
-      
-        <link rel="next" href="../Player_format/">
       
       
         
@@ -25,7 +21,7 @@
     
     
       
-        <title>Level format - Hytale Formats Wiki</title>
+        <title>Warps format - Hytale Formats Wiki</title>
       
     
     
@@ -70,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#level-format" class="md-skip">
+        <a href="#warps-format" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Level format
+              Warps format
             
           </span>
         </div>
@@ -226,8 +222,6 @@
       
   
   
-    
-  
   
   
     
@@ -240,11 +234,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -265,7 +261,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -280,8 +276,6 @@
                 
   
   
-    
-  
   
   
     
@@ -291,11 +285,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -316,7 +312,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -359,37 +355,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Level format
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Level_format/" class="md-nav__link">
         
   
   
@@ -405,48 +374,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#directory-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Directory structure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        History
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -661,10 +588,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#directory-structure" class="md-nav__link">
+  <a href="#json-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Directory structure
+        JSON format
       
     </span>
   </a>
@@ -699,64 +626,26 @@
 
 
 
-<h1 id="level-format">Level format</h1>
-<p>Each level is its own folder. A level folder is often identified by having a <code>universe</code> subfolder, along with other subfolders to store the maps and regions of the level.</p>
-<h2 id="directory-structure">Directory structure</h2>
-<p>This is the directory structure of the <code>Hytale/Saves</code> folder, where the game saves the entire world data:</p>
+<h1 id="warps-format">Warps format</h1>
+<p>The <strong>warps.json</strong> file is used to track all warp locations.</p>
+<h2 id="json-format">JSON format</h2>
 <div id="treeview">
 <ul>
-<li class="addicon file_system.directory">: A world directory.<ul>
-<li class="addicon file_system.directory">backup: Contains backups of the contents of the universe folder automaticly created by the game while playing.<ul>
-<li class="addicon file_system.archive">&lt;yyyy&gt;-&lt;mm&gt;-&lt;dd&gt;_&lt;HH&gt;-&lt;MM&gt;-&lt;SS&gt;.zip: A backup file.</li>
-</ul>
-</li>
-<li class="addicon file_system.directory">logs: Contains copies of the games console log.<ul>
-<li class="addicon file_system.file">&lt;yyyy&gt;-&lt;mm&gt;-&lt;dd&gt;_&lt;HH&gt;-&lt;MM&gt;-&lt;SS&gt;_server.log: A console log.</li>
-</ul>
-</li>
-<li class="addicon file_system.directory">mods: Stores the installed mods config files and other data that are used with this world.<ul>
-<li class="addicon file_system.directory">Hytale_Shop<ul>
-<li class="addicon file_system.file">barter_shop_state.json: See <a href="../Barter_Shop_State_format/">Barter Shop State format</a>.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="addicon file_system.directory">universe<ul>
-<li class="addicon file_system.directory">players: Stores the individual states of the players that have played in this world.<ul>
-<li class="addicon file_system.file">&lt;uuid&gt;.json: A json file of the player. See <a href="./Player.json_format.md">Player.json format</a>.</li>
-</ul>
-</li>
-<li class="addicon file_system.directory">worlds<ul>
-<li class="addicon file_system.directory">default: The default world, normally Orbis.<ul>
-<li class="addicon file_system.directory">chunks: Stores region files of the world.<ul>
-<li class="addicon file_system.file">&lt;x&gt;.&lt;z&gt;.region.bin: A region file. See <a href="../Chunk_format/">Chunk format</a>.</li>
-</ul>
-</li>
-<li class="addicon file_system.directory">resources<ul>
-<li class="addicon file_system.file">BlockCounter.json</li>
-<li class="addicon file_system.file">BlockMapMarkers.json</li>
-<li class="addicon file_system.file">InstanceData.json</li>
-<li class="addicon file_system.file">PrefabEditSession.json</li>
-<li class="addicon file_system.file">ReputationData.json</li>
-<li class="addicon file_system.file">SpawnSuppressionController.json</li>
-<li class="addicon file_system.file">Time.json</li>
-</ul>
-</li>
-<li class="addicon file_system.file">config.json: See <a href="../World_Config_format/">World Config format</a>.</li>
+<li class="addicon json.object">: Root object.<ul>
+<li class="addicon json.array">Warps: Array of warp locations.<ul>
+<li class="addicon json.object">: A warp location.<ul>
+<li class="addicon json.string">Id: The name of this warp location.</li>
+<li class="addicon json.string">World: The world id that this warp location is in.</li>
+<li class="addicon json.string">Creator: The creator of this warp location. Currently always <code>*Teleporter</code>.</li>
+<li class="addicon json.string">CreationDate: The date and time this warp location was created.</li>
+<li class="addicon json.float">X: The X position the player warps to when traveling to this location.</li>
+<li class="addicon json.float">Y: The Y position the player warps to when traveling to this location.</li>
+<li class="addicon json.float">Z: The Z position the player warps to when traveling to this location.</li>
+<li class="addicon json.float">Yaw: The direction the player is looking when warped to this location.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="addicon file_system.file">memories.json: See <a href="../Memories_format/">Memories format</a>.</li>
-<li class="addicon file_system.file">warps.json: See <a href="../Warps_format/">Warps format</a>.</li>
-</ul>
-</li>
-<li class="addicon file_system.file">bans.json: See <a href="../Bans_format/">Bans format</a>.</li>
-<li class="addicon file_system.file">client_metadata.json: See <a href="../Client_Metadata_format/">Client Metadata format</a>.</li>
-<li class="addicon file_system.file">config.json: See <a href="../Mods_Config_format/">Mods Config format</a>.</li>
-<li class="addicon file_system.file">permissions.json: See <a href="../Permissions_format/">Permission format</a>.</li>
-<li class="addicon file_system.image_file">preview.png</li>
-<li class="addicon file_system.file">whitelist.json: See <a href="../Whitelist_format/">Whitelist format</a>.</li>
 </ul>
 </li>
 </ul>
@@ -769,11 +658,7 @@
         </tr>
         <tr>
             <th>2026.01.13-dcad8778f</th>
-            <td>To Be Determined</td>
-        </tr>
-        <tr>
-            <th>?</th>
-            <td>Added client_metadata.json file to track which patchline the world was created with.</td>
+            <td>The warp format is introduced.</td>
         </tr>
     </tbody>
 </table>
