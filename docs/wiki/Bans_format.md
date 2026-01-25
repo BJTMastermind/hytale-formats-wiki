@@ -29,7 +29,7 @@ The **bans.json** file is used to track the players that are banned from this wo
             <th colspan="8"><p>Early Access</p></th>
         </tr>
         <tr>
-            <th>2026.01.13-50e69c385</th>
+            <th>2026.01.13-dcad8778f</th>
             <td>The ban format is introduced.</td>
         </tr>
     </tbody>
