@@ -17,8 +17,22 @@ nav:
             - Chunk format: wiki/Chunk_format.md
             - Level format: wiki/Level_format.md
             - Player format: wiki/Player_format.md
-            - Memories format: wiki/Memories_format.md
             - World Config format: wiki/World_Config_format.md
+        - Multiplayer formats:
+            - Bans format: wiki/Bans_format.md
+            - Permissions format: wiki/Permissions_format.md
+            - Whitelist format: wiki/Whitelist_format.md
+        - Other formats:
+            - Barter Shop State format: wiki/Barter_Shop_State_format.md
+            - Client Metadata format: wiki/Client_Metadata_format.md
+            - Memories format: wiki/Memories_format.md
+            - Mods Config format: wiki/Mods_Config_format.md
+            - Warps format: wiki/Warps_format.md
+        - Changelogs:
+            - 2026.01.13-50e69c385: wiki/changelogs/2026.01.13-50e69c385.md
+            - 2026.01.15-c04fdfe10: wiki/changelogs/2026.01.15-c04fdfe10.md
+            - 2026.01.17-4b0f30090: wiki/changelogs/2026.01.17-4b0f30090.md
+            - 2026.01.24-6e2d4fc36: wiki/changelogs/2026.01.24-6e2d4fc36.md
         - Version history: wiki/Version_history.md
         - Development version history: wiki/Development_version_history.md
     - View on GitHub: https://github.com/bjtmastermind/hytale-formats-wiki
