@@ -1,21 +1,19 @@
+!!! info
+    This page is a work in progress
+
 # Chunk format
 
 Chunks store the terrain and entities within a 32×320×32 area in the world. They also store precomputed lighting, heightmap data for Hytale's performance, and other meta information.
 
-## Binary Structure
+## ??? structure
 
-<div markdown="1" id="table">
-| Name | Size (in bytes) | Description |
-|------|-----------------|-------------|
-| Magic | 20 | Identifies the Hytale region. Always `HytaleIndexedStorage` |
-| Version | 4 | The version of the format used to save this region. Currently always 1. |
-| Blob Count | 4 | Currently always 1024. |
-| Segment Size | 4 | Currently always 4096. |
-| Blob Index Array | `Blob Count` * 4 | The blob index int array. |
-</div>
+*See also: [Region file format](./Region_file_format.md)*
 
-(To be continued)
+Chunks are stored as ? in regional Hytale Region files, which are named in the form `x.z.region.bin`. They are stored in ??? format, with the following structure:
 
+Work in progress.
+
+<!--
 ## Block format
 
 Block positions are ordered YZX for compression purposes.
@@ -37,6 +35,7 @@ You can calculate the index for a chunk section one of the following ways:
 
 (Advanced index. loops over when out of bounds)<br>
 `index = (y & 31) << 10 | (z & 31) << 5 | x & 31`
+-->
 
 ## History
 

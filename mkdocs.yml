@@ -16,6 +16,7 @@ nav:
         - World formats:
             - Chunk format: wiki/Chunk_format.md
             - Player format: wiki/Player_format.md
+            - Region file format: wiki/Region_file_format.md
             - World Config format: wiki/World_Config_format.md
         - Multiplayer formats:
             - Bans format: wiki/Bans_format.md
