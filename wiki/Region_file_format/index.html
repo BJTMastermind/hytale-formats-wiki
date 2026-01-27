@@ -538,6 +538,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credits
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1525,6 +1536,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credits
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1543,11 +1565,11 @@
 
 
 <h1 id="region-file-format">Region file format</h1>
-<p>The <strong>Region file format</strong> is the binary file format for storing Hytale chunks. Each file stores a group of 32×32 chunks called a <strong>region</strong>.<a href="#a">[a]</a> The file begins with a magic number of <code>HytaleIndexedStorage</code>.</p>
+<p>The <strong>Region file format</strong> is the <a href="https://en.wikipedia.org/wiki/Binary_file">binary file format</a> for storing Hytale chunks. Each file stores a group of 32×32 chunks called a <strong>region</strong>.<a href="#a">[a]</a> The file begins with a <a href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic number</a> of <code>HytaleIndexedStorage</code>.</p>
 <h2 id="location">Location</h2>
 <p>Region files have names in the form <code>x.z.region.bin</code>, where x and z are the region's coordinates.</p>
-<p>The coordinates of a region file in which any given chunk resides in, can be acquired through taking the floor of dividing the chunk coordinates by 16. For example, a chunk at (30, -3) would be in the region (0, -1), and one at (1500, -600) would be at (46, -19). Within the file, chunks are stored starting from (x=0,z=0), in "rows" of X. (I.e. (0,0) to (31,0), followed by (0,1) to (31,1), et cetera)</p>
-<p>Alternatively, the same can be achieved through performing an arithmetic shift 5 bits to the right. It is important that an arithmetic shift occurs, rather than a logical shift.</p>
+<p>The coordinates of a region file in which any given chunk resides in, can be acquired through taking the floor of dividing the chunk coordinates by 32. For example, a chunk at (30, -3) would be in the region (0, -1), and one at (1500, -600) would be at (46, -19). Within the file, chunks are stored starting from (x=0,z=0), in "rows" of X. (I.e. (0,0) to (31,0), followed by (0,1) to (31,1), et cetera)</p>
+<p>Alternatively, the same can be achieved through performing an <a href="https://en.wikipedia.org/wiki/Arithmetic_shift">arithmetic shift</a> 5 bits to the right. It is important that an arithmetic shift occurs, rather than a <a href="https://en.wikipedia.org/wiki/Logical_shift">logical shift</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// float division</span>
 <span class="n">Int32</span><span class="w"> </span><span class="n">regionX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Int32</span><span class="p">)</span><span class="n">floor</span><span class="p">(</span><span class="n">chunkX</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32.0f</span><span class="p">);</span>
 <span class="n">Int32</span><span class="w"> </span><span class="n">regionZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Int32</span><span class="p">)</span><span class="n">floor</span><span class="p">(</span><span class="n">chunkZ</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32.0f</span><span class="p">);</span>
@@ -1556,7 +1578,7 @@
 <span class="n">Int32</span><span class="w"> </span><span class="n">regionX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chunkX</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <span class="n">Int32</span><span class="w"> </span><span class="n">regionZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chunkZ</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
-<p>Reciprocally, the starting block coordinate of a region can be calculated by multiplying the x and z region values (as defined by the region file's name) by 512. Likewise, each chunk's starting block coordinate can be calculated by performing either modulo or floor/integer division to the chunk's index in the header table (0 through 1023) and adding the result to the region's x and z values:</p>
+<p>Reciprocally, the starting block coordinate of a region can be calculated by multiplying the x and z region values (as defined by the region file's name) by 1024. Likewise, each chunk's starting block coordinate can be calculated by performing either modulo or floor/integer division to the chunk's index in the header table (0 through 1023) and adding the result to the region's x and z values:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// get starting block in region x, z</span>
 <span class="n">Int32</span><span class="w"> </span><span class="n">regionX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">blockX</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span>
 <span class="n">Int32</span><span class="w"> </span><span class="n">regionZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">blockZ</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span>
@@ -1565,7 +1587,7 @@
 <span class="n">Int32</span><span class="w"> </span><span class="n">chunkX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">regionX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="n">headerIndex</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">32</span><span class="p">);</span>
 <span class="n">Int32</span><span class="w"> </span><span class="n">chunkZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">regionZ</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="n">headerIndex</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">32</span><span class="p">);</span>
 </code></pre></div>
-<p>Converting from chunk coordinates of a region back to the header index, is done via the following formula. Where one example utilises bitwise AND. This is potentially more efficient, but depending on the language the first example is optimised into the other variant at the assembly level. To acquire the starting byte of the big-endian 32 bit integer, multiply the result of the computation below by 4. (32 / 8 = 4) Finding the related timestamp can be done by adding 0x400 (32^2 or 1024) to the index value.</p>
+<p>Converting from chunk coordinates of a region back to the header index, is done via the following formula. Where one example utilises <a href="https://en.wikipedia.org/wiki/Bitwise_and">bitwise AND</a>. This is potentially more efficient, but depending on the language the first example is optimised into the other variant at the assembly level. To acquire the starting byte of the <a href="https://en.wikipedia.org/wiki/Endianness">big-endian</a> 32 bit integer, multiply the result of the computation below by 4 (32 / 8 = 4).</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// acquire header table index</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">headerIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span>
 
@@ -1613,11 +1635,11 @@
 </table>
 </div>
 <h4 id="chunk-location">Chunk location</h4>
-<p>Location information for a chunk consists of a four byte integer offset pointing to the beging of the chunks data blob. Chunks are always less then 1MiB in size. If a chunk isn't present in the region file (e.g. because it hasn't been generated yet), its index will be zero.</p>
-<p>A chunk with an offset of 2, therefore pointing to 2 * 4096 + 32.</p>
+<p>Location information for a chunk consists of a four byte integer offset pointing to the beginning of the chunks data blob. Chunks are always less then 1MiB in size. If a chunk isn't present in the region file (e.g. because it hasn't been generated yet), its index will be zero.</p>
+<p>A chunk with an offset of 2, therefore pointing to (2 * 4096) + 32.</p>
 <h3 id="payload">Payload</h3>
 <p>Chunk data begins with a (big-endian) four-byte signed decompressed length, followed by a (big-endian) four-byte signed compressed length that indicates the exact length of the remaining chunk data in bytes.</p>
-<p><em>Hytale</em> always pads the chunk's data to be a multiple-of-4096B in length. <em>Hytale</em> does not accept files in which the chunks are not padded. Note that this padding is not included in the length field.</p>
+<p><em>Hytale</em> always pads the chunk's data to be a multiple-of-4096B in length. <em>Hytale</em> does not accept files in which the chunks are not padded. Note that this padding is not included in the length integers.</p>
 <div id="table">
 <table>
 <thead>
@@ -1656,6 +1678,10 @@
 <h2 id="notes">Notes</h2>
 <ol>
 <li><a id="a"></a> A total of 1024 chunks can be stored in the format, covering an area of 1024x1024 blocks.</li>
+</ol>
+<h2 id="credits">Credits</h2>
+<ol>
+<li>This page used the <a href="https://minecraft.wiki/w/Region_file_format">Minecraft wiki's Region file format</a> page as a base, with changes made to match <em>Hytale's</em> Region file format given how similar they are to each other.</li>
 </ol>
 
 
