@@ -5,13 +5,175 @@
 
 Chunks store the terrain and entities within a 32×320×32 area in the world. They also store precomputed lighting, heightmap data for Hytale's performance, and other meta information.
 
-## ??? structure
+## BSON structure
+
+!!! info
+    This section is a work in progress. Some BSON type labels may be incorrect and some BSON object contents are missing due to being empty in my test files. Descriptions will be filled in last.
 
 *See also: [Region file format](./Region_file_format.md)*
 
-Chunks are stored as ? in regional Hytale Region files, which are named in the form `x.z.region.bin`. They are stored in ??? format, with the following structure:
+Chunks are stored as objects in regional Hytale Region files, which are named in the form `x.z.region.bin`. They are stored in [BSON format](https://en.wikipedia.org/wiki/BSON), with the following structure:
 
-Work in progress.
+<div markdown="1" id="treeview">
+* BSON_Object: Root object.
+    * BSON_Object("Components"):
+        * BSON_Object("BlockComponentChunk"):
+            * BSON_Object("BlockComponents"):
+                * BSON_Object:("*<5_digit_number\>*"):
+                    * BSON_Object("Components"):
+                        * BSON_Object("*blockId*"):
+                            * BSON_Int("version"):
+                            * BSON_*<Type\>*("*Components for blockId*"):
+        * BSON_Object("ChunkColumn"):
+            * BSON_Array("Sections"):
+                * BSON_Object: A section object.
+                    * BSON_Object("Components"):
+                        * BSON_Object("ChunkSection"):
+                        * BSON_Object("BlockPhysics"):
+                        * BSON_Object("Fluid"):
+                        * BSON_Object("Block"):
+        * BSON_Object("WorldChunk"):
+        * BSON_Object("BlockHealthChunk"):
+            * BSON_String("Data"):
+            * BSON_Date("LastRepairGameTime"):
+        * BSON_Object("ChunkSpawnedNPCData"):
+            * BSON_Object("EnvironmentSpawnCounts"):
+        * BSON_Object("EnvironmentChunk"):
+            * BSON_String("Data"):
+        * BSON_Object("BlockChunk"):
+            * BSON_Int("Version"):
+            * BSON_String("Data"):
+        * BSON_Object("EntityChunk"):
+            * BSON_Array("Entities"):
+                * BSON_Object: An entity.
+                    * BSON_Object("Components"):
+                        * BSON_Object("EffectController"):
+                        * BSON_Object("DisplayName"):
+                            * BSON_Object("DisplayName"):
+                                * BSON_String("MessageId"):
+                                * BSON_Bool("Bold"):
+                                * BSON_Bool("Italic"):
+                                * BSON_Bool("Monospace"):
+                                * BSON_Bool("Underline"):
+                        * BSON_Object("UIComponentList"):
+                        * BSON_Object("Transform"):
+                            * BSON_Object("Position"):
+                                * BSON_Double("X"):
+                                * BSON_Double("Y"):
+                                * BSON_Double("Z"):
+                            * BSON_Object("Rotation"):
+                                * BSON_Double("Pitch"):
+                                * BSON_Double("Yaw"):
+                                * BSON_Double("Roll"):
+                        * BSON_Object("Velocity"):
+                            * BSON_Object("Velocity"):
+                                * BSON_Double("X"):
+                                * BSON_Double("Y"):
+                                * BSON_Double("Z"):
+                        * BSON_Object("PrefabCopyable"):
+                        * BSON_Object("Interactions"):
+                            * BSON_Object("Interactions"):
+                                * BSON_String("Use"):
+                        * BSON_Object("Model"):
+                            * BSON_Object("Model"):
+                                * BSON_String("Id"):
+                                * BSON_Int("Scale"):
+                                * BSON_Bool("Static"):
+                        * BSON_Object("UUID"):
+                            * BSON_UUID("UUID"):
+                        * BSON_Object("EntityStats"):
+                            * BSON_Int("Version"):
+                            * BSON_Object("*<Stat\>*"):
+                                * BSON_String("Id"):
+                                * BSON_Int("Value"):
+                        * BSON_Object("NPC"):
+                            * BSON_Int("Version"):
+                            * BSON_UUID("UUID"):
+                            * BSON_Object("Inventory"):
+                                * BSON_Int("Version"):
+                                * BSON_Object("Storage"):
+                                    * BSON_String("Id"):
+                                    * BSON_Int("Capacity"):
+                                    * BSON_Object("Items"):
+                                        * BSON_Object("*<index\>*"):
+                                            * BSON_String("Id"):
+                                            * BSON_Int("Quantity"):
+                                            * BSON_Int("Durability"):
+                                            * BSON_Int("MaxDurability"):
+                                            * BSON_Bool("OverrideDroppedItemAnimation"):
+                                * BSON_Object("Armor"):
+                                    * BSON_String("Id"):
+                                    * BSON_Int("Capacity"):
+                                    * BSON_Object("Items"):
+                                        * BSON_Object("*<index\>*"):
+                                            * BSON_String("Id"):
+                                            * BSON_Int("Quantity"):
+                                            * BSON_Int("Durability"):
+                                            * BSON_Int("MaxDurability"):
+                                            * BSON_Bool("OverrideDroppedItemAnimation"):
+                                * BSON_Object("HotBar"):
+                                    * BSON_String("Id"):
+                                    * BSON_Int("Capacity"):
+                                    * BSON_Object("Items"):
+                                        * BSON_Object("*<index\>*"):
+                                            * BSON_String("Id"):
+                                            * BSON_Int("Quantity"):
+                                            * BSON_Int("Durability"):
+                                            * BSON_Int("MaxDurability"):
+                                            * BSON_Bool("OverrideDroppedItemAnimation"):
+                                * BSON_Object("Utility"):
+                                    * BSON_String("Id"):
+                                    * BSON_Int("Capacity"):
+                                    * BSON_Object("Items"):
+                                        * BSON_Object("*<index\>*"):
+                                            * BSON_String("Id"):
+                                            * BSON_Int("Quantity"):
+                                            * BSON_Int("Durability"):
+                                            * BSON_Int("MaxDurability"):
+                                            * BSON_Bool("OverrideDroppedItemAnimation"):
+                                * BSON_Object("Backpack"):
+                                    * BSON_String("Id"):
+                                    * BSON_Int("Capacity"):
+                                    * BSON_Object("Items"):
+                                        * BSON_Object("*<index\>*"):
+                                            * BSON_String("Id"):
+                                            * BSON_Int("Quantity"):
+                                            * BSON_Int("Durability"):
+                                            * BSON_Int("MaxDurability"):
+                                            * BSON_Bool("OverrideDroppedItemAnimation"):
+                                * BSON_Int("ActiveHotbarSlot"):
+                                * BSON_Object("Tool"):
+                                    * BSON_String("Id"):
+                                    * BSON_Int("Capacity"):
+                                    * BSON_Object("Items"):
+                                        * BSON_Object("*<index\>*"):
+                                            * BSON_String("Id"):
+                                            * BSON_Int("Quantity"):
+                                            * BSON_Int("Durability"):
+                                            * BSON_Int("MaxDurability"):
+                                            * BSON_Bool("OverrideDroppedItemAnimation"):
+                                * BSON_Int("ActiveToolsSlot"):
+                                * BSON_Int("ActiveUtilitySlot"):
+                                * BSON_String("SortType"):
+                            * BSON_Int("HvrPhs"):
+                            * BSON_Int("HvrHght"):
+                            * BSON_Int("MdlScl"):
+                            * BSON_Date("SpawnInstant"):
+                            * BSON_Int("WorldgenId"):
+                            * BSON_Object("PathManager"):
+                            * BSON_Object("LeashPos"):
+                                * BSON_Double("X"):
+                                * BSON_Double("Y"):
+                                * BSON_Double("Z"):
+                            * BSON_Double("LeashHdg"):
+                            * BSON_Double("LeashPtch"):
+                            * BSON_String("RoleName"):
+                        * BSON_Object("HeadRotation"):
+                            * BSON_Object("Rotation"):
+                                * BSON_Double("Pitch"):
+                                * BSON_Double("Yaw"):
+                                * BSON_Double("Roll"):
+</div>
 
 <!--
 ## Block format

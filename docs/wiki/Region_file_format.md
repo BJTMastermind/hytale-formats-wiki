@@ -81,7 +81,7 @@ Chunk data begins with a (big-endian) four-byte signed decompressed length, foll
 
 The compression schema used by *Hytale* is [Zstd](https://en.wikipedia.org/wiki/Zstd).
 
-The uncompressed data is in ___ format and follows the information detailed on the [chunk format](./Chunk_format.md) article.
+The uncompressed data is in [BSON format](https://en.wikipedia.org/wiki/BSON) and follows the information detailed on the [chunk format](./Chunk_format.md) article.
 
 ## History
 
