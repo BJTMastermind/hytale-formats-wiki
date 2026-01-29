@@ -23,7 +23,7 @@ Early Access was the initial development phase of *Hytale* released to the publi
         <td>5d02071f7</td>
     </tr>
     <tr>
-        <td rowspan="5">Update 2</td>
+        <td rowspan="6">Update 2</td>
         <td>2026.01.17</td>
         <td>a4cc0e7dd</td>
     </tr>
@@ -41,5 +41,9 @@ Early Access was the initial development phase of *Hytale* released to the publi
     <tr>
         <td>2026.01.27</td>
         <td>734d39026</td>
+    </tr>
+    <tr>
+        <td>2026.01.28</td>
+        <td>87d03be09</td>
     </tr>
 </table>
