@@ -8,13 +8,14 @@ Chunks store the terrain and entities within a 32×320×32 area in the world. Th
 ## BSON structure
 
 !!! info
-    This section is a work in progress. Some BSON type labels may be incorrect and some BSON document contents are missing due to being empty in my test files. Descriptions will be filled in last.
+    This section is a work in progress. Some BSON document contents are missing due to being empty in my test files. Descriptions will be filled in last.
 
 *See also: [Region file format](./Region_file_format.md)*
 
 Chunks are stored as types in regional Hytale Region files, which are named in the form `x.z.region.bin`. They are stored in [BSON format](https://en.wikipedia.org/wiki/BSON), with the following structure:
 
 <div markdown="1" id="treeview">
+
 * BSON_Document("Components"): Root document.
     * BSON_Document("BlockComponentChunk"):
         * BSON_Document("BlockComponents"):
@@ -30,21 +31,21 @@ Chunks are stored as types in regional Hytale Region files, which are named in t
                     * BSON_Document("BlockPhysics"):
                         * BSON_Binary<Generic\>("Data"):
                     * BSON_Document("Fluid"):
-                        * BSON_Binary<Generic\>("Data"):
+                        * BSON_Binary<Generic\>("Data"): See [Fluid format](./Chunk_format/Fluid_format.md).
                     * BSON_Document("Block"):
-                        * BSON_Int32("Version"):
-                        * BSON_Binary<Generic\>("Data"):
+                        * BSON_Int32("Version"): Referenced by some parts of the Block format.
+                        * BSON_Binary<Generic\>("Data"): See [Block format](./Chunk_format/Block_format.md).
     * BSON_Document("WorldChunk"):
     * BSON_Document("BlockHealthChunk"):
-        * BSON_Binary<Generic\>("Data"):
+        * BSON_Binary<Generic\>("Data"): See [BlockHealthChunk format](./Chunk_format/BlockHealthChunk_format.md).
         * BSON_String("LastRepairGameTime"):
     * BSON_Document("ChunkSpawnedNPCData"):
         * BSON_Document("EnvironmentSpawnCounts"):
     * BSON_Document("EnvironmentChunk"):
         * BSON_Binary<Generic\>("Data"):
     * BSON_Document("BlockChunk"):
-        * BSON_Int32("Version"):
-        * BSON_Binary<Generic\>("Data"):
+        * BSON_Int32("Version"): Referenced by some parts of the BlockChunk format.
+        * BSON_Binary<Generic\>("Data"): See [BlockChunk format](./Chunk_format/BlockChunk_format.md).
     * BSON_Document("EntityChunk"):
         * BSON_Array("Entities"):
             * BSON_Document: An entity.
@@ -175,31 +176,8 @@ Chunks are stored as types in regional Hytale Region files, which are named in t
                             * BSON_Double("Pitch"):
                             * BSON_Double("Yaw"):
                             * BSON_Double("Roll"):
+
 </div>
-
-<!--
-## Block format
-
-Block positions are ordered YZX for compression purposes.
-
-The coordinate system is as follows:
-
-* **X** increases East, decreases West
-* **Y** increases upward, decreases downward
-* **Z** increases South, decreases North
-
-This means indices are ordered like in a book, with its top to the North, read from beneath and with words written backward: each letter is a different X-index, each line a Z-index, and each page a Y-index. In case of a flat 2D array, the Y-index is omitted, and the array reads like a single page.
-
-Each section is a 32×32×32-block area, with up to 10 sections in a chunk : from 0 at the bottom, to 31 on top. Empty sections are not saved.
-
-You can calculate the index for a chunk section one of the following ways:
-
-(Simple index)<br>
-`index = (y * 32 + z) * 32 + x`
-
-(Advanced index. loops over when out of bounds)<br>
-`index = (y & 31) << 10 | (z & 31) << 5 | x & 31`
--->
 
 ## History
 
