@@ -8,28 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/">
+        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/BlockChunk_format/">
       
       
-        <link rel="prev" href="../..">
-      
-      
-        <link rel="next" href="../Player_format/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Chunk format - Hytale Formats Wiki</title>
+        <title>BlockChunk format - Hytale Formats Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -48,11 +44,11 @@
       
     
     
-      <link rel="stylesheet" href="../../css/treeview.css">
+      <link rel="stylesheet" href="../../../css/treeview.css">
     
-      <link rel="stylesheet" href="../../css/table.css">
+      <link rel="stylesheet" href="../../../css/table.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chunk-format" class="md-skip">
+        <a href="#blockchunk-format" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Hytale Formats Wiki" class="md-header__button md-logo" aria-label="Hytale Formats Wiki" data-md-component="logo">
+    <a href="../../.." title="Hytale Formats Wiki" class="md-header__button md-logo" aria-label="Hytale Formats Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chunk format
+              BlockChunk format
             
           </span>
         </div>
@@ -184,7 +180,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Hytale Formats Wiki" class="md-nav__button md-logo" aria-label="Hytale Formats Wiki" data-md-component="logo">
+    <a href="../../.." title="Hytale Formats Wiki" class="md-nav__button md-logo" aria-label="Hytale Formats Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -202,7 +198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -226,8 +222,6 @@
       
   
   
-    
-  
   
   
     
@@ -240,11 +234,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -265,7 +261,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -280,8 +276,6 @@
                 
   
   
-    
-  
   
   
     
@@ -291,11 +285,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -316,7 +312,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -331,37 +327,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Chunk format
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -377,48 +346,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#bson-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        BSON structure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        History
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -431,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Player_format/" class="md-nav__link">
+      <a href="../../Player_format/" class="md-nav__link">
         
   
   
@@ -459,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Region_file_format/" class="md-nav__link">
+      <a href="../../Region_file_format/" class="md-nav__link">
         
   
   
@@ -487,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../World_Config_format/" class="md-nav__link">
+      <a href="../../World_Config_format/" class="md-nav__link">
         
   
   
@@ -574,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Bans_format/" class="md-nav__link">
+      <a href="../../Bans_format/" class="md-nav__link">
         
   
   
@@ -602,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Permissions_format/" class="md-nav__link">
+      <a href="../../Permissions_format/" class="md-nav__link">
         
   
   
@@ -630,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Whitelist_format/" class="md-nav__link">
+      <a href="../../Whitelist_format/" class="md-nav__link">
         
   
   
@@ -717,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Barter_Shop_State_format/" class="md-nav__link">
+      <a href="../../Barter_Shop_State_format/" class="md-nav__link">
         
   
   
@@ -745,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Block_Counter_format/" class="md-nav__link">
+      <a href="../../Block_Counter_format/" class="md-nav__link">
         
   
   
@@ -773,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Block_Map_Markers_format/" class="md-nav__link">
+      <a href="../../Block_Map_Markers_format/" class="md-nav__link">
         
   
   
@@ -801,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Client_Metadata_format/" class="md-nav__link">
+      <a href="../../Client_Metadata_format/" class="md-nav__link">
         
   
   
@@ -829,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Instance_Data_format/" class="md-nav__link">
+      <a href="../../Instance_Data_format/" class="md-nav__link">
         
   
   
@@ -857,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Memories_format/" class="md-nav__link">
+      <a href="../../Memories_format/" class="md-nav__link">
         
   
   
@@ -885,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mods_Config_format/" class="md-nav__link">
+      <a href="../../Mods_Config_format/" class="md-nav__link">
         
   
   
@@ -913,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Prefab_Edit_Session_format/" class="md-nav__link">
+      <a href="../../Prefab_Edit_Session_format/" class="md-nav__link">
         
   
   
@@ -941,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Reputation_Data_format/" class="md-nav__link">
+      <a href="../../Reputation_Data_format/" class="md-nav__link">
         
   
   
@@ -969,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Spawn_Suppression_Controller_format/" class="md-nav__link">
+      <a href="../../Spawn_Suppression_Controller_format/" class="md-nav__link">
         
   
   
@@ -997,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Time_format/" class="md-nav__link">
+      <a href="../../Time_format/" class="md-nav__link">
         
   
   
@@ -1025,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Warps_format/" class="md-nav__link">
+      <a href="../../Warps_format/" class="md-nav__link">
         
   
   
@@ -1053,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../World_structure/" class="md-nav__link">
+      <a href="../../World_structure/" class="md-nav__link">
         
   
   
@@ -1140,7 +1067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelogs/2026.01.13-50e69c385/" class="md-nav__link">
+      <a href="../../changelogs/2026.01.13-50e69c385/" class="md-nav__link">
         
   
   
@@ -1168,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelogs/2026.01.15-c04fdfe10/" class="md-nav__link">
+      <a href="../../changelogs/2026.01.15-c04fdfe10/" class="md-nav__link">
         
   
   
@@ -1196,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelogs/2026.01.17-4b0f30090/" class="md-nav__link">
+      <a href="../../changelogs/2026.01.17-4b0f30090/" class="md-nav__link">
         
   
   
@@ -1224,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelogs/2026.01.24-6e2d4fc36/" class="md-nav__link">
+      <a href="../../changelogs/2026.01.24-6e2d4fc36/" class="md-nav__link">
         
   
   
@@ -1252,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelogs/2026.01.27-734d39026/" class="md-nav__link">
+      <a href="../../changelogs/2026.01.27-734d39026/" class="md-nav__link">
         
   
   
@@ -1288,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Version_history/" class="md-nav__link">
+      <a href="../../Version_history/" class="md-nav__link">
         
   
   
@@ -1316,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Development_version_history/" class="md-nav__link">
+      <a href="../../Development_version_history/" class="md-nav__link">
         
   
   
@@ -1398,21 +1325,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bson-structure" class="md-nav__link">
+  <a href="#binary-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        BSON structure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        History
+        Binary structure
       
     </span>
   </a>
@@ -1436,314 +1352,77 @@
 
 
 
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This page is a work in progress</p>
-</div>
-<h1 id="chunk-format">Chunk format</h1>
-<p>Chunks store the terrain and entities within a 32×320×32 area in the world. They also store precomputed lighting, heightmap data for Hytale's performance, and other meta information.</p>
-<h2 id="bson-structure">BSON structure</h2>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This section is a work in progress. Some BSON document contents are missing due to being empty in my test files. Descriptions will be filled in last.</p>
-</div>
-<p><em>See also: <a href="../Region_file_format/">Region file format</a></em></p>
-<p>Chunks are stored as types in regional Hytale Region files, which are named in the form <code>x.z.region.bin</code>. They are stored in <a href="https://en.wikipedia.org/wiki/BSON">BSON format</a>, with the following structure:</p>
-<div id="treeview">
-<ul>
-<li>BSON_Document("Components"): Root document.<ul>
-<li>BSON_Document("BlockComponentChunk"):<ul>
-<li>BSON_Document("BlockComponents"):<ul>
-<li>BSON_Document("<em>&lt;5_digit_number&gt;</em>"):<ul>
-<li>BSON_Document("Components"):<ul>
-<li>BSON_Document("<em>blockId</em>"):<ul>
-<li>BSON_<em>&lt;Type&gt;</em>("<em>Components for blockId</em>"):</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("ChunkColumn"):<ul>
-<li>BSON_Array("Sections"):<ul>
-<li>BSON_Document: A section document.<ul>
-<li>BSON_Document("Components"):<ul>
-<li>BSON_Document("ChunkSection"):</li>
-<li>BSON_Document("BlockPhysics"):<ul>
-<li>BSON_Binary&lt;Generic&gt;("Data"):</li>
-</ul>
-</li>
-<li>BSON_Document("Fluid"):<ul>
-<li>BSON_Binary&lt;Generic&gt;("Data"): See <a href="Fluid_format/">Fluid format</a>.</li>
-</ul>
-</li>
-<li>BSON_Document("Block"):<ul>
-<li>BSON_Int32("Version"): Referenced by some parts of the Block format.</li>
-<li>BSON_Binary&lt;Generic&gt;("Data"): See <a href="Block_format/">Block format</a>.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("WorldChunk"):</li>
-<li>BSON_Document("BlockHealthChunk"):<ul>
-<li>BSON_Binary&lt;Generic&gt;("Data"): See <a href="BlockHealthChunk_format/">BlockHealthChunk format</a>.</li>
-<li>BSON_String("LastRepairGameTime"):</li>
-</ul>
-</li>
-<li>BSON_Document("ChunkSpawnedNPCData"):<ul>
-<li>BSON_Document("EnvironmentSpawnCounts"):</li>
-</ul>
-</li>
-<li>BSON_Document("EnvironmentChunk"):<ul>
-<li>BSON_Binary&lt;Generic&gt;("Data"):</li>
-</ul>
-</li>
-<li>BSON_Document("BlockChunk"):<ul>
-<li>BSON_Int32("Version"): Referenced by some parts of the BlockChunk format.</li>
-<li>BSON_Binary&lt;Generic&gt;("Data"): See <a href="BlockChunk_format/">BlockChunk format</a>.</li>
-</ul>
-</li>
-<li>BSON_Document("EntityChunk"):<ul>
-<li>BSON_Array("Entities"):<ul>
-<li>BSON_Document: An entity.<ul>
-<li>BSON_Document("Components"):<ul>
-<li>BSON_Document("EffectController"):</li>
-<li>BSON_Document("DisplayName"):<ul>
-<li>BSON_Document("DisplayName"):<ul>
-<li>BSON_String("MessageId"):</li>
-<li>BSON_Boolean("Bold"):</li>
-<li>BSON_Boolean("Italic"):</li>
-<li>BSON_Boolean("Monospace"):</li>
-<li>BSON_Boolean("Underline"):</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("UIComponentList"):</li>
-<li>BSON_Document("Transform"):<ul>
-<li>BSON_Document("Position"):<ul>
-<li>BSON_Double("X"):</li>
-<li>BSON_Double("Y"):</li>
-<li>BSON_Double("Z"):</li>
-</ul>
-</li>
-<li>BSON_Document("Rotation"):<ul>
-<li>BSON_Double("Pitch"):</li>
-<li>BSON_Double("Yaw"):</li>
-<li>BSON_Double("Roll"):</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("Velocity"):<ul>
-<li>BSON_Document("Velocity"):<ul>
-<li>BSON_Double("X"):</li>
-<li>BSON_Double("Y"):</li>
-<li>BSON_Double("Z"):</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("PrefabCopyable"):</li>
-<li>BSON_Document("Interactions"):<ul>
-<li>BSON_Document("Interactions"):<ul>
-<li>BSON_String("Use"):</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("Model"):<ul>
-<li>BSON_Document("Model"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Double("Scale"):</li>
-<li>BSON_Boolean("Static"):</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("UUID"):<ul>
-<li>BSON_Binary&lt;UUID&gt;("UUID"):</li>
-</ul>
-</li>
-<li>BSON_Document("EntityStats"):<ul>
-<li>BSON_Int32("Version"):</li>
-<li>BSON_Document("<em>&lt;Stat&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Double("Value"):</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("NPC"):<ul>
-<li>BSON_Int32("Version"):</li>
-<li>BSON_Binary&lt;UUID&gt;("UUID"):</li>
-<li>BSON_Document("Inventory"):<ul>
-<li>BSON_Int32("Version"):</li>
-<li>BSON_Document("Storage"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("Armor"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("HotBar"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("Utility"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("Backpack"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Int32("ActiveHotbarSlot"):</li>
-<li>BSON_Document("Tool"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Int32("ActiveToolsSlot"):</li>
-<li>BSON_Int32("ActiveUtilitySlot"):</li>
-<li>BSON_String("SortType"):</li>
-</ul>
-</li>
-<li>BSON_Double("HvrPhs"):</li>
-<li>BSON_Double("HvrHght"):</li>
-<li>BSON_Double("MdlScl"):</li>
-<li>BSON_String("SpawnInstant"):</li>
-<li>BSON_Int32("WorldgenId"):</li>
-<li>BSON_Document("PathManager"):</li>
-<li>BSON_Document("LeashPos"):<ul>
-<li>BSON_Double("X"):</li>
-<li>BSON_Double("Y"):</li>
-<li>BSON_Double("Z"):</li>
-</ul>
-</li>
-<li>BSON_Double("LeashHdg"):</li>
-<li>BSON_Double("LeashPtch"):</li>
-<li>BSON_String("RoleName"):</li>
-</ul>
-</li>
-<li>BSON_Document("HeadRotation"):<ul>
-<li>BSON_Document("Rotation"):<ul>
-<li>BSON_Double("Pitch"):</li>
-<li>BSON_Double("Yaw"):</li>
-<li>BSON_Double("Roll"):</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="history">History</h2>
-<table id="table">
-    <tbody>
-        <tr>
-            <th colspan="8"><p>Early Access</p></th>
-        </tr>
-        <tr>
-            <th rowspan="2">2026.01.13-dcad8778f</th>
-            <td>The chunk format is introduced.</td>
-        </tr>
-        <tr>
-            <td>Chunks are divided into 10 individual 32×32×32 block sections.</td>
-        </tr>
-    </tbody>
+<h1 id="blockchunk-format">BlockChunk format</h1>
+<p>BlockChunk data is in <strong>Little Endian</strong> byte order.</p>
+<h2 id="binary-structure">Binary structure</h2>
+<div id="table">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Size (in bytes)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NeedsPhysics</td>
+<td>1 (boolean)</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>HeightCount</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>HeightKeys</td>
+<td><em>HeightCount</em> * 2</td>
+<td></td>
+</tr>
+<tr>
+<td>HeightLength</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>Height</td>
+<td><em>HeightLength</em></td>
+<td></td>
+</tr>
+<tr>
+<td>TintCount</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>TintKeys</td>
+<td><em>TintCount</em> * 4</td>
+<td></td>
+</tr>
+<tr>
+<td>TintLength</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>Tint</td>
+<td><em>TintLength</em></td>
+<td></td>
+</tr>
+<tr>
+<td>SectionCount</td>
+<td>4</td>
+<td>Only exists if version is 2 or less</td>
+</tr>
+<tr>
+<td>Sections</td>
+<td><em>Variable</em></td>
+<td>Only exists if version is 2 or less. See <a href="../Block_format/">Block format</a></td>
+</tr>
+</tbody>
 </table>
+</div>
 
 
 
@@ -1793,12 +1472,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../js/add_icons.js"></script>
+        <script src="../../../js/add_icons.js"></script>
       
     
   </body>

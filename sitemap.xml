@@ -2,118 +2,150 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Bans_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Barter_Shop_State_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Block_Counter_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Block_Map_Markers_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Client_Metadata_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Config_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Development_version_history/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Instance_Data_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Memories_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Mods_Config_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Permissions_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Player_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Prefab_Edit_Session_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Region_file_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Reputation_Data_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Spawn_Suppression_Controller_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Time_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Version_history/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Warps_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Whitelist_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/World_Config_format/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/World_structure/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
+    </url>
+    <url>
+         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/BlockChunk_format/</loc>
+         <lastmod>2026-02-04</lastmod>
+    </url>
+    <url>
+         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/BlockHealthChunk_format/</loc>
+         <lastmod>2026-02-04</lastmod>
+    </url>
+    <url>
+         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/BlockPhysics_format/</loc>
+         <lastmod>2026-02-04</lastmod>
+    </url>
+    <url>
+         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/Block_format/</loc>
+         <lastmod>2026-02-04</lastmod>
+    </url>
+    <url>
+         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/ChunkSection_format/</loc>
+         <lastmod>2026-02-04</lastmod>
+    </url>
+    <url>
+         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/EnvironmentChunk_format/</loc>
+         <lastmod>2026-02-04</lastmod>
+    </url>
+    <url>
+         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/Fluid_format/</loc>
+         <lastmod>2026-02-04</lastmod>
+    </url>
+    <url>
+         <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/WorldChunk_format/</loc>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.13-50e69c385/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.15-c04fdfe10/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.17-4b0f30090/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.24-6e2d4fc36/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
     <url>
          <loc>https://bjtmastermind.github.io/hytale-formats-wiki/wiki/changelogs/2026.01.27-734d39026/</loc>
-         <lastmod>2026-01-30</lastmod>
+         <lastmod>2026-02-04</lastmod>
     </url>
 </urlset>
