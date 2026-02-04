@@ -4,9 +4,9 @@ Hytale has been in constant development since 2015 and first released publicly i
 
 ## Early access release
 
-### 2026.01 Pre-Releases
-
 Early Access was the initial development phase of *Hytale* released to the public.
+
+### 2026.01 Pre-Releases
 
 <table id="table">
     <tr>
