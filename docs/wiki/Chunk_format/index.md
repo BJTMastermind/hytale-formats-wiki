@@ -10,7 +10,7 @@ Chunks store the terrain and entities within a 32×320×32 area in the world. Th
 !!! info
     This section is a work in progress. Some BSON document contents are missing due to being empty in my test files. Descriptions will be filled in last.
 
-*See also: [Region file format](./Region_file_format.md)*
+*See also: [Region file format](../Region_file_format.md)*
 
 Chunks are stored as types in regional Hytale Region files, which are named in the form `x.z.region.bin`. They are stored in [BSON format](https://en.wikipedia.org/wiki/BSON), with the following structure:
 
@@ -31,13 +31,13 @@ Chunks are stored as types in regional Hytale Region files, which are named in t
                     * BSON_Document("BlockPhysics"):
                         * BSON_Binary<Generic\>("Data"):
                     * BSON_Document("Fluid"):
-                        * BSON_Binary<Generic\>("Data"): See [Fluid format](./Chunk_format/Fluid_format.md).
+                        * BSON_Binary<Generic\>("Data"): See [Fluid format](./Fluid_format.md).
                     * BSON_Document("Block"):
                         * BSON_Int32("Version"): Referenced by some parts of the Block format.
-                        * BSON_Binary<Generic\>("Data"): See [Block format](./Chunk_format/Block_format.md).
+                        * BSON_Binary<Generic\>("Data"): See [Block format](./Block_format.md).
     * BSON_Document("WorldChunk"):
     * BSON_Document("BlockHealthChunk"):
-        * BSON_Binary<Generic\>("Data"): See [BlockHealthChunk format](./Chunk_format/BlockHealthChunk_format.md).
+        * BSON_Binary<Generic\>("Data"): See [BlockHealthChunk format](./BlockHealthChunk_format.md).
         * BSON_String("LastRepairGameTime"):
     * BSON_Document("ChunkSpawnedNPCData"):
         * BSON_Document("EnvironmentSpawnCounts"):
@@ -45,7 +45,7 @@ Chunks are stored as types in regional Hytale Region files, which are named in t
         * BSON_Binary<Generic\>("Data"):
     * BSON_Document("BlockChunk"):
         * BSON_Int32("Version"): Referenced by some parts of the BlockChunk format.
-        * BSON_Binary<Generic\>("Data"): See [BlockChunk format](./Chunk_format/BlockChunk_format.md).
+        * BSON_Binary<Generic\>("Data"): See [BlockChunk format](./BlockChunk_format.md).
     * BSON_Document("EntityChunk"):
         * BSON_Array("Entities"):
             * BSON_Document: An entity.

@@ -36,7 +36,7 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
             {.addicon .file_system.directory}
                 * chunks: Stores region files of the world.
                 {.addicon .file_system.directory}
-                    * <x\>.<z\>.region.bin: A region file. See [Chunk format](./Chunk_format.md).
+                    * <x\>.<z\>.region.bin: A region file. See [Chunk format](./Chunk_format/index.md).
                     {.addicon .file_system.file}
                 * resources
                 {.addicon .file_system.directory}
