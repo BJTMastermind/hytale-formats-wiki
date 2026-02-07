@@ -4,7 +4,7 @@ theme:
     name: material
     features:
         - navigation.sections
-        - navigation.expand
+        - navigation.indexes
 extra_css:
     - css/treeview.css
     - css/table.css
@@ -14,7 +14,12 @@ nav:
     - Home: index.md
     - Pages:
         - World formats:
-            - Chunk format: wiki/Chunk_format.md
+            - Chunk format:
+                - wiki/Chunk_format/index.md
+                - Block format: wiki/Chunk_format/Block_format.md
+                - BlockChunk format: wiki/Chunk_format/BlockChunk_format.md
+                - BlockHealthChunk format: wiki/Chunk_format/BlockHealthChunk_format.md
+                - Fluid format: wiki/Chunk_format/Fluid_format.md
             - Player format: wiki/Player_format.md
             - Region file format: wiki/Region_file_format.md
             - World Config format: wiki/World_Config_format.md
