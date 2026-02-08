@@ -34,7 +34,7 @@ Chunks are stored as types in regional Hytale Region files, which are named in t
                         * BSON_Binary<Generic\>("Data"): See [Fluid format](./Fluid_format.md).
                     * BSON_Document("Block"):
                         * BSON_Int32("Version"): Referenced by some parts of the Block format.
-                        * BSON_Binary<Generic\>("Data"): See [Block format](./Block_format.md).
+                        * BSON_Binary<Generic\>("Data"): See [Block format](./Block_format/index.md).
     * BSON_Document("WorldChunk"):
     * BSON_Document("BlockHealthChunk"):
         * BSON_Binary<Generic\>("Data"): See [BlockHealthChunk format](./BlockHealthChunk_format.md).

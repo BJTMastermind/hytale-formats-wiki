@@ -16,7 +16,9 @@ nav:
         - World formats:
             - Chunk format:
                 - wiki/Chunk_format/index.md
-                - Block format: wiki/Chunk_format/Block_format.md
+                - Block format:
+                    - wiki/Chunk_format/Block_format/index.md
+                    - Octree structure: wiki/Chunk_format/Block_format/Octree_structure.md
                 - BlockChunk format: wiki/Chunk_format/BlockChunk_format.md
                 - BlockHealthChunk format: wiki/Chunk_format/BlockHealthChunk_format.md
                 - Fluid format: wiki/Chunk_format/Fluid_format.md
