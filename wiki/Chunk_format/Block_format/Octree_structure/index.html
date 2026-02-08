@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Development_version_history/">
+        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Chunk_format/Block_format/Octree_structure/">
       
       
-        <link rel="prev" href="../Version_history/">
+        <link rel="prev" href="../">
       
+      
+        <link rel="next" href="../../BlockChunk_format/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Development version history - Hytale Formats Wiki</title>
+        <title>Octree structure - Hytale Formats Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -46,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../css/treeview.css">
+      <link rel="stylesheet" href="../../../../css/treeview.css">
     
-      <link rel="stylesheet" href="../../css/table.css">
+      <link rel="stylesheet" href="../../../../css/table.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#development-version-history" class="md-skip">
+        <a href="#octree-structure-light-data-format" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Hytale Formats Wiki" class="md-header__button md-logo" aria-label="Hytale Formats Wiki" data-md-component="logo">
+    <a href="../../../.." title="Hytale Formats Wiki" class="md-header__button md-logo" aria-label="Hytale Formats Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Development version history
+              Octree structure
             
           </span>
         </div>
@@ -182,7 +184,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Hytale Formats Wiki" class="md-nav__button md-logo" aria-label="Hytale Formats Wiki" data-md-component="logo">
+    <a href="../../../.." title="Hytale Formats Wiki" class="md-nav__button md-logo" aria-label="Hytale Formats Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -200,7 +202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -292,8 +294,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -311,11 +315,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -336,7 +340,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -351,6 +355,8 @@
                 
   
   
+    
+  
   
   
     
@@ -374,15 +380,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Chunk_format/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -406,7 +412,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -423,6 +429,8 @@
                 
   
   
+    
+  
   
   
     
@@ -440,15 +448,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Chunk_format/Block_format/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -472,7 +480,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_1_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -489,10 +497,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Chunk_format/Block_format/Octree_structure/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Octree structure
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -508,6 +543,120 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#node-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Child mask
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Child entries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#octant-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Octant mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#light-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Light channels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deserialization-algorithm-pseudocode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deserialization algorithm (pseudocode)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-value-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Light value resolution
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -528,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Chunk_format/BlockChunk_format/" class="md-nav__link">
+      <a href="../../BlockChunk_format/" class="md-nav__link">
         
   
   
@@ -556,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Chunk_format/BlockHealthChunk_format/" class="md-nav__link">
+      <a href="../../BlockHealthChunk_format/" class="md-nav__link">
         
   
   
@@ -584,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Chunk_format/Fluid_format/" class="md-nav__link">
+      <a href="../../Fluid_format/" class="md-nav__link">
         
   
   
@@ -620,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Player_format/" class="md-nav__link">
+      <a href="../../../Player_format/" class="md-nav__link">
         
   
   
@@ -648,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Region_file_format/" class="md-nav__link">
+      <a href="../../../Region_file_format/" class="md-nav__link">
         
   
   
@@ -676,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../World_Config_format/" class="md-nav__link">
+      <a href="../../../World_Config_format/" class="md-nav__link">
         
   
   
@@ -769,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Bans_format/" class="md-nav__link">
+      <a href="../../../Bans_format/" class="md-nav__link">
         
   
   
@@ -797,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Permissions_format/" class="md-nav__link">
+      <a href="../../../Permissions_format/" class="md-nav__link">
         
   
   
@@ -825,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Whitelist_format/" class="md-nav__link">
+      <a href="../../../Whitelist_format/" class="md-nav__link">
         
   
   
@@ -938,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Barter_Shop_State_format/" class="md-nav__link">
+      <a href="../../../Barter_Shop_State_format/" class="md-nav__link">
         
   
   
@@ -966,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Block_Counter_format/" class="md-nav__link">
+      <a href="../../../Block_Counter_format/" class="md-nav__link">
         
   
   
@@ -994,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Block_Map_Markers_format/" class="md-nav__link">
+      <a href="../../../Block_Map_Markers_format/" class="md-nav__link">
         
   
   
@@ -1022,7 +1171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Client_Metadata_format/" class="md-nav__link">
+      <a href="../../../Client_Metadata_format/" class="md-nav__link">
         
   
   
@@ -1050,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Instance_Data_format/" class="md-nav__link">
+      <a href="../../../Instance_Data_format/" class="md-nav__link">
         
   
   
@@ -1078,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Memories_format/" class="md-nav__link">
+      <a href="../../../Memories_format/" class="md-nav__link">
         
   
   
@@ -1106,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mods_Config_format/" class="md-nav__link">
+      <a href="../../../Mods_Config_format/" class="md-nav__link">
         
   
   
@@ -1134,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Prefab_Edit_Session_format/" class="md-nav__link">
+      <a href="../../../Prefab_Edit_Session_format/" class="md-nav__link">
         
   
   
@@ -1162,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Reputation_Data_format/" class="md-nav__link">
+      <a href="../../../Reputation_Data_format/" class="md-nav__link">
         
   
   
@@ -1190,7 +1339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Spawn_Suppression_Controller_format/" class="md-nav__link">
+      <a href="../../../Spawn_Suppression_Controller_format/" class="md-nav__link">
         
   
   
@@ -1218,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Time_format/" class="md-nav__link">
+      <a href="../../../Time_format/" class="md-nav__link">
         
   
   
@@ -1246,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Warps_format/" class="md-nav__link">
+      <a href="../../../Warps_format/" class="md-nav__link">
         
   
   
@@ -1274,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../World_structure/" class="md-nav__link">
+      <a href="../../../World_structure/" class="md-nav__link">
         
   
   
@@ -1371,7 +1520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelogs/2026.01.13-50e69c385/" class="md-nav__link">
+      <a href="../../../changelogs/2026.01.13-50e69c385/" class="md-nav__link">
         
   
   
@@ -1399,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelogs/2026.01.15-c04fdfe10/" class="md-nav__link">
+      <a href="../../../changelogs/2026.01.15-c04fdfe10/" class="md-nav__link">
         
   
   
@@ -1427,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelogs/2026.01.17-4b0f30090/" class="md-nav__link">
+      <a href="../../../changelogs/2026.01.17-4b0f30090/" class="md-nav__link">
         
   
   
@@ -1455,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelogs/2026.01.24-6e2d4fc36/" class="md-nav__link">
+      <a href="../../../changelogs/2026.01.24-6e2d4fc36/" class="md-nav__link">
         
   
   
@@ -1483,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelogs/2026.01.27-734d39026/" class="md-nav__link">
+      <a href="../../../changelogs/2026.01.27-734d39026/" class="md-nav__link">
         
   
   
@@ -1519,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Version_history/" class="md-nav__link">
+      <a href="../../../Version_history/" class="md-nav__link">
         
   
   
@@ -1544,37 +1693,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Development version history
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Development_version_history/" class="md-nav__link">
         
   
   
@@ -1590,65 +1712,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#early-access-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Early access release
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Early access release">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#202602-pre-releases" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2026.02 Pre-Releases
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#202601-pre-releases" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2026.01 Pre-Releases
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1715,22 +1778,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#early-access-release" class="md-nav__link">
+  <a href="#node-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Early access release
+        Node layout
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Early access release">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Child mask
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Child entries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage model">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#202602-pre-releases" class="md-nav__link">
+  <a href="#octant-mapping" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2026.02 Pre-Releases
+        Octant mapping
       
     </span>
   </a>
@@ -1738,10 +1834,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#202601-pre-releases" class="md-nav__link">
+  <a href="#light-channels" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2026.01 Pre-Releases
+        Light channels
       
     </span>
   </a>
@@ -1750,6 +1846,28 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deserialization-algorithm-pseudocode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deserialization algorithm (pseudocode)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-value-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Light value resolution
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1770,74 +1888,223 @@
 
 
 
-<h1 id="development-version-history">Development version history</h1>
-<p>Hytale has been in constant development since 2015 and first released publicly in early access on January 13, 2026.</p>
-<h2 id="early-access-release">Early access release</h2>
-<p>Early Access was the initial development phase of <em>Hytale</em> released to the public.</p>
-<h3 id="202602-pre-releases">2026.02 Pre-Releases</h3>
-<table id="table">
-    <tr>
-        <th>Pre-Release for</th>
-        <th>Version</th>
-        <th>Revision</th>
-    </tr>
-    <tr>
-        <td>Update 3</td>
-        <td>2026.02.05</td>
-        <td>bd949ff90</td>
-    </tr>
-    <tr>
-        <td>Update 3</td>
-        <td>2026.02.06</td>
-        <td>0baf7c5aa</td>
-    </tr>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page was mostly made by ChatGPT after being given code snippets for deserializing the light data octree and told to make a markdown document of it.</p>
+</div>
+<h1 id="octree-structure-light-data-format">Octree Structure (Light Data format)</h1>
+<p>The <code>LightData</code> field stores light values using an <strong>octree</strong> to efficiently compress large uniform regions.</p>
+<p>An octree recursively subdivides a cubic volume into <strong>8 equally sized sub-volumes (octants)</strong>.
+Each octree node represents a region of space that is either:</p>
+<ul>
+<li>a <strong>leaf</strong>, storing a single light value for the entire region, or</li>
+<li>an <strong>internal node</strong>, subdividing the region into 8 child octants</li>
+</ul>
+<p>This allows large areas with identical light values to be stored compactly, while preserving detail where light varies.</p>
+<h2 id="node-layout">Node layout</h2>
+<p>Each octree node is stored as a fixed-size <strong>17-byte structure</strong>:</p>
+<div id="table">
+<table>
+<thead>
+<tr>
+<th>Offset</th>
+<th>Size</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1 byte</td>
+<td>Child mask</td>
+</tr>
+<tr>
+<td>1–16</td>
+<td>16 bytes</td>
+<td>8 child entries (2 bytes each)</td>
+</tr>
+</tbody>
 </table>
+</div>
+<p>Nodes are stored sequentially in a flat array and are referenced by <strong>index</strong>, not by pointer.</p>
+<p>Child references are stored as 16-bit node indices, limiting the octree to at most 65,535 nodes.</p>
+<h2 id="child-mask">Child mask</h2>
+<p>The child mask is an 8-bit bitfield, with one bit per octant (child index <code>0–7</code>):</p>
+<ul>
+<li>Bit value <code>0</code> -&gt; the child is a <strong>leaf</strong></li>
+<li>Bit value <code>1</code> -&gt; the child is a <strong>subtree</strong></li>
+</ul>
+<p>The ordering of the octants is fixed and consistent throughout the structure (see Octant mapping below).</p>
+<p>Example:</p>
+<p><code>0b00001010</code></p>
+<div id="table">
+<table>
+<thead>
+<tr>
+<th>Child index</th>
+<th>Mask bit</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>Leaf value</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>Subtree</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>Leaf value</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>Subtree</td>
+</tr>
+<tr>
+<td>4–7</td>
+<td>0</td>
+<td>Leaf values</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="child-entries">Child entries</h2>
+<p>Each of the 8 child entries is a <strong>16-bit value</strong> whose meaning depends on the corresponding mask bit:</p>
+<ul>
+<li>If the mask bit is <code>0</code> -&gt; the entry is a <strong>literal light value</strong> for that entire octant</li>
+<li>If the mask bit is <code>1</code> -&gt; the entry is an <strong>index</strong> of another octree node within the flat node array</li>
+</ul>
+<h2 id="storage-model">Storage model</h2>
+<p>Although conceptually a tree, the octree is stored as a <strong>flat list of nodes</strong>:</p>
+<ul>
+<li>Node index 0 is always the root node.</li>
+<li>Nodes are allocated sequentially as the data is deserialized</li>
+<li>Child references are indices into this list</li>
+<li>The tree is serialized in <strong>depth-first order</strong></li>
+</ul>
+<p>Conceptually:</p>
+<div id="treeview">
+<ul>
+<li>Node 0 (root)<ul>
+<li>child 0 -&gt; value</li>
+<li>child 1 -&gt; Node 1<ul>
+<li>child 0 -&gt; value</li>
+<li>child 3 -&gt; Node 2</li>
+</ul>
+</li>
+<li>child 2 -&gt; value</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>The octree represents the same 32×32×32 block space as the section data.
+The following describes how block coordinates map to octree child indices.</p>
+<h3 id="octant-mapping">Octant mapping</h3>
+<p>At each level of the octree, the child octant is selected using three bits of the linear block index.</p>
+<p>The linear index is laid out in YZX order:</p>
+<p><code>index = y*32*32 + z*32 + x</code></p>
+<p>For a given depth, the octant index is computed as:</p>
+<p><code>octant = (index &gt;&gt; (12 - depth)) &amp; 7</code></p>
+<p>This corresponds to the following bit layout:</p>
+<div id="table">
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>Axis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bit 2 (value 4)</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>bit 1 (value 2)</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>bit 0 (value 1)</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Thus, the octant index is:</p>
+<p><code>octant = (yBit &lt;&lt; 2) | (zBit &lt;&lt; 1) | xBit</code></p>
+<p>The octree has 5 levels, subdividing the 32×32×32 block space down to individual blocks.</p>
+<h3 id="light-channels">Light channels</h3>
+<p>Each light value is a 16-bit integer composed of four 4-bit channels:</p>
+<div id="table">
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Bits</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0–3</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4–7</td>
+<td>Green</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8–11</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>3</td>
+<td>12–15</td>
+<td>Unknown / reserved</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Each channel has a value range of 0–15.</p>
+<p>The effective block light intensity used by the engine is computed as the maximum of the red, green, and blue channel values.</p>
+<h2 id="deserialization-algorithm-pseudocode">Deserialization algorithm (pseudocode)</h2>
+<p>The following pseudocode illustrates how the octree is reconstructed:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Node</span><span class="w"> </span><span class="nf">readNode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readByte</span><span class="p">();</span>
+<span class="w">    </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="n">mask</span><span class="p">);</span>
 
-<h3 id="202601-pre-releases">2026.01 Pre-Releases</h3>
-<table id="table">
-    <tr>
-        <th>Pre-Release for</th>
-        <th>Version</th>
-        <th>Revision</th>
-    </tr>
-    <tr>
-        <td rowspan="2">Update 1</td>
-        <td rowspan="2">2026.01.16</td>
-        <td>c508b9acd</td>
-    </tr>
-    <tr>
-        <td>5d02071f7</td>
-    </tr>
-    <tr>
-        <td rowspan="6">Update 2</td>
-        <td>2026.01.17</td>
-        <td>a4cc0e7dd</td>
-    </tr>
-    <tr>
-        <td rowspan="2">2026.01.22</td>
-        <td>a60fdd027</td>
-    </tr>
-    <tr>
-        <td>6f8bdbdc4</td>
-    </tr>
-    <tr>
-        <td>2026.01.23</td>
-        <td>6e2d4fc36</td>
-    </tr>
-    <tr>
-        <td>2026.01.27</td>
-        <td>734d39026</td>
-    </tr>
-    <tr>
-        <td>2026.01.28</td>
-        <td>87d03be09</td>
-    </tr>
-    <tr>
-        <td>Update 3</td>
-        <td>2026.01.29</td>
-        <td>301e13929</td>
-    </tr>
-</table>
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">child</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mf">.7</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mask</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">allocateNewNode</span><span class="p">();</span>
+<span class="w">            </span><span class="n">node</span><span class="p">.</span><span class="n">children</span><span class="p">[</span><span class="n">child</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">index</span><span class="p">;</span>
+<span class="w">            </span><span class="n">readNode</span><span class="p">();</span><span class="w"> </span><span class="c1">// recurse</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">node</span><span class="p">.</span><span class="n">children</span><span class="p">[</span><span class="n">child</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readShort</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">node</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The first node read is the <strong>root node</strong> of the octree.</p>
+<h2 id="light-value-resolution">Light value resolution</h2>
+<p>To resolve the light value at a specific position:</p>
+<ol>
+<li>Start at the root node</li>
+<li>Determine which octant contains the position</li>
+<li>If the child entry is a value, return it</li>
+<li>If the child entry is a subtree, repeat for that node</li>
+</ol>
+<p>This process continues until a leaf value is reached.</p>
 
 
 
@@ -1887,12 +2154,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.sections", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../js/add_icons.js"></script>
+        <script src="../../../../js/add_icons.js"></script>
       
     
   </body>

@@ -14,7 +14,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../BlockChunk_format/">
+        <link rel="next" href="Octree_structure/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Block format - Hytale Formats Wiki</title>
+        <title>Index - Hytale Formats Wiki</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Block format
+              Index
             
           </span>
         </div>
@@ -433,16 +433,31 @@
   
   
   
-    <li class="md-nav__item md-nav__item--active">
+    
+    
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+        
+          
+        
       
         
       
+    
+    
+    
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_2" checked>
+        
           
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
   
   
   <span class="md-ellipsis">
@@ -456,17 +471,43 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_2_1_1_2" id="__nav_2_1_1_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Block format
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Octree_structure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Block format
+    Octree structure
   
 
     
@@ -475,47 +516,13 @@
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#binary-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Binary structure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#block-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Block layout
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1738,7 +1745,7 @@
 <tr>
 <td>FillerBlockPalette</td>
 <td><em>FillerBlockCount</em></td>
-<td></td>
+<td>The filler block data in the palette. See below</td>
 </tr>
 <tr>
 <td>FillerBlocks</td>
@@ -1758,7 +1765,7 @@
 <tr>
 <td>RotationBlockPalette</td>
 <td><em>RotationBlockCount</em></td>
-<td></td>
+<td>The rotation block data in the palette. See below</td>
 </tr>
 <tr>
 <td>RotationBlocks</td>
@@ -1778,12 +1785,12 @@
 <tr>
 <td>LocalChangeCounter</td>
 <td>2</td>
-<td></td>
+<td>16-bit Identifier, identifying the current state of the local light data.</td>
 </tr>
 <tr>
 <td>GlobalChangeCounter</td>
 <td>2</td>
-<td></td>
+<td>16-bit Identifier, identifying the current state of the global light data.</td>
 </tr>
 </tbody>
 </table>
@@ -1807,17 +1814,17 @@
 <tr>
 <td>BlockIdLength</td>
 <td>2</td>
-<td>The length of the block id</td>
+<td>The length of the block id.</td>
 </tr>
 <tr>
 <td>BlockId</td>
 <td><em>BlockIdLength</em></td>
-<td>The block id</td>
+<td>The block id.</td>
 </tr>
 <tr>
 <td>Count</td>
 <td>2</td>
-<td>How many of this block exist in this section</td>
+<td>How many of this block exist in this section.</td>
 </tr>
 </tbody>
 </table>
@@ -1839,14 +1846,14 @@
 <td>The index within the palette.</td>
 </tr>
 <tr>
-<td>FillerBlockId</td>
+<td>FillerBlockData</td>
 <td>2</td>
-<td>The block id</td>
+<td>The filler block data.</td>
 </tr>
 <tr>
 <td>Count</td>
 <td>2</td>
-<td>How many of this block exist in this section</td>
+<td>How many of this block exist in this section.</td>
 </tr>
 </tbody>
 </table>
@@ -1868,14 +1875,14 @@
 <td>The index within the palette.</td>
 </tr>
 <tr>
-<td>RotationBlockId</td>
+<td>RotationDataValue</td>
 <td>1</td>
-<td>The block id</td>
+<td>The blocks rotation data value.</td>
 </tr>
 <tr>
 <td>Count</td>
 <td>2</td>
-<td>How many of this block exist in this section</td>
+<td>How many of this block exist in this section.</td>
 </tr>
 </tbody>
 </table>
@@ -1894,22 +1901,22 @@
 <tr>
 <td>ChangeId</td>
 <td>2</td>
-<td>Unknown</td>
+<td>Change counter identifier, identifying the current state of the light data blob.</td>
 </tr>
 <tr>
 <td>HasLight</td>
 <td>1 (boolean)</td>
-<td></td>
+<td><code>true</code> if light data is present.</td>
 </tr>
 <tr>
 <td>LightLength</td>
 <td>4</td>
-<td></td>
+<td>The total size in bytes of the octree.</td>
 </tr>
 <tr>
 <td>LightData</td>
 <td><em>LightLength</em></td>
-<td>An octree of light data</td>
+<td>An implicit pointer-based octree of light data. See <a href="./Block_format/Octree_structure.md">Octree structure</a></td>
 </tr>
 </tbody>
 </table>
