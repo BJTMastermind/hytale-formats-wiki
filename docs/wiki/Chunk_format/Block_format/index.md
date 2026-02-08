@@ -80,7 +80,7 @@ Block data is in **Big Endian** byte order.
 | ChangeId | 2 | Change counter identifier, identifying the current state of the light data blob. |
 | HasLight | 1 (boolean) | `true` if light data is present. |
 | LightLength | 4 | The total size in bytes of the octree. |
-| LightData | *LightLength* | An implicit pointer-based octree of light data. See [Octree structure](./Block_format/Octree_structure.md) |
+| LightData | *LightLength* | An implicit pointer-based octree of light data. See [Octree structure](./Octree_structure.md) |
 
 </div>
 
