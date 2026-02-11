@@ -145,13 +145,13 @@ Node readNode() {
     mask = readByte();
     node = new Node(mask);
 
-    foreach (child 0..7) {
+    for (child_idx in 0..7) {
         if (mask bit is 1) {
             index = allocateNewNode();
-            node.children[child] = index;
+            node.children[child_idx] = index;
             readNode(); // recurse
         } else {
-            node.children[child] = readShort();
+            node.children[child_idx] = readShort();
         }
     }
     return node;
