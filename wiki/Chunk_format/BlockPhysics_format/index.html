@@ -1653,7 +1653,6 @@
 
 
 <h1 id="blockphysics-format">BlockPhysics format</h1>
-<p>BlockPhysics data is in <strong>Unknown</strong> byte order.</p>
 <h2 id="binary-format">Binary format</h2>
 <div id="table">
 <table>
@@ -1668,12 +1667,12 @@
 <tr>
 <td>HasData</td>
 <td>1 (boolean)</td>
-<td></td>
+<td><code>true</code> if block physics data exists.</td>
 </tr>
 <tr>
 <td>Data</td>
 <td>16384</td>
-<td></td>
+<td>The block physics data. 4 bits per block.</td>
 </tr>
 </tbody>
 </table>
