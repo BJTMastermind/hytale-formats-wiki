@@ -42,7 +42,7 @@ Chunks are stored as types in regional Hytale Region files, which are named in t
     * BSON_Document("ChunkSpawnedNPCData"):
         * BSON_Document("EnvironmentSpawnCounts"):
     * BSON_Document("EnvironmentChunk"):
-        * BSON_Binary<Generic\>("Data"):
+        * BSON_Binary<Generic\>("Data"): See [EnvironmentChunk format](./EnvironmentChunk_format.md).
     * BSON_Document("BlockChunk"):
         * BSON_Int32("Version"): Referenced by some parts of the BlockChunk format.
         * BSON_Binary<Generic\>("Data"): See [BlockChunk format](./BlockChunk_format.md).
