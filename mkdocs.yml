@@ -21,6 +21,7 @@ nav:
                     - Octree structure: wiki/Chunk_format/Block_format/Octree_structure.md
                 - BlockChunk format: wiki/Chunk_format/BlockChunk_format.md
                 - BlockHealthChunk format: wiki/Chunk_format/BlockHealthChunk_format.md
+                - EnvironmentChunk format: wiki/Chunk_format/EnvironmentChunk_format.md
                 - Fluid format: wiki/Chunk_format/Fluid_format.md
             - Player format: wiki/Player_format.md
             - Region file format: wiki/Region_file_format.md
