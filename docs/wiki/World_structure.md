@@ -24,6 +24,10 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
         {.addicon .file_system.directory}
             * barter_shop_state.json: See [Barter Shop State format](./Barter_Shop_State_format.md).
             {.addicon .file_system.file}
+    * prefabs: Contains all player created prefabs for this world.
+    {.addicon .file_system.directory}
+        * <name\>.prefab.json: An exported prefab. See [Prefab format](./Prefab_format.md).
+        {.addicon .file_system.file}
     * universe
     {.addicon .file_system.directory}
         * players: Stores the individual states of the players that have played in this world.
