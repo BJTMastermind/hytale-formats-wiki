@@ -5,6 +5,7 @@ The **worlds/.../config.json** file contains global information about the world 
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * Version:
@@ -113,6 +114,7 @@ The **worlds/.../config.json** file contains global information about the world 
         {.addicon .json.string}
     * Plugin:
     {.addicon .json.object}
+
 </div>
 
 ## History

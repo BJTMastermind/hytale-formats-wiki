@@ -5,12 +5,14 @@ The **BlockCounter.json** file is used to track how many of a limited block have
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * BlockPlacmentCounts: Contains all the block counters.
     {.addicon .json.object}
         * Teleporters: The amount of teleporters in this world. Absent if none.
         {.addicon .json.int}
+
 </div>
 
 ## History

@@ -5,10 +5,12 @@ The **Time.json** file is used to track the in-game time in a real-time equivale
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * Now: The real-time equivalent of the in-game time. Starts at `1970-01-01T00:00:00` which would be `0001-01-01T00:00:00` for in-game time.
     {.addicon .json.string}
+
 </div>
 
 ## History

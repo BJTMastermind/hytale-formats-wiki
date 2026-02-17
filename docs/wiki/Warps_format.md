@@ -5,6 +5,7 @@ The **warps.json** file is used to track all warp locations.
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * Warps: Array of warp locations.
@@ -27,6 +28,7 @@ The **warps.json** file is used to track all warp locations.
             {.addicon .json.float}
             * Yaw: The direction the player is looking when warped to this location.
             {.addicon .json.float}
+
 </div>
 
 ## History

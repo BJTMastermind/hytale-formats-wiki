@@ -5,10 +5,12 @@ The **client_metadata.json** file is used to track what patchline the world was 
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * CreatedWithPatchline: The patchline the world was last loaded with. Either "release" or "pre-release".
     {.addicon .json.string}
+
 </div>
 
 ## History

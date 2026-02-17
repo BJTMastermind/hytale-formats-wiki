@@ -5,6 +5,7 @@ The **/config.json** file stores a list of all mods avablible for the world and 
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * Mods: Holds all the loaded mods.
@@ -13,6 +14,7 @@ The **/config.json** file stores a list of all mods avablible for the world and 
         {.addicon .json.object}
             * Enabled: `true` if the mod is enabled for this world, otherwise `false`.
             {.addicon .json.boolean}
+
 </div>
 
 ## History

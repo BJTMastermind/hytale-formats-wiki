@@ -5,6 +5,7 @@ The **PrefabEditSession.json** file is used for storing prefab data.
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * SpawnPoint: The spawn point of the prefab.
@@ -17,6 +18,7 @@ The **PrefabEditSession.json** file is used for storing prefab data.
         {.addicon .json.int}
     * LoadedPrefabMetadata: Unknown.
     {.addicon .json.array}
+
 </div>
 
 ## History

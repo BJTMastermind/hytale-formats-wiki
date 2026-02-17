@@ -5,6 +5,7 @@ The **BlockMapMarkers.json** file is used to track the map markers, such as the 
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * Markers: Contains all the block map markers.
@@ -25,6 +26,7 @@ The **BlockMapMarkers.json** file is used to track the map markers, such as the 
             {.addicon .json.string}
             * MarkerId: The uuid string id of this map marker.
             {.addicon .json.string}
+
 </div>
 
 ## History

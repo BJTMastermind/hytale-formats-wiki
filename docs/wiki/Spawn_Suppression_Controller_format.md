@@ -5,6 +5,7 @@ The **SpawnSuppressionController.json** file is used to prevent NPCs from spawni
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * SpawnSuppressorMap: Contains all spawn suppression controllers.
@@ -21,6 +22,7 @@ The **SpawnSuppressionController.json** file is used to prevent NPCs from spawni
                 {.addicon .json.float}
             * Suppression: The suppression type. Also determines the range of the spawn suppressor. Known types: `Spawn_Camp`.
             {.addicon .json.string}
+
 </div>
 
 ## History

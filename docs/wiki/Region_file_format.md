@@ -51,6 +51,7 @@ Region files begin with a 32 byte header plus a 4KiB table, containing the offse
 The offset of a chunk [x, z] (in chunk coordinates) in the table can be found using this formula: 4 * ((x mod 32) + (z mod 32) * 32). When using certain languages (such as Java/C/C++), the values of x mod 32 and z mod 32 can be negative. To prevent this, use the AND operator (&) instead of modulo: 4 * ((x & 31) + (z & 31) * 32).
 
 <div markdown="1" id="table">
+
 | byte | description |
 |------|-------------|
 | 0x00 - 0x13 | magic (20 bytes) |
@@ -59,6 +60,7 @@ The offset of a chunk [x, z] (in chunk coordinates) in the table can be found us
 | 0x1C - 0x1F | segment size (4096 default; 4 bytes) |
 | 0x20 - 0x101F | locations (***blob count*** entries; 4 bytes each) |
 | 0x2000... | chunks and unused space |
+
 </div>
 
 #### Chunk location
@@ -74,9 +76,11 @@ Chunk data begins with a (big-endian) four-byte signed decompressed length, foll
 *Hytale* always pads the chunk's data to be a multiple-of-4096B in length. *Hytale* does not accept files in which the chunks are not padded. Note that this padding is not included in the length integers.
 
 <div markdown="1" id="table">
+
 | byte | 0 - 3 | 4 - 7 | 8... |
 |------|-------|-------|------|
 | description | decompressed length (in bytes) | compressed length (in bytes) | compressed data |
+
 </div>
 
 The compression schema used by *Hytale* is [Zstd](https://en.wikipedia.org/wiki/Zstd).

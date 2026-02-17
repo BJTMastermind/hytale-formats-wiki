@@ -5,6 +5,7 @@ The **barter_shop_state.json** file is used to track shop/merchant current stock
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * Shops: Contains restock data for all shops found.
@@ -19,6 +20,7 @@ The **barter_shop_state.json** file is used to track shop/merchant current stock
             {.addicon .json.string}
             * ResolveSeed: A random seed for the shop.
             {.addicon .json.int}
+
 </div>
 
 ## History

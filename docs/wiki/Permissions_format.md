@@ -5,6 +5,7 @@ The **permissions.json** file is used to track the permissions of all the player
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * users: Object of all players and their permissions.
@@ -29,6 +30,7 @@ The **permissions.json** file is used to track the permissions of all the player
         {.addicon .json.array}
             * : A permission this group allows. Can be a custom permission.
             {.addicon .json.string}
+
 </div>
 
 ## History

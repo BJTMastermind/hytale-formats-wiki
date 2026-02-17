@@ -7,6 +7,7 @@
 <details markdown="1">
 <summary>Show</summary>
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * Components:
@@ -358,6 +359,7 @@
                 {.addicon .json.float}
                 * Roll:
                 {.addicon .json.float}
+
 </div>
 </details>
 

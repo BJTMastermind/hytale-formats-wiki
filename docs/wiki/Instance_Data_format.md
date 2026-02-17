@@ -5,10 +5,12 @@ The **InstanceData.json** file is used to track various instance related data. C
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * HadPlayer: Weather this instance has had a player in it before.
     {.addicon .json.boolean}
+
 </div>
 
 ## History

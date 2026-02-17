@@ -5,10 +5,12 @@ What **ReputationData.json** is currently used for is unknown.
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * Stats: Unknown contents.
     {.addicon .json.object}
+
 </div>
 
 ## History

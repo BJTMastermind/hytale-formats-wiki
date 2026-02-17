@@ -5,6 +5,7 @@ The **bans.json** file is used to track the players that are banned from this wo
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root array.
 {.addicon .json.array}
     * : A banned player object.
@@ -19,6 +20,7 @@ The **bans.json** file is used to track the players that are banned from this wo
         {.addicon .json.int}
         * reason: The reason message given for the ban. (Currently unused)
         {.addicon .json.string}
+
 </div>
 
 ## History

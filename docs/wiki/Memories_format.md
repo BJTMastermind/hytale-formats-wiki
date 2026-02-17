@@ -5,6 +5,7 @@ The **memories.json** file is used to store the players found "Memories", which 
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * Memories: Array that holds all memory entries.
@@ -23,6 +24,7 @@ The **memories.json** file is used to store the players found "Memories", which 
             {.addicon .json.int}
             * FoundLocationNameKey: Where this NPC was found.
             {.addicon .json.string}
+
 </div>
 
 ## History

@@ -5,6 +5,7 @@ The **whitelist.json** file is used to track what players are allowed to enter t
 ## JSON format
 
 <div markdown="1" id="treeview">
+
 * : Root object.
 {.addicon .json.object}
     * enabled: `true` if the whitelist is enabled. Defaults to `false`.
@@ -13,6 +14,7 @@ The **whitelist.json** file is used to track what players are allowed to enter t
     {.addicon .json.array}
         * : A whitelisted player uuid.
         {.addicon .json.string}
+
 </div>
 
 ## History
