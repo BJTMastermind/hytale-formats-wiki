@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Block_Counter_format/">
+        <link rel="canonical" href="https://bjtmastermind.github.io/hytale-formats-wiki/wiki/Prefab_format/">
       
       
-        <link rel="prev" href="../Barter_Shop_State_format/">
+        <link rel="prev" href="../Prefab_Edit_Session_format/">
       
       
-        <link rel="next" href="../Block_Map_Markers_format/">
+        <link rel="next" href="../Reputation_Data_format/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Block Counter format - Hytale Formats Wiki</title>
+        <title>Prefab format - Hytale Formats Wiki</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#block-counter-format" class="md-skip">
+        <a href="#prefab-format" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Block Counter format
+              Prefab format
             
           </span>
         </div>
@@ -1029,37 +1029,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Block Counter format
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Block_Counter_format/" class="md-nav__link">
         
   
   
@@ -1075,48 +1048,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#json-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        JSON format
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        History
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1294,10 +1225,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Prefab_format/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prefab format
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1313,6 +1271,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#json-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1830,14 +1830,40 @@
 
 
 
-<h1 id="block-counter-format">Block Counter format</h1>
-<p>The <strong>BlockCounter.json</strong> file is used to track how many of a limited block have been placed in the world.</p>
+<h1 id="prefab-format">Prefab format</h1>
+<p><strong>&lt;name&gt;.prefab.json</strong> files are used to save and export player made structures/prefabs, allowing players to then paste the prefab in to another world or another universe within the same world.</p>
 <h2 id="json-format">JSON format</h2>
 <div id="treeview">
 <ul>
 <li class="addicon json.object">: Root object.<ul>
-<li class="addicon json.object">BlockPlacmentCounts: Contains all the block counters.<ul>
-<li class="addicon json.int">Teleporters: The amount of teleporters in this world. Absent if none.</li>
+<li class="addicon json.int">version: The format version used at time of saving.</li>
+<li class="addicon json.int">blockIdVersion: The block Id version used at time of saving.</li>
+<li class="addicon json.int">anchorX: The X coordinate anchor or origin point relative to the prefabs area. 0 being the center of the prefab area.</li>
+<li class="addicon json.int">anchorY: The Y coordinate anchor or origin point relative to the prefabs area. 0 being the bottom layer of the prefab area.</li>
+<li class="addicon json.int">anchorZ: The Z coordinate anchor or origin point relative to the prefabs area. 0 being the center of the prefab area.</li>
+<li class="addicon json.array">blocks: The list of all non-Empty blocks in the prefab. Saved from the bottom North-West corner to the top South-East corner.<ul>
+<li class="addicon json.object">: A block entry.<ul>
+<li class="addicon json.int">x: The prefab relative X position of this block.</li>
+<li class="addicon json.int">y: The prefab relative Y position of this block.</li>
+<li class="addicon json.int">z: The prefab relative Z position of this block.</li>
+<li class="addicon json.string">name: The block id.</li>
+<li class="addicon json.object">components: The component data for this block. May not exist.</li>
+<li class="addicon json.int">support: The support distance level of this block. May not exist.</li>
+<li class="addicon json.int">filler: The filler value, may be a bit field (Unconfirmed). May not exist.</li>
+<li class="addicon json.int">rotation: The rotation value of this block. May not exist.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="addicon json.array">fluids: The list of all fluids in the prefab. Saved from the bottom North-West corner to the top South-East corner.<ul>
+<li class="addicon json.object">: A fluid entry.<ul>
+<li class="addicon json.int">x: The prefab relative X position of this fluid.</li>
+<li class="addicon json.int">y: The prefab relative Y position of this fluid.</li>
+<li class="addicon json.int">z: The prefab relative Z position of this fluid.</li>
+<li class="addicon json.string">name: The fluid id.</li>
+<li class="addicon json.int">level: The fluids level.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1852,7 +1878,7 @@
         </tr>
         <tr>
             <th>2026.01.13-dcad8778f</th>
-            <td>The block counter format is introduced.</td>
+            <td>The prefab format is introduced.</td>
         </tr>
     </tbody>
 </table>
