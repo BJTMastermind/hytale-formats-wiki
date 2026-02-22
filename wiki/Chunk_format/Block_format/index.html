@@ -25,7 +25,7 @@
     
     
       
-        <title>Index - Hytale Formats Wiki</title>
+        <title>Block format - Hytale Formats Wiki</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Block format
             
           </span>
         </div>
@@ -1765,6 +1765,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Binary structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blockpalette" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BlockPalette
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fillerblockpalette" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FillerBlockPalette
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotationblockpalette" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RotationBlockPalette
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locallight-globallight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LocalLight &amp; GlobalLight
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1795,10 +1845,6 @@
 
 
 
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This page is a work in progress</p>
-</div>
 <h1 id="block-format">Block format</h1>
 <p>Block data is in <strong>Big Endian</strong> byte order.</p>
 <h2 id="binary-structure">Binary structure</h2>
@@ -1829,13 +1875,13 @@
 </tr>
 <tr>
 <td>BlockPalette</td>
-<td><em>BlockCount</em></td>
+<td><strong><em>BlockCount</em></strong></td>
 <td>The blocks in the palette. See below</td>
 </tr>
 <tr>
 <td>Blocks</td>
-<td>32768 of <em>PaletteType</em></td>
-<td>the blocks as palette indexes. (Low-nibble-first packing if <em>PaletteType</em> is 1)</td>
+<td>32768 of <strong><em>PaletteType</em></strong></td>
+<td>the blocks as palette indexes. (Low-nibble-first packing if <strong><em>PaletteType</em></strong> is 1)</td>
 </tr>
 <tr>
 <td>TickingBlockCount</td>
@@ -1849,7 +1895,7 @@
 </tr>
 <tr>
 <td>TickingBlockData</td>
-<td><em>TickingBlockDataSize</em> × 8</td>
+<td><strong><em>TickingBlockDataSize</em></strong> × 8</td>
 <td>Unknown</td>
 </tr>
 <tr>
@@ -1864,13 +1910,13 @@
 </tr>
 <tr>
 <td>FillerBlockPalette</td>
-<td><em>FillerBlockCount</em></td>
+<td><strong><em>FillerBlockCount</em></strong></td>
 <td>The filler block data in the palette. See below</td>
 </tr>
 <tr>
 <td>FillerBlocks</td>
-<td>32768 of <em>FillerPaletteType</em></td>
-<td>The filler blocks as palette indexes. (Low-nibble-first packing if <em>FillerPaletteType</em> is 1)</td>
+<td>32768 of <strong><em>FillerPaletteType</em></strong></td>
+<td>The filler blocks as palette indexes. (Low-nibble-first packing if <strong><em>FillerPaletteType</em></strong> is 1)</td>
 </tr>
 <tr>
 <td>RotationPaletteType</td>
@@ -1884,13 +1930,13 @@
 </tr>
 <tr>
 <td>RotationBlockPalette</td>
-<td><em>RotationBlockCount</em></td>
+<td><strong><em>RotationBlockCount</em></strong></td>
 <td>The rotation block data in the palette. See below</td>
 </tr>
 <tr>
 <td>RotationBlocks</td>
-<td>32768 of <em>RotationPaletteType</em></td>
-<td>The rotation blocks as palette indexes. (Low-nibble-first packing if <em>RotationPaletteType</em> is 1)</td>
+<td>32768 of <strong><em>RotationPaletteType</em></strong></td>
+<td>The rotation blocks as palette indexes. (Low-nibble-first packing if <strong><em>RotationPaletteType</em></strong> is 1)</td>
 </tr>
 <tr>
 <td>LocalLight</td>
@@ -1915,7 +1961,7 @@
 </tbody>
 </table>
 </div>
-<p><strong>BlockPalette</strong>:</p>
+<h3 id="blockpalette">BlockPalette</h3>
 <div id="table">
 <table>
 <thead>
@@ -1949,7 +1995,7 @@
 </tbody>
 </table>
 </div>
-<p><strong>FillerBlockPalette</strong>:</p>
+<h3 id="fillerblockpalette">FillerBlockPalette</h3>
 <div id="table">
 <table>
 <thead>
@@ -1978,7 +2024,7 @@
 </tbody>
 </table>
 </div>
-<p><strong>RotationBlockPalette</strong>:</p>
+<h3 id="rotationblockpalette">RotationBlockPalette</h3>
 <div id="table">
 <table>
 <thead>
@@ -2007,7 +2053,7 @@
 </tbody>
 </table>
 </div>
-<p><strong>LocalLight</strong> &amp; <strong>GlobalLight</strong>:</p>
+<h3 id="locallight-globallight">LocalLight &amp; GlobalLight</h3>
 <div id="table">
 <table>
 <thead>

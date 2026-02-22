@@ -1841,7 +1841,7 @@
 
 
 <h1 id="blockchunk-format">BlockChunk format</h1>
-<p>BlockChunk data is in <strong>Mixed</strong> byte order.</p>
+<p>BlockChunk data is in <strong>Little Endian</strong> byte order.</p>
 <h2 id="binary-structure">Binary structure</h2>
 <div id="table">
 <table>
@@ -1850,7 +1850,6 @@
 <th>Name</th>
 <th>Size (in bytes)</th>
 <th>Description</th>
-<th>Byte Order</th>
 </tr>
 </thead>
 <tbody>
@@ -1858,67 +1857,46 @@
 <td>NeedsPhysics</td>
 <td>1 (boolean)</td>
 <td>Unknown</td>
-<td>N/A</td>
 </tr>
 <tr>
 <td>HeightCount</td>
 <td>2</td>
-<td></td>
-<td>Little</td>
+<td>Number of height keys</td>
 </tr>
 <tr>
 <td>HeightKeys</td>
-<td><em>HeightCount</em> * 2</td>
-<td></td>
-<td>Little</td>
+<td><strong><em>HeightCount</em></strong> × 2</td>
+<td>Array of 16-bit integer keys</td>
 </tr>
 <tr>
 <td>HeightLength</td>
 <td>4</td>
-<td></td>
-<td>Little</td>
+<td>Height data length</td>
 </tr>
 <tr>
 <td>Height</td>
-<td><em>HeightLength</em></td>
-<td></td>
-<td>N/A</td>
+<td><strong><em>HeightLength</em></strong></td>
+<td>Height data (Might be VarInts)</td>
 </tr>
 <tr>
 <td>TintCount</td>
 <td>2</td>
-<td></td>
-<td>Little</td>
+<td>Number of tint keys</td>
 </tr>
 <tr>
 <td>TintKeys</td>
-<td><em>TintCount</em> * 4</td>
-<td></td>
-<td>Little</td>
+<td><strong><em>TintCount</em></strong> × 4</td>
+<td>Array of 32-bit integer keys</td>
 </tr>
 <tr>
 <td>TintLength</td>
 <td>4</td>
-<td></td>
-<td>Little</td>
+<td>Tint data length</td>
 </tr>
 <tr>
 <td>Tint</td>
-<td><em>TintLength</em></td>
-<td></td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>SectionCount</td>
-<td>4</td>
-<td>Only exists if version is 2 or less</td>
-<td>Big</td>
-</tr>
-<tr>
-<td>Sections</td>
-<td><em>Variable</em></td>
-<td>Only exists if version is 2 or less. See <a href="../Block_format/">Block format</a></td>
-<td>Big</td>
+<td><strong><em>TintLength</em></strong></td>
+<td>Tint data (Might be VarInts)</td>
 </tr>
 </tbody>
 </table>

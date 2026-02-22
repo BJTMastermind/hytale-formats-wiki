@@ -25,7 +25,7 @@
     
     
       
-        <title>Index - Hytale Formats Wiki</title>
+        <title>Chunk format - Hytale Formats Wiki</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Chunk format
             
           </span>
         </div>
@@ -1793,28 +1793,24 @@
 
 
 
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This page is a work in progress</p>
-</div>
 <h1 id="chunk-format">Chunk format</h1>
 <p>Chunks store the terrain and entities within a 32×320×32 area in the world. They also store precomputed lighting, heightmap data for Hytale's performance, and other meta information.</p>
 <h2 id="bson-structure">BSON structure</h2>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This section is a work in progress. Some BSON document contents are missing due to being empty in my test files. Descriptions will be filled in last.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some BSON document contents are missing due to being empty in my test files.</p>
 </div>
 <p><em>See also: <a href="../Region_file_format/">Region file format</a></em></p>
 <p>Chunks are stored as types in regional Hytale Region files, which are named in the form <code>x.z.region.bin</code>. They are stored in <a href="https://en.wikipedia.org/wiki/BSON">BSON format</a>, with the following structure:</p>
 <div id="treeview">
 <ul>
 <li>BSON_Document("Components"): Root document.<ul>
-<li>BSON_Document("BlockComponentChunk"):<ul>
-<li>BSON_Document("BlockComponents"):<ul>
-<li>BSON_Document("<em>&lt;5_digit_number&gt;</em>"):<ul>
-<li>BSON_Document("Components"):<ul>
-<li>BSON_Document("<em>blockId</em>"):<ul>
-<li>BSON_<em>&lt;Type&gt;</em>("<em>Components for blockId</em>"):</li>
+<li>BSON_Document("BlockComponentChunk"): Currently unknown.<ul>
+<li>BSON_Document("BlockComponents"): Currently unknown.<ul>
+<li>BSON_Document("<em>&lt;5_digit_number&gt;</em>"): Currently unknown.<ul>
+<li>BSON_Document("Components"): Contains all blocks and their components.<ul>
+<li>BSON_Document("<em>blockId</em>"): Holds all components for this block id.<ul>
+<li>BSON_<em>&lt;Type&gt;</em>("<em>Components for blockId</em>"): A component for this block.</li>
 </ul>
 </li>
 </ul>
@@ -1825,20 +1821,20 @@
 </li>
 </ul>
 </li>
-<li>BSON_Document("ChunkColumn"):<ul>
-<li>BSON_Array("Sections"):<ul>
+<li>BSON_Document("ChunkColumn"): Contains all data relating to the blocks and fluids in this chunk.<ul>
+<li>BSON_Array("Sections"): An array of 10 BSON_Documents containing information for all the sections within this chunk.<ul>
 <li>BSON_Document: A section document.<ul>
-<li>BSON_Document("Components"):<ul>
-<li>BSON_Document("ChunkSection"):</li>
-<li>BSON_Document("BlockPhysics"):<ul>
+<li>BSON_Document("Components"): Contains the chunk sections components.<ul>
+<li>BSON_Document("ChunkSection"): Currently unknown.</li>
+<li>BSON_Document("BlockPhysics"): Contains information for the support level of blocks that require a support block.<ul>
 <li>BSON_Binary&lt;Generic&gt;("Data"): See <a href="BlockPhysics_format/">BlockPhysics format</a>.</li>
 </ul>
 </li>
-<li>BSON_Document("Fluid"):<ul>
+<li>BSON_Document("Fluid"): Contains the fluid information for this chunk section.<ul>
 <li>BSON_Binary&lt;Generic&gt;("Data"): See <a href="Fluid_format/">Fluid format</a>.</li>
 </ul>
 </li>
-<li>BSON_Document("Block"):<ul>
+<li>BSON_Document("Block"): Contains the block information for this chunk section.<ul>
 <li>BSON_Int32("Version"): Referenced by some parts of the Block format.</li>
 <li>BSON_Binary&lt;Generic&gt;("Data"): See <a href="Block_format/">Block format</a>.</li>
 </ul>
@@ -1851,225 +1847,225 @@
 </li>
 </ul>
 </li>
-<li>BSON_Document("WorldChunk"):</li>
-<li>BSON_Document("BlockHealthChunk"):<ul>
+<li>BSON_Document("WorldChunk"): Currently unknown.</li>
+<li>BSON_Document("BlockHealthChunk"): Use is currently unknown.<ul>
 <li>BSON_Binary&lt;Generic&gt;("Data"): See <a href="BlockHealthChunk_format/">BlockHealthChunk format</a>.</li>
-<li>BSON_String("LastRepairGameTime"):</li>
+<li>BSON_String("LastRepairGameTime"): Currently unknown.</li>
 </ul>
 </li>
-<li>BSON_Document("ChunkSpawnedNPCData"):<ul>
-<li>BSON_Document("EnvironmentSpawnCounts"):</li>
+<li>BSON_Document("ChunkSpawnedNPCData"): Currently unknown.<ul>
+<li>BSON_Document("EnvironmentSpawnCounts"): Currently unknown.</li>
 </ul>
 </li>
-<li>BSON_Document("EnvironmentChunk"):<ul>
+<li>BSON_Document("EnvironmentChunk"): Stores the environment data for this chunk.<ul>
 <li>BSON_Binary&lt;Generic&gt;("Data"): See <a href="EnvironmentChunk_format/">EnvironmentChunk format</a>.</li>
 </ul>
 </li>
-<li>BSON_Document("BlockChunk"):<ul>
+<li>BSON_Document("BlockChunk"): Stores heightmap and tint data for this chunk.<ul>
 <li>BSON_Int32("Version"): Referenced by some parts of the BlockChunk format.</li>
 <li>BSON_Binary&lt;Generic&gt;("Data"): See <a href="BlockChunk_format/">BlockChunk format</a>.</li>
 </ul>
 </li>
-<li>BSON_Document("EntityChunk"):<ul>
-<li>BSON_Array("Entities"):<ul>
+<li>BSON_Document("EntityChunk"): Contains all entities in this chunk.<ul>
+<li>BSON_Array("Entities"): Array of all entities in this chunk.<ul>
 <li>BSON_Document: An entity.<ul>
-<li>BSON_Document("Components"):<ul>
-<li>BSON_Document("EffectController"):</li>
-<li>BSON_Document("DisplayName"):<ul>
-<li>BSON_Document("DisplayName"):<ul>
-<li>BSON_String("MessageId"):</li>
-<li>BSON_Boolean("Bold"):</li>
-<li>BSON_Boolean("Italic"):</li>
-<li>BSON_Boolean("Monospace"):</li>
-<li>BSON_Boolean("Underline"):</li>
+<li>BSON_Document("Components"): All the components this entity has.<ul>
+<li>BSON_Document("EffectController"): Currently unknown.</li>
+<li>BSON_Document("DisplayName"): The entity's display name information.<ul>
+<li>BSON_Document("DisplayName")<ul>
+<li>BSON_String("MessageId"): The name of this entity.</li>
+<li>BSON_Boolean("Bold"): <code>true</code> if the name should be display in a bold font.</li>
+<li>BSON_Boolean("Italic"): <code>true</code> if the name should be display in a italic font.</li>
+<li>BSON_Boolean("Monospace"): <code>true</code> if the name should be display in a monospace font.</li>
+<li>BSON_Boolean("Underline"): <code>true</code> if the name should be display with a underline.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>BSON_Document("UIComponentList"):</li>
-<li>BSON_Document("Transform"):<ul>
-<li>BSON_Document("Position"):<ul>
-<li>BSON_Double("X"):</li>
-<li>BSON_Double("Y"):</li>
-<li>BSON_Double("Z"):</li>
+<li>BSON_Document("UIComponentList"): Currently unknown.</li>
+<li>BSON_Document("Transform"): The entity's position and rotation in the world.<ul>
+<li>BSON_Document("Position"): The entity's position.<ul>
+<li>BSON_Double("X"): X position of the entity.</li>
+<li>BSON_Double("Y"): Y position of the entity.</li>
+<li>BSON_Double("Z"): Z position of the entity.</li>
 </ul>
 </li>
-<li>BSON_Document("Rotation"):<ul>
-<li>BSON_Double("Pitch"):</li>
-<li>BSON_Double("Yaw"):</li>
-<li>BSON_Double("Roll"):</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BSON_Document("Velocity"):<ul>
-<li>BSON_Document("Velocity"):<ul>
-<li>BSON_Double("X"):</li>
-<li>BSON_Double("Y"):</li>
-<li>BSON_Double("Z"):</li>
+<li>BSON_Document("Rotation"): The entity's rotation.<ul>
+<li>BSON_Double("Pitch"): The X rotation of the entity.</li>
+<li>BSON_Double("Yaw"): The Y rotation of the entity.</li>
+<li>BSON_Double("Roll"): The Z rotation of the entity.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>BSON_Document("PrefabCopyable"):</li>
-<li>BSON_Document("Interactions"):<ul>
-<li>BSON_Document("Interactions"):<ul>
-<li>BSON_String("Use"):</li>
+<li>BSON_Document("Velocity"): The entity's velocity.<ul>
+<li>BSON_Document("Velocity")<ul>
+<li>BSON_Double("X"): X direction velocity value.</li>
+<li>BSON_Double("Y"): Y direction velocity value.</li>
+<li>BSON_Double("Z"): Z direction velocity value.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>BSON_Document("Model"):<ul>
-<li>BSON_Document("Model"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Double("Scale"):</li>
-<li>BSON_Boolean("Static"):</li>
+<li>BSON_Document("PrefabCopyable"): Currently unknown.</li>
+<li>BSON_Document("Interactions"): Contains interactions that this npc can use.<ul>
+<li>BSON_Document("Interactions")<ul>
+<li>BSON_String("<em>&lt;InteractionType&gt;</em>"): The id of this interaction type.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>BSON_Document("UUID"):<ul>
-<li>BSON_Binary&lt;UUID&gt;("UUID"):</li>
-</ul>
-</li>
-<li>BSON_Document("EntityStats"):<ul>
-<li>BSON_Int32("Version"):</li>
-<li>BSON_Document("<em>&lt;Stat&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Double("Value"):</li>
+<li>BSON_Document("Model"): Model information for this entity.<ul>
+<li>BSON_Document("Model")<ul>
+<li>BSON_String("Id"): The model Id for this entity.</li>
+<li>BSON_Double("Scale"): The entity's model scale.</li>
+<li>BSON_Boolean("Static"): <code>true</code> if the model is static.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>BSON_Document("NPC"):<ul>
-<li>BSON_Int32("Version"):</li>
-<li>BSON_Binary&lt;UUID&gt;("UUID"):</li>
-<li>BSON_Document("Inventory"):<ul>
-<li>BSON_Int32("Version"):</li>
-<li>BSON_Document("Storage"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
+<li>BSON_Document("UUID"): The entity's UUID.<ul>
+<li>BSON_Binary&lt;UUID&gt;("UUID"): The UUID stored in binary form.</li>
+</ul>
+</li>
+<li>BSON_Document("EntityStats"): Contains all stats of this entity, such as their oxygen level, mana level, and more.<ul>
+<li>BSON_Int32("Version"): The entity stats format version used when saved.</li>
+<li>BSON_Document("<em>&lt;Stat&gt;</em>"): A entity stat.<ul>
+<li>BSON_String("Id"): The id of the stat. Normally matches document key name.</li>
+<li>BSON_Double("Value"): The value of the entity stat.</li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li>BSON_Document("Armor"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
+<li>BSON_Document("NPC"): Contains common npc data.<ul>
+<li>BSON_Int32("Version"): The npc format version used when saved.</li>
+<li>BSON_Binary&lt;UUID&gt;("UUID"): The entity's UUID stored in binary form. (Again)</li>
+<li>BSON_Document("Inventory"): Contains all items across all inventories for this entity.<ul>
+<li>BSON_Int32("Version"): The inventory format version used when saved.</li>
+<li>BSON_Document("Storage"): Contains all items in the main inventory.<ul>
+<li>BSON_String("Id"): The inventory type id. Normally <code>Simple</code>.</li>
+<li>BSON_Int32("Capacity"): The total number of inventory slots available.</li>
+<li>BSON_Document("Items"): List of items in this inventory. Empty if no items are present.<ul>
+<li>BSON_Document("<em>&lt;index&gt;</em>"): An item at the given inventory index.<ul>
+<li>BSON_String("Id"): The item id</li>
+<li>BSON_Int32("Quantity"): The item count.</li>
+<li>BSON_Double("Durability"): The items current durability.</li>
+<li>BSON_Double("MaxDurability"): The items total durability when un-damaged.</li>
+<li>BSON_Boolean("OverrideDroppedItemAnimation"): Currently unknown.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>BSON_Document("HotBar"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
+<li>BSON_Document("Armor"): Contains all items in the armor slots.<ul>
+<li>BSON_String("Id"): The inventory type id. Normally <code>Simple</code>.</li>
+<li>BSON_Int32("Capacity"): The total number of inventory slots available.</li>
+<li>BSON_Document("Items"): List of items in this inventory. Empty if no items are present.<ul>
+<li>BSON_Document("<em>&lt;index&gt;</em>"): An item at the given inventory index.<ul>
+<li>BSON_String("Id"): The item id</li>
+<li>BSON_Int32("Quantity"): The item count.</li>
+<li>BSON_Double("Durability"): The items current durability.</li>
+<li>BSON_Double("MaxDurability"): The items total durability when un-damaged.</li>
+<li>BSON_Boolean("OverrideDroppedItemAnimation"): Currently unknown.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>BSON_Document("Utility"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
+<li>BSON_Document("HotBar"): Contains all items in the hotbar.<ul>
+<li>BSON_String("Id"): The inventory type id. Normally <code>Simple</code>.</li>
+<li>BSON_Int32("Capacity"): The total number of inventory slots available.</li>
+<li>BSON_Document("Items"): List of items in this inventory. Empty if no items are present.<ul>
+<li>BSON_Document("<em>&lt;index&gt;</em>"): An item at the given inventory index.<ul>
+<li>BSON_String("Id"): The item id</li>
+<li>BSON_Int32("Quantity"): The item count.</li>
+<li>BSON_Double("Durability"): The items current durability.</li>
+<li>BSON_Double("MaxDurability"): The items total durability when un-damaged.</li>
+<li>BSON_Boolean("OverrideDroppedItemAnimation"): Currently unknown.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>BSON_Document("Backpack"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
+<li>BSON_Document("Utility"): Contains all items in the utility/offhand wheel.<ul>
+<li>BSON_String("Id"): The inventory type id. Normally <code>Simple</code>.</li>
+<li>BSON_Int32("Capacity"): The total number of inventory slots available.</li>
+<li>BSON_Document("Items"): List of items in this inventory. Empty if no items are present.<ul>
+<li>BSON_Document("<em>&lt;index&gt;</em>"): An item at the given inventory index.<ul>
+<li>BSON_String("Id"): The item id</li>
+<li>BSON_Int32("Quantity"): The item count.</li>
+<li>BSON_Double("Durability"): The items current durability.</li>
+<li>BSON_Double("MaxDurability"): The items total durability when un-damaged.</li>
+<li>BSON_Boolean("OverrideDroppedItemAnimation"): Currently unknown.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>BSON_Int32("ActiveHotbarSlot"):</li>
-<li>BSON_Document("Tool"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Capacity"):</li>
-<li>BSON_Document("Items"):<ul>
-<li>BSON_Document("<em>&lt;index&gt;</em>"):<ul>
-<li>BSON_String("Id"):</li>
-<li>BSON_Int32("Quantity"):</li>
-<li>BSON_Double("Durability"):</li>
-<li>BSON_Double("MaxDurability"):</li>
-<li>BSON_Boolean("OverrideDroppedItemAnimation"):</li>
+<li>BSON_Document("Backpack"): Contains all items in the entity's backpack.<ul>
+<li>BSON_String("Id"): The inventory type id. Normally <code>Simple</code>.</li>
+<li>BSON_Int32("Capacity"): The total number of inventory slots available.</li>
+<li>BSON_Document("Items"): List of items in this inventory. Empty if no items are present.<ul>
+<li>BSON_Document("<em>&lt;index&gt;</em>"): An item at the given inventory index.<ul>
+<li>BSON_String("Id"): The item id</li>
+<li>BSON_Int32("Quantity"): The item count.</li>
+<li>BSON_Double("Durability"): The items current durability.</li>
+<li>BSON_Double("MaxDurability"): The items total durability when un-damaged.</li>
+<li>BSON_Boolean("OverrideDroppedItemAnimation"): Currently unknown.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>BSON_Int32("ActiveToolsSlot"):</li>
-<li>BSON_Int32("ActiveUtilitySlot"):</li>
-<li>BSON_String("SortType"):</li>
+<li>BSON_Int32("ActiveHotbarSlot"): The entity's currently selected hotbar slot.</li>
+<li>BSON_Document("Tool"): Currently unknown.<ul>
+<li>BSON_String("Id"): The inventory type id. Normally <code>Simple</code>.</li>
+<li>BSON_Int32("Capacity"): The total number of inventory slots available.</li>
+<li>BSON_Document("Items"): List of items in this inventory. Empty if no items are present.<ul>
+<li>BSON_Document("<em>&lt;index&gt;</em>"): An item at the given inventory index.<ul>
+<li>BSON_String("Id"): The item id</li>
+<li>BSON_Int32("Quantity"): The item count.</li>
+<li>BSON_Double("Durability"): The items current durability.</li>
+<li>BSON_Double("MaxDurability"): The items total durability when un-damaged.</li>
+<li>BSON_Boolean("OverrideDroppedItemAnimation"): Currently unknown.</li>
 </ul>
 </li>
-<li>BSON_Double("HvrPhs"):</li>
-<li>BSON_Double("HvrHght"):</li>
-<li>BSON_Double("MdlScl"):</li>
-<li>BSON_String("SpawnInstant"):</li>
-<li>BSON_Int32("WorldgenId"):</li>
-<li>BSON_Document("PathManager"):</li>
-<li>BSON_Document("LeashPos"):<ul>
-<li>BSON_Double("X"):</li>
-<li>BSON_Double("Y"):</li>
-<li>BSON_Double("Z"):</li>
 </ul>
 </li>
-<li>BSON_Double("LeashHdg"):</li>
-<li>BSON_Double("LeashPtch"):</li>
-<li>BSON_String("RoleName"):</li>
 </ul>
 </li>
-<li>BSON_Document("HeadRotation"):<ul>
-<li>BSON_Document("Rotation"):<ul>
-<li>BSON_Double("Pitch"):</li>
-<li>BSON_Double("Yaw"):</li>
-<li>BSON_Double("Roll"):</li>
+<li>BSON_Int32("ActiveToolsSlot"): The entity's currently selected tool slot. <code>-1</code> if none.</li>
+<li>BSON_Int32("ActiveUtilitySlot"): The entity's currently selected utility/offhand slot. <code>-1</code> if none.</li>
+<li>BSON_String("SortType"): The entity's inventory item sort type.</li>
+</ul>
+</li>
+<li>BSON_Double("HvrPhs"): The entity's hover phase.</li>
+<li>BSON_Double("HvrHght"): The entity's hover height.</li>
+<li>BSON_Double("MdlScl"): The entity's initial model scale.</li>
+<li>BSON_String("SpawnInstant"): The timestamp of when this entity spawned into the world. in the format of <code>YYYY-MM-DDThh:mm:ssZ</code> as in-game time i.e <code>0001-01-01T12:00:00Z</code>.</li>
+<li>BSON_Int32("WorldgenId"): Use currently unknown. (deprecated field)</li>
+<li>BSON_Document("PathManager"): Currently unknown.</li>
+<li>BSON_Document("LeashPos"): The entity's spawn location.<ul>
+<li>BSON_Double("X"): The X position of where this entity spawned.</li>
+<li>BSON_Double("Y"): The Y position of where this entity spawned.</li>
+<li>BSON_Double("Z"): The Z position of where this entity spawned.</li>
+</ul>
+</li>
+<li>BSON_Double("LeashHdg"): The entity's yaw/heading when first spawned.</li>
+<li>BSON_Double("LeashPtch"): The entity's pitch when first spawned.</li>
+<li>BSON_String("RoleName"): The entity's Id.</li>
+</ul>
+</li>
+<li>BSON_Document("HeadRotation"): The entity's initial head rotation.<ul>
+<li>BSON_Document("Rotation")<ul>
+<li>BSON_Double("Pitch"): The initial X rotation of the entity.</li>
+<li>BSON_Double("Yaw"): The initial Y rotation of the entity.</li>
+<li>BSON_Double("Roll"): The initial Z rotation of the entity.</li>
 </ul>
 </li>
 </ul>

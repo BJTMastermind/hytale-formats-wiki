@@ -1975,8 +1975,8 @@
 <td>The number of palette entries.</td>
 </tr>
 <tr>
-<td>Palette</td>
-<td><em>Variable</em></td>
+<td>Palette Entries</td>
+<td><strong><em>PaletteSize</em></strong></td>
 <td>The palette entries.</td>
 </tr>
 <tr>
@@ -1988,7 +1988,6 @@
 </table>
 </div>
 <h3 id="palette-entry">Palette Entry</h3>
-<p>Repeated <code>PaletteSize</code> times.</p>
 <div id="table">
 <table>
 <thead>
@@ -2011,7 +2010,7 @@
 </tr>
 <tr>
 <td>Key</td>
-<td><em>KeyLength</em></td>
+<td><strong><em>KeyLength</em></strong></td>
 <td>UTF-8 encoded environment key.</td>
 </tr>
 </tbody>
@@ -2041,12 +2040,12 @@ z = columnIndex / 32
 </tr>
 <tr>
 <td>MaxYs</td>
-<td><em>BoundaryCount</em> × 4</td>
+<td><strong><em>BoundaryCount</em></strong> × 4</td>
 <td>The absolute Y boundary values (inclusive upper bounds of each segment).</td>
 </tr>
 <tr>
 <td>EnvironmentIds</td>
-<td>(<em>BoundaryCount</em> + 1) × 4</td>
+<td>(<strong><em>BoundaryCount</em></strong> + 1) × 4</td>
 <td>Serialized environment IDs for each vertical segment.</td>
 </tr>
 </tbody>
