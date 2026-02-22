@@ -1,6 +1,3 @@
-!!! info
-    This page is a work in progress
-
 # Block format
 
 Block data is in **Big Endian** byte order.
@@ -14,19 +11,19 @@ Block data is in **Big Endian** byte order.
 | BlockMigrationVersion | 4 | Only exists if version is 6 or above |
 | PaletteType | 1 | The palette type.<br>May be: 0 = `Empty`, 1 = `Half Byte`, 2 = `Byte`, or 3 = `Short` |
 | BlockCount | 2 | Number of blocks in the palette |
-| BlockPalette | *BlockCount* | The blocks in the palette. See below |
-| Blocks | 32768 of *PaletteType* | the blocks as palette indexes. (Low-nibble-first packing if *PaletteType* is 1) |
+| BlockPalette | ***BlockCount*** | The blocks in the palette. See below |
+| Blocks | 32768 of ***PaletteType*** | the blocks as palette indexes. (Low-nibble-first packing if ***PaletteType*** is 1) |
 | TickingBlockCount | 2 | Unknown |
 | TickingBlockDataSize | 2 | Unknown |
-| TickingBlockData | *TickingBlockDataSize* × 8 | Unknown |
+| TickingBlockData | ***TickingBlockDataSize*** × 8 | Unknown |
 | FillerPaletteType | 1 | The filler palette type.<br>May be: 0 = `Empty`, 1 = `Half Byte`, 2 = `Byte`, or 3 = `Short` |
 | FillerBlockCount | 2 | Number of filler blocks in the palette |
-| FillerBlockPalette | *FillerBlockCount* | The filler block data in the palette. See below |
-| FillerBlocks | 32768 of *FillerPaletteType* | The filler blocks as palette indexes. (Low-nibble-first packing if *FillerPaletteType* is 1) |
+| FillerBlockPalette | ***FillerBlockCount*** | The filler block data in the palette. See below |
+| FillerBlocks | 32768 of ***FillerPaletteType*** | The filler blocks as palette indexes. (Low-nibble-first packing if ***FillerPaletteType*** is 1) |
 | RotationPaletteType | 1 | The rotation palette type.<br>May be: 0 = `Empty`, 1 = `Half Byte`, 2 = `Byte`, or 3 = `Short` |
 | RotationBlockCount | 1 | Number of rotation blocks in the palette |
-| RotationBlockPalette | *RotationBlockCount* | The rotation block data in the palette. See below |
-| RotationBlocks | 32768 of *RotationPaletteType* | The rotation blocks as palette indexes. (Low-nibble-first packing if *RotationPaletteType* is 1) |
+| RotationBlockPalette | ***RotationBlockCount*** | The rotation block data in the palette. See below |
+| RotationBlocks | 32768 of ***RotationPaletteType*** | The rotation blocks as palette indexes. (Low-nibble-first packing if ***RotationPaletteType*** is 1) |
 | LocalLight | *Variable* | The local light data. See below |
 | GlobalLight | *Variable* | The global light data. See below |
 | LocalChangeCounter | 2 | 16-bit Identifier, identifying the current state of the local light data. |
@@ -34,7 +31,7 @@ Block data is in **Big Endian** byte order.
 
 </div>
 
-**BlockPalette**:
+### BlockPalette
 
 <div markdown="1" id="table">
 
@@ -47,7 +44,7 @@ Block data is in **Big Endian** byte order.
 
 </div>
 
-**FillerBlockPalette**:
+### FillerBlockPalette
 
 <div markdown="1" id="table">
 
@@ -59,7 +56,7 @@ Block data is in **Big Endian** byte order.
 
 </div>
 
-**RotationBlockPalette**:
+### RotationBlockPalette
 
 <div markdown="1" id="table">
 
@@ -71,7 +68,7 @@ Block data is in **Big Endian** byte order.
 
 </div>
 
-**LocalLight** & **GlobalLight**:
+### LocalLight & GlobalLight
 
 <div markdown="1" id="table">
 

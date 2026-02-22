@@ -12,14 +12,12 @@ EnvironmentChunk data is in **Big Endian** byte order.
 | Name | Size (in bytes) | Description |
 |------|-----------------|-------------|
 | PaletteSize | 4 | The number of palette entries. |
-| Palette | *Variable* | The palette entries. |
+| Palette Entries | ***PaletteSize*** | The palette entries. |
 | Columns | *Variable* | Exactly 1024 1×1 columns for this chunk. |
 
 </div>
 
 ### Palette Entry
-
-Repeated `PaletteSize` times.
 
 <div markdown="1" id="table">
 
@@ -27,7 +25,7 @@ Repeated `PaletteSize` times.
 |------|-----------------|-------------|
 | SerialId | 4 | A serialized environment Id referenced by column entries. |
 | KeyLength | 2 | Unsigned 16-bit length of Key. |
-| Key | *KeyLength* | UTF-8 encoded environment key. |
+| Key | ***KeyLength*** | UTF-8 encoded environment key. |
 
 </div>
 
@@ -49,8 +47,8 @@ z = columnIndex / 32
 | Name | Size (in bytes) | Description |
 |------|-----------------|-------------|
 | BoundaryCount | 4 | The number of vertical Y boundaries. |
-| MaxYs | *BoundaryCount* × 4 | The absolute Y boundary values (inclusive upper bounds of each segment). |
-| EnvironmentIds | (*BoundaryCount* + 1) × 4 | Serialized environment IDs for each vertical segment. |
+| MaxYs | ***BoundaryCount*** × 4 | The absolute Y boundary values (inclusive upper bounds of each segment). |
+| EnvironmentIds | (***BoundaryCount*** + 1) × 4 | Serialized environment IDs for each vertical segment. |
 
 </div>
 

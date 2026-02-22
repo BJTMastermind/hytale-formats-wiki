@@ -10,13 +10,13 @@ BlockHealthChunk data is in **Unknown** byte order.
 |------|-----------------|-------------|
 | Version | 1 | The version of this format that this was saved with |
 | HealthEntriesCount | 4 | The number of entries |
-| HealthEntries | *HealthEntriesCount* | See blow |
+| HealthEntries | ***HealthEntriesCount*** | See blow |
 | FragilityEntiresCount | 4 | The number of fragile entires |
-| FragilityEntires | *FragilityEntiresCount* | See below |
+| FragilityEntires | ***FragilityEntiresCount*** | See below |
 
 </div>
 
-**HealthEntries**:
+### HealthEntries
 
 <div markdown="1" id="table">
 
@@ -26,11 +26,11 @@ BlockHealthChunk data is in **Unknown** byte order.
 | Y | 4 | The y position |
 | Z | 4 | The z position |
 | Health | 4 (float) | The current health of the block |
-| LastDamageGameTime | 8 | |
+| LastDamageGameTime | 8 | Unknown |
 
 </div>
 
-**FragilityEntires**:
+### FragilityEntires
 
 <div markdown="1" id="table">
 

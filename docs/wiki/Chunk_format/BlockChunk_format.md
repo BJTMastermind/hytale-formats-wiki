@@ -1,23 +1,21 @@
 # BlockChunk format
 
-BlockChunk data is in **Mixed** byte order.
+BlockChunk data is in **Little Endian** byte order.
 
 ## Binary structure
 
 <div markdown="1" id="table">
 
-| Name | Size (in bytes) | Description | Byte Order |
-|------|-----------------|-------------|------------|
-| NeedsPhysics | 1 (boolean) | Unknown | N/A |
-| HeightCount | 2 | | Little |
-| HeightKeys | *HeightCount* * 2 | | Little |
-| HeightLength | 4 | | Little |
-| Height | *HeightLength* | | N/A |
-| TintCount | 2 | | Little |
-| TintKeys | *TintCount* * 4 | | Little |
-| TintLength | 4 | | Little |
-| Tint | *TintLength* | | N/A |
-| SectionCount | 4 | Only exists if version is 2 or less | Big |
-| Sections | *Variable* | Only exists if version is 2 or less. See [Block format](./Block_format/index.md) | Big |
+| Name | Size (in bytes) | Description |
+|------|-----------------|-------------|
+| NeedsPhysics | 1 (boolean) | Unknown |
+| HeightCount | 2 | Number of height keys |
+| HeightKeys | ***HeightCount*** × 2 | Array of 16-bit integer keys |
+| HeightLength | 4 | Height data length |
+| Height | ***HeightLength*** | Height data (Might be VarInts) |
+| TintCount | 2 | Number of tint keys |
+| TintKeys | ***TintCount*** × 4 | Array of 32-bit integer keys |
+| TintLength | 4 | Tint data length |
+| Tint | ***TintLength*** | Tint data (Might be VarInts) |
 
 </div>
