@@ -44,15 +44,17 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
                     {.addicon .file_system.file}
                 * resources
                 {.addicon .file_system.directory}
-                    * BlockCounter.json See [Block Counter format](./Block_Counter_format.md).
+                    * BlockCounter.json: See [Block Counter format](./Block_Counter_format.md).
                     {.addicon .file_system.file}
-                    * BlockMapMarkers.json See [Block Map Markers format](./Block_Map_Markers_format.md).
+                    * BlockMapMarkers.json: See [Block Map Markers format](./Block_Map_Markers_format.md).
                     {.addicon .file_system.file}
-                    * InstanceData.json See [Instance Data](./Instance_Data_format.md).
+                    * InstanceData.json: See [Instance Data](./Instance_Data_format.md).
                     {.addicon .file_system.file}
                     * PrefabEditSession.json: See [Prefab Edit Session format](./Prefab_Edit_Session_format.md).
                     {.addicon .file_system.file}
                     * ReputationData.json: See [Reputation Data format](./Reputation_Data_format.md).
+                    {.addicon .file_system.file}
+                    * SharedUserMapMarkers.json: See [Shared User Map Markers format](./Shared_User_Map_Markers_format.md)
                     {.addicon .file_system.file}
                     * SpawnSuppressionController.json: See [Spawn Suppression Controller format](./Spawn_Suppression_Controller_format.md).
                     {.addicon .file_system.file}
