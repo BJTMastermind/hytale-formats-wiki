@@ -4,364 +4,409 @@
 
 ## JSON format
 
-<details markdown="1">
-<summary>Show</summary>
 <div markdown="1" id="treeview">
 
 * : Root object.
 {.addicon .json.object}
-    * Components:
+    * Components: All the components this player has.
     {.addicon .json.object}
-        * Nameplate:
+        * Nameplate: The players unmodified name.
         {.addicon .json.object}
             * Text: The players name.
             {.addicon .json.string}
-        * EffectController:
+        * EffectController: Currently unknown.
         {.addicon .json.object}
-        * ObjectiveHistory:
+        * ObjectiveHistory: Currently unknown.
         {.addicon .json.object}
-            * ObjectiveHistory:
+            * ObjectiveHistory: Currently unknown.
             {.addicon .json.object}
-            * ObjectiveLineHistory:
+            * ObjectiveLineHistory: Currently unknown.
             {.addicon .json.object}
-        * DisplayName:
+        * DisplayName: The players display name information.
         {.addicon .json.object}
-            * DisplayName:
+            * DisplayName
             {.addicon .json.object}
-                * RawText: The players name.
+                * RawText: The players display name.
                 {.addicon .json.string}
-                * Bold:
+                * Bold: `true` if the name should be displayed in a bold font.
                 {.addicon .json.boolean}
-                * Italic:
+                * Italic: `true` if the name should be displayed in a italic font.
                 {.addicon .json.boolean}
-                * Monospace:
+                * Monospace: `true` if the name should be displayed in a monospace font.
                 {.addicon .json.boolean}
-                * Underline:
+                * Underline: `true` if the name should be displayed with an underline.
                 {.addicon .json.boolean}
-        * UIComponentList:
+        * UIComponentList: Currently unknown.
         {.addicon .json.object}
-        * Transform:
+        * Transform: The players position and rotation in the world.
         {.addicon .json.object}
-            * Position:
+            * Position: The players position.
             {.addicon .json.object}
-                * X:
+                * X: X position of the player.
                 {.addicon .json.float}
-                * Y:
+                * Y: Y position of the player.
                 {.addicon .json.float}
-                * Z:
+                * Z: Z position of the player.
                 {.addicon .json.float}
-            * Rotation:
+            * Rotation: The players rotation.
             {.addicon .json.object}
-                * Pitch:
+                * Pitch: The X rotation of the player.
                 {.addicon .json.float}
-                * Yaw:
+                * Yaw: The Y rotation of the player.
                 {.addicon .json.float}
-                * Roll:
+                * Roll: The Z rotation of the player.
                 {.addicon .json.float}
-        * BuilderTools:
+        * BuilderTools: Currently unknown.
         {.addicon .json.object}
-            * SelectionHistory:
-        * Velocity:
+            * SelectionHistory: Currently unknown.
+            {.addicon .json.boolean}
+        * Velocity: The players velocity.
         {.addicon .json.object}
-            * Velocity:
+            * Velocity
             {.addicon .json.object}
-                * X:
+                * X: X direction velocity value.
                 {.addicon .json.float}
-                * Y:
+                * Y: Y direction velocity value.
                 {.addicon .json.float}
-                * Z:
+                * Z: Z direction velocity value.
                 {.addicon .json.float}
-        * Player
+        * Player: Contains common player data.
         {.addicon .json.object}
-            * Version:
+            * Version: The player format version used when saved.
             {.addicon .json.int}
-            * UUID:
+            * UUID: The players UUID stored in binary form encoded in base64.
             {.addicon .json.object}
-                * $binary:
+                * $binary: The base64 encoded binary UUID value.
                 {.addicon .json.string}
-                * $type:
+                * $type: The BSON binary type. Always `04` for UUID.
                 {.addicon .json.string}
-            * Inventory:
+            * Inventory: Contains all items across all inventories for this player.
             {.addicon .json.object}
-                * Version:
+                * Version: The inventory format version used when saved.
                 {.addicon .json.int}
-                * Storage:
+                * Storage: Contains all items in the main inventory.
                 {.addicon .json.object}
-                    * Id:
+                    * Id: The inventory type id. Normally `Simple`.
                     {.addicon .json.string}
-                    * Capacity:
+                    * Capacity: The total number of inventory slots available.
                     {.addicon .json.int}
-                    * Items:
+                    * Items: List of items in this inventory. Empty if no items are present.
                     {.addicon .json.object}
-                        * <#\>:
+                        * <#\>: An item at the given inventory index.
                         {.addicon .json.object}
-                            * Id:
+                            * Id: The item id.
                             {.addicon .json.string}
-                            * Quantity:
+                            * Quantity: The item count.
                             {.addicon .json.int}
-                            * Durability:
+                            * Durability: The items current durability.
                             {.addicon .json.float}
-                            * MaxDurability:
+                            * MaxDurability: The items total durability when un-damaged.
                             {.addicon .json.float}
-                            * OverrideDropItemAnimation:
+                            * OverrideDropItemAnimation: Currently unknown.
                             {.addicon .json.boolean}
-                * Armor:
+                * Armor: Contains all items in the armor slots.
                 {.addicon .json.object}
-                    * Id:
+                    * Id: The inventory type id. Normally `Simple`.
                     {.addicon .json.string}
-                    * Capacity:
+                    * Capacity: The total number of inventory slots available.
                     {.addicon .json.int}
-                    * Items:
+                    * Items: List of items in this inventory. Empty if no items are present.
                     {.addicon .json.object}
-                        * <#\>:
+                        * <#\>: An item at the given inventory index.
                         {.addicon .json.object}
-                            * Id:
+                            * Id: The item id.
                             {.addicon .json.string}
-                            * Quantity:
+                            * Quantity: The item count.
                             {.addicon .json.int}
-                            * Durability:
+                            * Durability: The items current durability.
                             {.addicon .json.float}
-                            * MaxDurability:
+                            * MaxDurability: The items total durability when un-damaged.
                             {.addicon .json.float}
-                            * OverrideDropItemAnimation:
+                            * OverrideDropItemAnimation: Currently unknown.
                             {.addicon .json.boolean}
-                * HotBar:
+                * HotBar: Contains all items in the hotbar.
                 {.addicon .json.object}
-                    * Id:
+                    * Id: The inventory type id. Normally `Simple`.
                     {.addicon .json.string}
-                    * Capacity:
+                    * Capacity: The total number of inventory slots available.
                     {.addicon .json.int}
-                    * Items:
+                    * Items: List of items in this inventory. Empty if no items are present.
                     {.addicon .json.object}
-                        * <#\>:
+                        * <#\>: An item at the given inventory index.
                         {.addicon .json.object}
-                            * Id:
+                            * Id: The item id.
                             {.addicon .json.string}
-                            * Quantity:
+                            * Quantity: The item count.
                             {.addicon .json.int}
-                            * Durability:
+                            * Durability: The items current durability.
                             {.addicon .json.float}
-                            * MaxDurability:
+                            * MaxDurability: The items total durability when un-damaged.
                             {.addicon .json.float}
-                            * OverrideDropItemAnimation:
+                            * OverrideDropItemAnimation: Currently unknown.
                             {.addicon .json.boolean}
-                * Utility:
+                * Utility: Contains all items in the utility/offhand wheel.
                 {.addicon .json.object}
-                    * Id:
+                    * Id: The inventory type id. Normally `Simple`.
                     {.addicon .json.string}
-                    * Capacity:
+                    * Capacity: The total number of inventory slots available.
                     {.addicon .json.int}
-                    * Items:
+                    * Items: List of items in this inventory. Empty if no items are present.
                     {.addicon .json.object}
-                        * <#\>:
+                        * <#\>: An item at the given inventory index.
                         {.addicon .json.object}
-                            * Id:
+                            * Id: The item id.
                             {.addicon .json.string}
-                            * Quantity:
+                            * Quantity: The item count.
                             {.addicon .json.int}
-                            * Durability:
+                            * Durability: The items current durability.
                             {.addicon .json.float}
-                            * MaxDurability:
+                            * MaxDurability: The items total durability when un-damaged.
                             {.addicon .json.float}
-                            * OverrideDropItemAnimation:
+                            * OverrideDropItemAnimation: Currently unknown.
                             {.addicon .json.boolean}
-                * Backpack:
+                * Backpack: Contains all items in the entity's backpack.
                 {.addicon .json.object}
-                    * Id:
+                    * Id: The inventory type id. Normally `Simple`.
                     {.addicon .json.string}
-                    * Capacity:
+                    * Capacity: The total number of inventory slots available.
                     {.addicon .json.int}
-                    * Items:
+                    * Items: List of items in this inventory. Empty if no items are present.
                     {.addicon .json.object}
-                        * <#\>:
+                        * <#\>: An item at the given inventory index.
                         {.addicon .json.object}
-                            * Id:
+                            * Id: The item id.
                             {.addicon .json.string}
-                            * Quantity:
+                            * Quantity: The item count.
                             {.addicon .json.int}
-                            * Durability:
+                            * Durability: The items current durability.
                             {.addicon .json.float}
-                            * MaxDurability:
+                            * MaxDurability: The items total durability when un-damaged.
                             {.addicon .json.float}
-                            * OverrideDropItemAnimation:
+                            * OverrideDropItemAnimation: Currently unknown.
                             {.addicon .json.boolean}
-                * ActiveHotbarSlot:
+                * ActiveHotbarSlot: The entity's currently selected hotbar slot.
                 {.addicon .json.int}
-                * Tool:
+                * Tool: Currently unknown.
                 {.addicon .json.object}
-                    * Id:
+                    * Id: The inventory type id. Normally `Simple`.
                     {.addicon .json.string}
-                    * Capacity:
+                    * Capacity: The total number of inventory slots available.
                     {.addicon .json.int}
-                    * Items:
+                    * Items: List of items in this inventory. Empty if no items are present.
                     {.addicon .json.object}
-                        * <#\>:
+                        * <#\>: An item at the given inventory index.
                         {.addicon .json.object}
-                            * Id:
+                            * Id: The item id.
                             {.addicon .json.string}
-                            * Quantity:
+                            * Quantity: The item count.
                             {.addicon .json.int}
-                            * Durability:
+                            * Durability: The items current durability.
                             {.addicon .json.float}
-                            * MaxDurability:
+                            * MaxDurability: The items total durability when un-damaged.
                             {.addicon .json.float}
-                            * OverrideDropItemAnimation:
+                            * OverrideDropItemAnimation: Currently unknown.
                             {.addicon .json.boolean}
-                * ActiveToolsSlot:
+                * ActiveToolsSlot: The entity's currently selected tool slot. `-1` if none.
                 {.addicon .json.int}
-                * ActiveUtilitySlot:
+                * ActiveUtilitySlot: The entity's currently selected utility/offhand slot.
                 {.addicon .json.int}
-                * SortType:
+                * SortType: The entity's inventory item sort type.
                 {.addicon .json.string}
             * PlayerData:
             {.addicon .json.object}
-                * BlockIdVersion:
+                * BlockIdVersion: The block id version at the time of saving.
                 {.addicon .json.int}
-                * World:
+                * World: The current world/universe the player is in.
                 {.addicon .json.string}
-                * KnownRecipes:
+                * KnownRecipes: Currently unknown.
                 {.addicon .json.array}
-                * PerWorldData:
+                * PerWorldData: Contains per world information for this player.
                 {.addicon .json.object}
-                    * instance-<Zone_Name\>-<uuid\>:
+                    * <instanceName\>: Contains this players per world data for this world.
                     {.addicon .json.object}
-                        * LastPosition:
+                        * LastPosition: The players last position and rotation in this world.
                         {.addicon .json.object}
-                            * X:
+                            * X: The players X position of where they last were in this world.
                             {.addicon .json.float}
-                            * Y:
+                            * Y: The players Y position of where they last were in this world.
                             {.addicon .json.float}
-                            * Z:
+                            * Z: The players Z position of where they last were in this world.
                             {.addicon .json.float}
-                            * Pitch:
+                            * Pitch: The players X rotation of where they were last looking in this world.
                             {.addicon .json.float}
-                            * Yaw:
+                            * Yaw: The players Y rotation of where they were last looking in this world.
                             {.addicon .json.float}
-                            * Roll:
+                            * Roll: The players Z rotation of where they were last looking in this world.
                             {.addicon .json.float}
-                        * LastMovementStates:
+                        * LastMovementStates: The players last movement state.
                         {.addicon .json.object}
-                            * Flying:
+                            * Flying: `true` if the player was flying when they were last in this world.
                             {.addicon .json.boolean}
-                        * FirstSpawn:
+                        * FirstSpawn: Currently unknown.
                         {.addicon .json.boolean}
-                        * DeathPositions:
+                        * RespawnPoints: List of all respawn points for this player.
+                        {.addicon .json.array}
+                            * : A respawn point.
+                            {.addicon .json.object}
+                                * BlockPosition:
+                                {.addicon .json.object}
+                                    * X: X position of the respawn block.
+                                    {.addicon .json.int}
+                                    * Y: Y position of the respawn block.
+                                    {.addicon .json.int}
+                                    * Z: Z position of the respawn block.
+                                    {.addicon .json.int}
+                                * RespawnPosition:
+                                    * X: X position of where the player respawns at this location.
+                                    {.addicon .json.float}
+                                    * Y: Y position of where the player respawns at this location.
+                                    {.addicon .json.float}
+                                    * Z: Z position of where the player respawns at this location.
+                                    {.addicon .json.float}
+                                * Name: The name of this respawn location.
+                                {.addicon .json.string}
+                        * DeathPositions: Contains all the players death map markers.
                         {.addicon .json.array}
                             * : A death position.
                             {.addicon .json.object}
-                                * MarkerId:
+                                * MarkerId: The death markers id. Has the format of `death-marker-<uuid>`
                                 {.addicon .json.string}
-                                * Transform:
+                                * Transform: The position and rotation information of where the player died.
                                 {.addicon .json.object}
-                                    * X:
+                                    * X: The X position of where the player died.
                                     {.addicon .json.float}
-                                    * Y:
+                                    * Y: The Y position of where the player died.
                                     {.addicon .json.float}
-                                    * Z:
+                                    * Z: The Z position of where the player died.
                                     {.addicon .json.float}
-                                    * Pitch:
+                                    * Pitch: The X rotation of the player when they died. (Unused in practice. Always `0.0`)
                                     {.addicon .json.float}
-                                    * Yaw:
+                                    * Yaw: The Y rotation of the player when they died. (Unused in practice. Always `0.0`)
                                     {.addicon .json.float}
-                                    * Roll:
+                                    * Roll: The Z rotation of the player when they died. (Unused in practice. Always `0.0`)
                                     {.addicon .json.float}
-                                * Day:
+                                * Day: The day number that the player died on.
                                 {.addicon .json.int}
-                * DiscoveredZones:
+                        * UserMarkers: Contains all player made map markers that aren't shared with other players.
+                        {.addicon .json.array}
+                            * : A custom map marker.
+                            {.addicon .json.object}
+                                * Id: The id of this marker. Has the format of `user_personal_<uuid>`.
+                                {.addicon .json.string}
+                                * X: The X position of this map marker.
+                                {.addicon .json.float}
+                                * Z: The Z position of this map marker.
+                                {.addicon .json.float}
+                                * Name: The name of this map marker.
+                                {.addicon .json.string}
+                                * Icon: The icon file name for this map marker.
+                                {.addicon .json.string}
+                                * ColorTint: The hex tint color to apply to the marker icon.
+                                {.addicon .json.string}
+                                * CreatedByUuid: The UUID of the player who created this map marker stored in binary form encoded in base64.
+                                {.addicon .json.object}
+                                    * $binary: The base64 encoded binary UUID value.
+                                    {.addicon .json.string}
+                                    * $type: The BSON binary type. Always `04` for UUID.
+                                    {.addicon .json.string}
+                                * CreatedByName: The name of the player who created this map marker.
+                                {.addicon .json.string}
+                * DiscoveredZones: Contains all the zones the player has discovered.
                 {.addicon .json.array}
                     * : A zone the player has discoverd.
                     {.addicon .json.string}
-                * DiscoveredInstances:
+                * DiscoveredInstances: Contains the UUIDs of all instances this player discovered.
                 {.addicon .json.array}
                     * : A discovered instance.
                     {.addicon .json.object}
-                        * $binary:
+                        * $binary: The discovered instances base64 encoded binary UUID value.
                         {.addicon .json.string}
-                        * $type:
+                        * $type: The BSON binary type. Always `04` for UUID.
                         {.addicon .json.string}
-                * ReputationData:
+                * ReputationData: Currently unknown.
                 {.addicon .json.object}
-                * ActiveObjectiveUUIDs:
+                * ActiveObjectiveUUIDs: Currently unknown.
                 {.addicon .json.array}
-            * BlockPlacementOverride:
+            * BlockPlacementOverride: Currently unknown.
             {.addicon .json.boolean}
-            * HotbarManager:
+            * HotbarManager: Contains the players saved hotbar information.
             {.addicon .json.object}
-                * SavedHotbars:
+                * SavedHotbars: Contains all the players saved hotbars.
                 {.addicon .json.array}
-                    * : A saved hotbar row.
+                    * : A saved hotbar row. `null` if this row is empty.
                     {.addicon .json.object}
-                        * Id:
+                        * Id: The inventory type id. Normally `Simple`.
                         {.addicon .json.string}
-                        * Capacity:
+                        * Capacity: The total number of inventory slots available.
                         {.addicon .json.int}
-                        * Items:
+                        * Items: List of items in this inventory. Empty if no items are present.
                         {.addicon .json.object}
-                            * <#\>:
+                            * <#\>: An item at the given inventory index.
                             {.addicon .json.object}
-                                * Id:
+                                * Id: The item id.
                                 {.addicon .json.string}
-                                * Quantity:
+                                * Quantity: The item count.
                                 {.addicon .json.int}
-                                * Durability:
+                                * Durability: The items current durability.
                                 {.addicon .json.float}
-                                * MaxDurability:
+                                * MaxDurability: The items total durability when un-damaged.
                                 {.addicon .json.float}
-                                * OverrideDropItemAnimation:
+                                * OverrideDropItemAnimation: Currently unknown.
                                 {.addicon .json.boolean}
-                * CurrentHotbar:
+                * CurrentHotbar: The currently loaded saved hotbar.
                 {.addicon .json.int}
-            * GameMode:
+            * GameMode: This players current gamemode.
             {.addicon .json.string}
-        * Invulnerable:
+        * Invulnerable: if present the player is invulnerable.
         {.addicon .json.object}
-        * HitboxCollision:
+        * HitboxCollision: Currently unknown.
         {.addicon .json.object}
-            * HitboxCollisionConfigIndex:
+            * HitboxCollisionConfigIndex: Currently unknown.
             {.addicon .json.int}
-        * UniqueItemUsages:
+        * UniqueItemUsages: Tracks 1 time uses unique items that the player has used.
         {.addicon .json.object}
-            * UniqueItemUsed:
+            * UniqueItemUsed: Contains all unique items this player has used.
             {.addicon .json.array}
-        * Instance:
+                * : An unique item that this player has used.
+                {.addicon .json.string}
+        * Instance: Currently unknown.
         {.addicon .json.object}
-        * UUID:
+        * UUID: The players UUID stored in binary form encoded in base64. (Again)
         {.addicon .json.object}
-            * UUID:
+            * UUID
             {.addicon .json.object}
-                * $binary:
+                * $binary: The base64 encoded binary UUID value.
                 {.addicon .json.string}
-                * $type:
+                * $type: The BSON binary type. Always `04` for UUID.
                 {.addicon .json.string}
-        * EntityStates:
+        * EntityStats: Contains all stats of this player, such as their oxygen level, mana level, and more.
         {.addicon .json.object}
-            * Version:
+            * Version: The player stats format version used when saved.
             {.addicon .json.int}
-            * Stats:
+            * Stats: Contains all stats of this player.
             {.addicon .json.object}
-                * <stat\>:
+                * <stat\>: A player stat.
                 {.addicon .json.object}
-                    * Id:
+                    * Id: The id of the stat. Normally matches document key name.
                     {.addicon .json.string}
-                    * Value:
+                    * Value: The value of the player stat.
                     {.addicon .json.float}
-        * CreativeHub:
+        * CreativeHub: Information for the Creative mode hub.
         {.addicon .json.object}
-            * ParentHubWorldUuid:
+            * ParentHubWorldUuid: The stringified UUID of the creative world hub.
             {.addicon .json.string}
-        * HeadRotation:
+        * HeadRotation: The players initial head rotation.
         {.addicon .json.object}
-            * Rotation:
+            * Rotation
             {.addicon .json.object}
-                * Pitch:
+                * Pitch: The initial X rotation of the player.
                 {.addicon .json.float}
-                * Yaw:
+                * Yaw: The initial Y rotation of the player.
                 {.addicon .json.float}
-                * Roll:
+                * Roll: The initial Z rotation of the player.
                 {.addicon .json.float}
 
 </div>
-</details>
 
 ## Inventory slot numbers
 
@@ -381,6 +426,10 @@ The gray names reflect what each inventory section is called in the json.
         <tr>
             <th>2026.01.13-dcad8778f</th>
             <td>The player format is introduced.</td>
+        </tr>
+        <tr>
+            <th>2026.02.17-255364b8e</th>
+            <td>Added UserMarkers array to PerWorldData to store information for the new User-Placed Map Markers</td>
         </tr>
     </tbody>
 </table>
