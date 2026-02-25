@@ -8,112 +8,138 @@ The **worlds/.../config.json** file contains global information about the world 
 
 * : Root object.
 {.addicon .json.object}
-    * Version:
+    * Version: The world config format used at the time of saving.
     {.addicon .json.int}
-    * UUID:
+    * UUID: The worlds UUID stored in binary form encoded in base64.
     {.addicon .json.object}
-        * $binary:
+        * $binary: The base64 encoded binary UUID value.
         {.addicon .json.string}
-        * $type:
+        * $type: The BSON binary type. Always `04` for UUID.
         {.addicon .json.string}
-    * DisplayName:
+    * DisplayName: The name of this world as shown in-game.
     {.addicon .json.string}
-    * Seed:
+    * Seed: The worlds seed.
     {.addicon .json.int}
-    * WorldGen:
+    * SpawnProvider: Information for the world spawn point.
     {.addicon .json.object}
-        * Type:
+        * Id: Currently unknown. Always `Global`.
         {.addicon .json.string}
-        * Name:
-        {.addicon .json.string}
-    * WorldMap:
-    {.addicon .json.object}
-        * Type:
-        {.addicon .json.string}
-    * ChunkStorage:
-    {.addicon .json.object}
-        * Type:
-        {.addicon .json.string}
-    * ChunkConfig:
-    {.addicon .json.object}
-    * IsTicking:
-    {.addicon .json.boolean}
-    * IsBlockTicking:
-    {.addicon .json.boolean}
-    * IsPvpEnabled:
-    {.addicon .json.boolean}
-    * IsFallDamagedEnabled:
-    {.addicon .json.boolean}
-    * IsGameTimePaused:
-    {.addicon .json.boolean}
-    * GameTime:
-    {.addicon .json.string}
-    * ClientEffects:
-    {.addicon .json.object}
-        * SunHeightPercent:
-        {.addicon .json.float}
-        * SunAngleDegrees:
-        {.addicon .json.float}
-        * BloomIntensity:
-        {.addicon .json.float}
-        * BloomPower:
-        {.addicon .json.float}
-        * SunIntensity:
-        {.addicon .json.float}
-        * SunshaftIntensity:
-        {.addicon .json.float}
-        * SunshaftScaleFactor:
-        {.addicon .json.float}
-    * RequiredPlugins:
-    {.addicon .json.object}
-    * GameMode:
-    {.addicon .json.string}
-    * IsSpawningNPC:
-    {.addicon .json.boolean}
-    * IsSpawnMarkersEnabled:
-    {.addicon .json.boolean}
-    * IsAllNPCFrozen:
-    {.addicon .json.boolean}
-    * GameplayConfig:
-    {.addicon .json.string}
-    * Death:
-    {.addicon .json.object}
-        * RespawnController:
+        * SpawnPoint: The players world spawn point and spawn rotation.
         {.addicon .json.object}
-            * Type:
+            * X: X position of the world spawn point.
+            {.addicon .json.float}
+            * Y: Y position of the world spawn point.
+            {.addicon .json.float}
+            * Z: Z position of the world spawn point.
+            {.addicon .json.float}
+            * Pitch: X rotation of the world spawn rotation.
+            {.addicon .json.float}
+            * Yaw: Y rotation of the world spawn rotation.
+            {.addicon .json.float}
+            * Roll: Z rotation of the world spawn rotation.
+            {.addicon .json.float}
+    * WorldGen: Information for the world generator used for this world.
+    {.addicon .json.object}
+        * Type: The id of the world generator to use. Either `Hytale` (v1) or `HytaleGenerator` (v2)
+        {.addicon .json.string}
+        * WorldStructure: The type of world/universe to generate. Doesn't exists if `Type` is Hytale.
+        {.addicon .json.string}
+        * Name: The type of world/universe to generate. Doesn't exists if `Type` is HytaleGenerator.
+        {.addicon .json.string}
+        * Version: Currently unknown. Always `0.0.0`. Doesn't exists if `Type` is HytaleGenerator.
+        {.addicon .json.string}
+    * WorldMap: Currently unknown.
+    {.addicon .json.object}
+        * Type: Currently unknown. Always `WorldGen`.
+        {.addicon .json.string}
+    * ChunkStorage: The worlds chunk storage information.
+    {.addicon .json.object}
+        * Type: The worlds chunk storage type. Either `Hytale` or `RocksDb`.
+        {.addicon .json.string}
+    * ChunkConfig: Currently unknown.
+    {.addicon .json.object}
+    * IsTicking: `true` if the world ticks normally.
+    {.addicon .json.boolean}
+    * IsBlockTicking: `true` if blocks can get ticked. i.e: Crops growing.
+    {.addicon .json.boolean}
+    * IsPvpEnabled: `true` if PVP is enabled.
+    {.addicon .json.boolean}
+    * IsFallDamagedEnabled: `true` if fall damage is enabled.
+    {.addicon .json.boolean}
+    * IsGameTimePaused: `true` if the daynight cycle is paused.
+    {.addicon .json.boolean}
+    * GameTime: The current in-game date and time in the format: `<YYYY>-<MM>-<DD>T<hh>:<mm>:<ss>Z`. Example `0001-01-01T00:00:00Z`.
+    {.addicon .json.string}
+    * ClientEffects: Information for different client effects.
+    {.addicon .json.object}
+        * SunHeightPercent: Controls how high the sun can get in the sky.
+        {.addicon .json.float}
+        * SunAngleDegrees: Controls the angle of the sun.
+        {.addicon .json.float}
+        * BloomIntensity: Controls the sun bloom effect intensity.
+        {.addicon .json.float}
+        * BloomPower: Controls the sun bloom effect power.
+        {.addicon .json.float}
+        * SunIntensity: Controls the brightness intensity of the sun.
+        {.addicon .json.float}
+        * SunshaftIntensity: Controls the brightness intensity of the sun shafts.
+        {.addicon .json.float}
+        * SunshaftScaleFactor: Controls the scale of the sun shafts.
+        {.addicon .json.float}
+    * RequiredPlugins: Currently unknown.
+    {.addicon .json.object}
+    * GameMode: The default gamemode for this world.
+    {.addicon .json.string}
+    * IsSpawningNPC: `true` if npcs can spawn in naturally.
+    {.addicon .json.boolean}
+    * IsSpawnMarkersEnabled: `true` if the world spawn point has a marker on the world map and compass.
+    {.addicon .json.boolean}
+    * IsAllNPCFrozen: `true` if all npcs have their AI paused.
+    {.addicon .json.boolean}
+    * GameplayConfig: Currently unknown. Always `Default`.
+    {.addicon .json.string}
+    * Death: Information for what happens when a player dies.
+    {.addicon .json.object}
+        * RespawnController: Controls where the player should respawn.
+        {.addicon .json.object}
+            * Type: The id of the respawn location type. Known types: `HomeOrSpawnPoint`.
             {.addicon .json.string}
-        * ItemsLossMode:
+        * ItemsLossMode: The inventory penalty on death mode. One of `None` = None, `All` = Drop All, or `Configured` = Partial Drop.
         {.addicon .json.string}
-        * ItemsAmountLossPercentage:
+        * ItemsAmountLossPercentage: The percentage of the players resources loss on death. Only applies if `ItemsLossMode` is Configured.
         {.addicon .json.float}
-        * ItemsDurabilityLossPercentage:
+        * ItemsDurabilityLossPercentage: The percentage of item durability loss on death. Only applies if `ItemsLossMode` is Configured.
         {.addicon .json.float}
-    * DaytimeDurationSeconds:
+    * DaytimeDurationSeconds: How long in seconds the day lasts. Doesn't exists if `IsGameTimePaused` is true.
     {.addicon .json.int}
-    * NighttimeDurationSeconds:
+    * NighttimeDurationSeconds: How long in seconds the night lasts. Doesn't exists if `IsGameTimePaused` is true.
     {.addicon .json.int}
-    * IsCompassUpdating:
+    * IsCompassUpdating: `true` if the player's compass update.
     {.addicon .json.boolean}
-    * IsSavingPlayers:
+    * IsSavingPlayers: `true` if changes to player data saves to disk.
     {.addicon .json.boolean}
-    * IsSavingChunks:
+    * IsSavingChunks: `true` if changes to chunks are saved to disk.
     {.addicon .json.boolean}
-    * SaveNewChunks:
+    * SaveNewChunks: `true` if newly generated chunks are saved to disk.
     {.addicon .json.boolean}
-    * IsUnloadingChunks:
+    * IsUnloadingChunks: `true` if chunks can be unloaded.
     {.addicon .json.boolean}
-    * IsObjectiveMarkersEnabled:
+    * IsObjectiveMarkersEnabled: Currently unknown.
     {.addicon .json.boolean}
-    * DeleteOnUniverseStart:
+    * DeleteOnUniverseStart: `true` if this world should be deleted and regenerated when started.
     {.addicon .json.boolean}
-    * DeleteOnRemove:
+    * DeleteOnRemove: Currently unknown.
     {.addicon .json.boolean}
-    * ResourceStorage:
+    * ResourceStorage: Currently unknown.
     {.addicon .json.object}
-        * Type:
+        * Type: Currently unknown. Always `Hytale`.
         {.addicon .json.string}
-    * Plugin:
+    * Plugin: Information related to plugins, custom and built-in.
     {.addicon .json.object}
+        * CreativeHub: Contains information related to the Creative mode hub.
+        {.addicon .json.object}
+            * StartupInstance: The initial instance used for the Creative mode hub. Always `CreativeHub`.
+            {.addicon .json.string}
 
 </div>
 
