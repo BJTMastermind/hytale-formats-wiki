@@ -93,12 +93,12 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
             <th colspan="8"><p>Early Access</p></th>
         </tr>
         <tr>
-            <th>2026.01.13-dcad8778f</th>
-            <td>To Be Determined</td>
+            <th>2026.01.17-4b0f30090</th>
+            <td>Added client_metadata.json file to track which patchline the world was created with.</td>
         </tr>
         <tr>
-            <th>?</th>
-            <td>Added client_metadata.json file to track which patchline the world was created with.</td>
+            <th>2026.02.17-255364b8e</th>
+            <td>Added SharedUserMapMarkers.json file to track user defined map markers that are shared with other players.</td>
         </tr>
     </tbody>
 </table>

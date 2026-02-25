@@ -21,7 +21,7 @@ The **client_metadata.json** file is used to track what patchline the world was 
             <th colspan="8"><p>Early Access</p></th>
         </tr>
         <tr>
-            <th>?</th>
+            <th>2026.01.17-4b0f30090</th>
             <td>The client metadata format is introduced.</td>
         </tr>
     </tbody>
