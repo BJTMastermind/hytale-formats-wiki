@@ -16,7 +16,7 @@ The **barter_shop_state.json** file is used to track shop/merchant current stock
             {.addicon .json.array}
                 * : How much stock there is for the shop item with the same index.
                 {.addicon .json.int}
-            * NextRefresh: The in-game date and time of when the next stock refresh is. In the format of `<YYYY>-<MM>-<DD>T<HH>:<MM>:<SS>Z`.
+            * NextRefresh: The in-game date and time of when the next stock refresh is. In the format of `<yyyy>-<MM>-<dd>T<HH>:<mm>:<ss>Z`.
             {.addicon .json.string}
             * ResolveSeed: A random seed for the shop.
             {.addicon .json.int}

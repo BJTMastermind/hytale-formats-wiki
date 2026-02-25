@@ -158,7 +158,7 @@ Chunks are stored as types in regional Hytale Region files, which are named in t
                         * BSON_Double("HvrPhs"): The entity's hover phase.
                         * BSON_Double("HvrHght"): The entity's hover height.
                         * BSON_Double("MdlScl"): The entity's initial model scale.
-                        * BSON_String("SpawnInstant"): The timestamp of when this entity spawned into the world. in the format of `YYYY-MM-DDThh:mm:ssZ` as in-game time i.e `0001-01-01T12:00:00Z`.
+                        * BSON_String("SpawnInstant"): The timestamp of when this entity spawned into the world. in the format of `yyyy-MM-ddTHH:mm:ssZ` as in-game time i.e `0001-01-01T12:00:00Z`.
                         * BSON_Int32("WorldgenId"): Use currently unknown. (deprecated field)
                         * BSON_Document("PathManager"): Currently unknown.
                         * BSON_Document("LeashPos"): The entity's spawn location.

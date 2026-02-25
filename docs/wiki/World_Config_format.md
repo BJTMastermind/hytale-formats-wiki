@@ -68,7 +68,7 @@ The **worlds/.../config.json** file contains global information about the world 
     {.addicon .json.boolean}
     * IsGameTimePaused: `true` if the daynight cycle is paused.
     {.addicon .json.boolean}
-    * GameTime: The current in-game date and time in the format: `<YYYY>-<MM>-<DD>T<hh>:<mm>:<ss>Z`. Example `0001-01-01T00:00:00Z`.
+    * GameTime: The current in-game date and time in the format: `<yyyy>-<MM>-<dd>T<HH>:<mm>:<ss>Z`. Example `0001-01-01T00:00:00Z`.
     {.addicon .json.string}
     * ClientEffects: Information for different client effects.
     {.addicon .json.object}
