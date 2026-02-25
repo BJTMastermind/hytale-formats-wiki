@@ -1,6 +1,6 @@
 # Shared User Map Markers format
 
-**SharedUserMapMarkers.json** is used to track user defined map marker that are shared with other players.
+**SharedUserMapMarkers.json** is used to track user defined map markers that are shared with other players.
 
 ## JSON format
 
@@ -47,7 +47,7 @@
             <td>The shared user map markers format is introduced.</td>
         </tr>
         <tr>
-            <td>Used to track user defined map markers that are shared with all players.</td>
+            <td>Used to track user defined map markers that are shared with other players.</td>
         </tr>
     </tbody>
 </table>
