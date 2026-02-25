@@ -12,17 +12,21 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
 {.addicon .file_system.directory}
     * backup: Contains backups of the contents of the universe folder automaticly created by the game while playing.
     {.addicon .file_system.directory}
-        * <yyyy\>-<mm\>-<dd\>_<HH\>-<MM\>-<SS\>.zip: A backup file.
+        * archive: Contains archived backup files. An archived backup is the oldest backup thats about to be replaced with a newer backup.
+        {.addicon .file_system.directory}
+            * <yyyy\>-<MM\>-<dd\>_<HH\>-<mm\>-<ss\>.zip: An archived backup file.
+            {.addicon .file_system.archive}
+        * <yyyy\>-<MM\>-<dd\>_<HH\>-<mm\>-<ss\>.zip: A backup file.
         {.addicon .file_system.archive}
     * logs: Contains copies of the games console log.
     {.addicon .file_system.directory}
-        * <yyyy\>-<mm\>-<dd\>_<HH\>-<MM\>-<SS\>_server.log: A console log.
+        * <yyyy\>-<MM\>-<dd\>_<HH\>-<mm\>-<ss\>_server.log: A console log.
         {.addicon .file_system.file}
     * mods: Stores the installed mods config files and other data that are used with this world.
     {.addicon .file_system.directory}
-        * Hytale_Shop
+        * Hytale_Shop: Contains information relating to hytale's shop/merchant entities.
         {.addicon .file_system.directory}
-            * barter_shop_state.json: See [Barter Shop State format](./Barter_Shop_State_format.md).
+            * barter_shop_state.json: Tracks shop/merchant current stock and restock times. See [Barter Shop State format](./Barter_Shop_State_format.md).
             {.addicon .file_system.file}
     * prefabs: Contains all player created prefabs for this world.
     {.addicon .file_system.directory}
@@ -40,43 +44,43 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
             {.addicon .file_system.directory}
                 * chunks: Stores region files of the world.
                 {.addicon .file_system.directory}
-                    * <x\>.<z\>.region.bin: A region file. See [Chunk format](./Chunk_format/index.md).
+                    * <x\>.<z\>.region.bin: A region file. See [Region file format](./Region_file_format.md).
                     {.addicon .file_system.file}
                 * resources
                 {.addicon .file_system.directory}
-                    * BlockCounter.json: See [Block Counter format](./Block_Counter_format.md).
+                    * BlockCounter.json: Tracks how many of a limited block have been placed. See [Block Counter format](./Block_Counter_format.md).
                     {.addicon .file_system.file}
-                    * BlockMapMarkers.json: See [Block Map Markers format](./Block_Map_Markers_format.md).
+                    * BlockMapMarkers.json: Tracks the map markers, such as the Forgotten Temple. See [Block Map Markers format](./Block_Map_Markers_format.md).
                     {.addicon .file_system.file}
-                    * InstanceData.json: See [Instance Data](./Instance_Data_format.md).
+                    * InstanceData.json: Tracks various instance related data. See [Instance Data](./Instance_Data_format.md).
                     {.addicon .file_system.file}
-                    * PrefabEditSession.json: See [Prefab Edit Session format](./Prefab_Edit_Session_format.md).
+                    * PrefabEditSession.json: Used for storing prefab data. See [Prefab Edit Session format](./Prefab_Edit_Session_format.md).
                     {.addicon .file_system.file}
                     * ReputationData.json: See [Reputation Data format](./Reputation_Data_format.md).
                     {.addicon .file_system.file}
-                    * SharedUserMapMarkers.json: See [Shared User Map Markers format](./Shared_User_Map_Markers_format.md)
+                    * SharedUserMapMarkers.json: Tracks user defined shared map markers. See [Shared User Map Markers format](./Shared_User_Map_Markers_format.md)
                     {.addicon .file_system.file}
-                    * SpawnSuppressionController.json: See [Spawn Suppression Controller format](./Spawn_Suppression_Controller_format.md).
+                    * SpawnSuppressionController.json: Used to prevent NPCs from spawning in a given area. See [Spawn Suppression Controller format](./Spawn_Suppression_Controller_format.md).
                     {.addicon .file_system.file}
-                    * Time.json: See [Time format](./Time_format.md).
+                    * Time.json: Tracks the in-game time in a real-time equivalent. See [Time format](./Time_format.md).
                     {.addicon .file_system.file}
-                * config.json: See [World Config format](./World_Config_format.md).
+                * config.json: Contains global information about the world. See [World Config format](./World_Config_format.md).
                 {.addicon .file_system.file}
-        * memories.json: See [Memories format](./Memories_format.md).
+        * memories.json: Used to store the players found "Memories". See [Memories format](./Memories_format.md).
         {.addicon .file_system.file}
-        * warps.json: See [Warps format](./Warps_format.md).
+        * warps.json: Tracks all warp locations. See [Warps format](./Warps_format.md).
         {.addicon .file_system.file}
-    * bans.json: See [Bans format](./Bans_format.md).
+    * bans.json: Tracks the players that are banned from this world. See [Bans format](./Bans_format.md).
     {.addicon .file_system.file}
-    * client_metadata.json: See [Client Metadata format](./Client_Metadata_format.md).
+    * client_metadata.json: Tracks what patchline the world was last loaded with. See [Client Metadata format](./Client_Metadata_format.md).
     {.addicon .file_system.file}
-    * config.json: See [Mods Config format](./Mods_Config_format.md).
+    * config.json: Tracks all mods avablible for the world and which ones are enabled. See [Mods Config format](./Mods_Config_format.md).
     {.addicon .file_system.file}
-    * permissions.json: See [Permission format](./Permissions_format.md).
+    * permissions.json: Tracks the permissions of all players. See [Permission format](./Permissions_format.md).
     {.addicon .file_system.file}
-    * preview.png
+    * preview.png: The world icon.
     {.addicon .file_system.image_file}
-    * whitelist.json: See [Whitelist format](./Whitelist_format.md).
+    * whitelist.json: Tracks what players are allowed to enter the world. See [Whitelist format](./Whitelist_format.md).
     {.addicon .file_system.file}
 
 </div>
