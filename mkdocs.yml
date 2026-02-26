@@ -13,7 +13,9 @@ extra_javascript:
 nav:
     - Home: index.md
     - Pages:
+        - World structure: wiki/World_structure.md
         - World formats:
+            - Barter Shop State format: wiki/Barter_Shop_State_format.md
             - Chunk format:
                 - wiki/Chunk_format/index.md
                 - Block format:
@@ -24,29 +26,29 @@ nav:
                 - BlockPhysics format: wiki/Chunk_format/BlockPhysics_format.md
                 - EnvironmentChunk format: wiki/Chunk_format/EnvironmentChunk_format.md
                 - Fluid format: wiki/Chunk_format/Fluid_format.md
+            - Memories format: wiki/Memories_format.md
+            - Misc formats:
+                - Client Metadata format: wiki/Client_Metadata_format.md
+                - Mods Config format: wiki/Mods_Config_format.md
             - Player format: wiki/Player_format.md
             - Region file format: wiki/Region_file_format.md
+            - Resource formats:
+                - Block Counter format: wiki/Block_Counter_format.md
+                - Block Map Markers format: wiki/Block_Map_Markers_format.md
+                - Chunk Storage format: wiki/Chunk_Storage_format.md
+                - Instance Data format: wiki/Instance_Data_format.md
+                - Prefab Edit Session format: wiki/Prefab_Edit_Session_format.md
+                - Reputation Data format: wiki/Reputation_Data_format.md
+                - Shared User Map Markers format: wiki/Shared_User_Map_Markers_format.md
+                - Spawn Suppression Controller format: wiki/Spawn_Suppression_Controller_format.md
+                - Time format: wiki/Time_format.md
+            - Warps format: wiki/Warps_format.md
             - World Config format: wiki/World_Config_format.md
         - Multiplayer formats:
             - Bans format: wiki/Bans_format.md
             - Permissions format: wiki/Permissions_format.md
             - Whitelist format: wiki/Whitelist_format.md
-        - Other formats:
-            - Barter Shop State format: wiki/Barter_Shop_State_format.md
-            - Block Counter format: wiki/Block_Counter_format.md
-            - Block Map Markers format: wiki/Block_Map_Markers_format.md
-            - Client Metadata format: wiki/Client_Metadata_format.md
-            - Instance Data format: wiki/Instance_Data_format.md
-            - Memories format: wiki/Memories_format.md
-            - Mods Config format: wiki/Mods_Config_format.md
-            - Prefab Edit Session format: wiki/Prefab_Edit_Session_format.md
-            - Prefab format: wiki/Prefab_format.md
-            - Reputation Data format: wiki/Reputation_Data_format.md
-            - Shared User Map Markers format: wiki/Shared_User_Map_Markers_format.md
-            - Spawn Suppression Controller format: wiki/Spawn_Suppression_Controller_format.md
-            - Time format: wiki/Time_format.md
-            - Warps format: wiki/Warps_format.md
-            - World structure: wiki/World_structure.md
+        - Prefab format: wiki/Prefab_format.md
         - Changelogs:
             - 2026.01.13-50e69c385: wiki/changelogs/2026.01.13-50e69c385.md
             - 2026.01.15-c04fdfe10: wiki/changelogs/2026.01.15-c04fdfe10.md

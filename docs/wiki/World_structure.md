@@ -52,6 +52,8 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
                     {.addicon .file_system.file}
                     * BlockMapMarkers.json: Tracks the map markers, such as the Forgotten Temple. See [Block Map Markers format](./Block_Map_Markers_format.md).
                     {.addicon .file_system.file}
+                    * ChunkStorage.json: See [Chunk Storage format](./Chunk_Storage_format.md).
+                    {.addicon .file_system.file}
                     * InstanceData.json: Tracks various instance related data. See [Instance Data](./Instance_Data_format.md).
                     {.addicon .file_system.file}
                     * PrefabEditSession.json: Used for storing prefab data. See [Prefab Edit Session format](./Prefab_Edit_Session_format.md).
@@ -97,8 +99,11 @@ This is the directory structure of the `Hytale/Saves` folder, where the game sav
             <td>Added client_metadata.json file to track which patchline the world was created with.</td>
         </tr>
         <tr>
-            <th>2026.02.17-255364b8e</th>
+            <th rowspan="2">2026.02.17-255364b8e</th>
             <td>Added SharedUserMapMarkers.json file to track user defined map markers that are shared with other players.</td>
+        </tr>
+        <tr>
+            <td>Added ChunkStorage.json file, current uses is unknown.</td>
         </tr>
     </tbody>
 </table>
