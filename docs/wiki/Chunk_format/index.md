@@ -1,3 +1,6 @@
+!!! archived
+    This page has been archived and migrated, and will no longer recieve updates. For the latest version of this page see it on the [Hytale wiki](https://hytalewiki.org/w/Chunk_format).
+
 # Chunk format
 
 Chunks store the terrain and entities within a 32×320×32 area in the world. They also store precomputed lighting, heightmap data for Hytale's performance, and other meta information.

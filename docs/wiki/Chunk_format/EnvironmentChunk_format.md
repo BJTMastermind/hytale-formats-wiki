@@ -1,3 +1,6 @@
+!!! archived
+    This page has been archived and migrated, and will no longer recieve updates. For the latest version of this page see it on the [Hytale wiki](https://hytalewiki.org/w/Chunk_format/EnvironmentChunk_format).
+
 !!! note
     This page was refined and clarified by ChatGPT.
 

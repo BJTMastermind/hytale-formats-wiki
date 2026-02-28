@@ -1,3 +1,6 @@
+!!! archived
+    This page has been archived and migrated, and will no longer recieve updates. For the latest version of this page see it on the [Hytale wiki](https://hytalewiki.org/w/Region_file_format).
+
 # Region file format
 
 The **Region file format** is the [binary file format](https://en.wikipedia.org/wiki/Binary_file) for storing Hytale chunks. Each file stores a group of 32×32 chunks called a **region**.[\[a\]](#a) The file begins with a [magic number](https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files) of `HytaleIndexedStorage`.

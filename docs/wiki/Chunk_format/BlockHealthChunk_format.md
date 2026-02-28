@@ -1,3 +1,6 @@
+!!! archived
+    This page has been archived and migrated, and will no longer recieve updates. For the latest version of this page see it on the [Hytale wiki](https://hytalewiki.org/w/Chunk_format/BlockHealthChunk_format).
+
 # BlockHealthChunk format
 
 BlockHealthChunk data is in **Unknown** byte order.

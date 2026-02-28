@@ -1,3 +1,6 @@
+!!! archived
+    This page has been archived and migrated, and will no longer recieve updates. For the latest version of this page see it on the [Hytale wiki](https://hytalewiki.org/w/Chunk_format/Block_format/Octree_structure).
+
 !!! note
     This page was mostly made by ChatGPT after being given code snippets for deserializing the light data octree and told to make a markdown document of it.
 
