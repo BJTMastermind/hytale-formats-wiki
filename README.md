@@ -1,3 +1,7 @@
+> [!note]
+> This project has been migrated to Codeberg and will no longer be updated here.<br>
+> Visit the projects Codeberg repository at: https://codeberg.org/VoxelBill/hytale-formats-wiki
+
 # Hytale Formats Wiki
 
 Documentation of the hytale file formats based on my discoveries
@@ -6,7 +10,7 @@ Documentation of the hytale file formats based on my discoveries
 
 This repository stores information relating to the file formats used by the game [Hytale](https://hytale.com/), from the world format, entity format, player data format, etc.
 
-View the live site [here](https://bjtmastermind.github.io/hytale-formats-wiki) or see the `docs` folder for the documentation.
+View the live site [here](https://voxelbill.github.io/hytale-formats-wiki) or see the `docs` folder for the documentation.
 
 ## License
 
